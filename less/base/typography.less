@@ -1,0 +1,55 @@
+/*=====================
+  Базовая типография
+=====================*/
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@300;400;500;600;700&display=swap');
+
+@commissioner: 'Commissioner', sans-serif;
+
+body {
+  font-family: @commissioner;  
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 400;
+  color: @text;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+& img {
+  max-width: 100%;
+}
+
+h1 {
+  
+}
+
+h2 {
+
+}
+
+p,
+li {
+  // font-size: 15px;
+  line-height: 1.2;
+  
+}
+
+p:last-child,
+li:last-child {
+  margin-bottom: 0;
+}
+
+.wysiwyg {
+  & > * {
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
