@@ -1,0 +1,103 @@
+.catalog {
+    &_mainpage {
+        padding: 53px 0;
+    }
+
+    &__wrap {
+        margin: 0 -5px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        width: calc((100% / 5) - 10px);
+        margin: 0 5px 10px;
+        border-radius: 5px;
+
+        .image {
+            height: 200px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+
+            img {
+                max-height: 100%;
+                max-width: 100%;
+            }
+        }
+
+        .name {
+            font-size: 14px;
+            font-weight: 400;
+            display: block;
+            margin-top: 17px;
+            line-height: 1.4;
+        }
+
+        .prices {
+            display: flex;
+            align-items: flex-end;
+            margin-top: 5px;
+
+            .curr {
+                font-weight: 700;
+                font-size: 20px;
+            }
+
+            .old {
+                font-size: 14px;
+                font-weight: 400;
+                color: fade(@text, 50%);
+                position: relative;
+                margin-left: 17px;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: -4px;
+                    top: 50%;
+                    width: calc(100% + 8px);
+                    height: 1px;
+                    background-color: fade(@text, 50%);
+                }
+            }
+        }
+
+        .btns {
+            display: flex;
+            margin-top: 16px;
+
+            &__buy {
+                .btn-orange;
+                padding: 9px 25px;
+                border-radius: 6px;
+
+                svg {
+                    fill: @white;
+                    width: 19px;
+                    height: 20px;
+                }
+            }
+
+            &__compare {
+                display: flex;
+                align-items: center;
+                margin-left: 18px;
+
+                svg {
+                    width: 14px;
+                    height: 18px;
+                    fill: #8e8e8d;
+                }
+
+                .text {
+                    color: fade(@text, 50%);
+                    font-size: 13px;
+                    margin-left: 7px;
+                }
+            }
+        }
+    }
+}
