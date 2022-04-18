@@ -1,0 +1,132 @@
+.promo {
+    &_mainpage {
+        padding: 19px 0;
+    }
+
+    .slider {
+        width: 100%;
+        position: relative;
+        margin-bottom: 27px;
+
+        &__item {
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        &__wrap {
+            display: flex;
+        }
+
+        .image {
+            width: 62%;
+            min-height: 290px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .content {
+            width: 38%;
+            background-color: @blue;
+            padding: 59px 45px;
+        }
+
+        .label {
+            color: @white;
+            font-weight: 500;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .name {
+            color: @white;
+            font-weight: 600;
+            font-size: 25px;
+            line-height: 1.2;
+            margin: 0 0 23px;
+        }
+
+        p {
+            color: @white;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.2;
+        }          
+
+        &__prev,
+        &__next {
+            padding: 0;
+            background: @white;
+            outline: none;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+            width: 40px;
+            height: 40px;
+            border-radius: 100px;
+            border: 2px solid @white;
+            position: absolute;
+            top: 43%;
+            z-index: 2;
+
+            svg {
+                fill: @text;
+                width: 9px;
+                height: 14px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+            }
+        }
+
+        &__next {
+            right: 30px;
+        }
+
+        &__prev {
+            left: 30px;
+            transform: rotate(180deg);
+        }
+
+        .slick-dots {
+            bottom: -27px;
+
+            li, 
+            li button {
+                width: 30px;
+            }
+
+            li {
+                margin: 0 8px;
+                
+                button {
+                    &:before {
+                        content: '';
+                        opacity: 1;
+                        font-family: none;
+                        background-color: fade(@text, 20%);
+                        height: 2px;
+                        width: 100%;
+                        font-size: 0;
+                        top: 0;
+                        bottom: 0;
+                        margin: auto;
+                    }
+                }
+
+                &.slick-active {
+                    button {
+                        &:before {
+                            opacity: 1;
+                            background-color: @text;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

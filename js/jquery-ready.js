@@ -47,15 +47,25 @@ $(document).ready(function() {
 
     //============Мобильное меню (КОНЕЦ)
 
-    //всплывашка
-    $('.layout__item .close').click(function() {
-        //подставляем текст
-        let text = $(this).closest('.layout__item').find('.name h2').text();
-        $('.popup').find('.text span').text(text);
-        $('.popup').fadeIn();
-    })
+    //Главная страница - слайдер акций
+    if ($('.promo_mainpage').length) {
+        $('.promo_mainpage .slider').slick({
+            slidesToShow: 1,
+            dots: true,
+            prevArrow: '<button type="button" class="slider__prev"><svg><use xlink:href="img/icons/sprite.svg#chevron"></use></svg></button>',
+            nextArrow: '<button type="button" class="slider__next"><svg><use xlink:href="img/icons/sprite.svg#chevron"></use></svg></button>',
+        });
 
-    $('.popup .close, .popup .btn').click(function() {
-        $(this).closest('.popup').fadeOut();
-    });
+        $('.promo_mainpage .slider .content').matchHeight();
+    }
+    
+    //Главная страница - слайдер партнеров
+    if ($('.partners').length) {
+        $('.partners .slider').slick({
+            slidesToShow: 4,
+            dots: false,
+            prevArrow: '<button type="button" class="slider__prev"><svg><use xlink:href="img/icons/sprite.svg#chevron"></use></svg></button>',
+            nextArrow: '<button type="button" class="slider__next"><svg><use xlink:href="img/icons/sprite.svg#chevron"></use></svg></button>',
+        });
+    }
 });
