@@ -47,6 +47,30 @@ $(document).ready(function() {
 
     //============Мобильное меню (КОНЕЦ)
 
+    //выпадашка с брендами и каталогом
+    if($('.header .dropdown').length) {
+        const btns = $('.header .btns__item');
+
+        btns.click(function() {
+            let btnId = $(this).attr('data-id');
+            
+            $('.layer').fadeIn(100)
+            $('.dropdown').hide();
+            $(`#${btnId}`).fadeIn();
+            $(this).addClass('active')
+        })
+    }
+
+    //клик по layer
+    if ($('.layer').length) {
+        $('.layer').click(function() {
+            $(this).fadeOut(100);
+            
+            $('.dropdown').hide();
+            $('.btns__item').removeClass('active')
+        })
+    }
+
     //Главная страница - слайдер акций
     if ($('.promo_mainpage').length) {
         $('.promo_mainpage .slider').slick({

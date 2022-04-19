@@ -1,5 +1,6 @@
 .header {
     border-bottom: 1px solid #d5d5d5;
+    position: relative;
 
     &__top {
         display: flex;      
@@ -97,6 +98,28 @@
             font-weight: 500;
             font-size: 15px;
             cursor: pointer;
+            position: relative;
+            
+            &:after {
+                position: absolute;
+                left: calc(50% - 4px);
+                top: calc(100% + 11px);
+                content: '';
+                border: 8px solid transparent; 
+                border-top: 8px solid rgba(0, 21, 24, 0.651);
+                opacity: 0;
+                z-index: 6;
+                transition: 0.1s;
+            }
+
+            &.active {
+
+                &:after {
+                    opacity: 1;
+                    transition: 0.1s;
+                    transition-delay: 0.5s;
+                }
+            }
 
             &.catalog-btn {
                 .btn-orange;
@@ -234,7 +257,42 @@
         }
     }
 
+    .dropdown {
+        position: absolute;
+        top: calc(100% - 10px);
+        width: 100%;
+        left: 0;
+        background-color: @white;
+        z-index: 5;
+        padding: 39px 0 32px;
+        display: none;
 
+        &__list {
+            list-style: none;
+            column-count: 4;
+            column-gap: 32px;
+            padding: 0;
+            margin: 0;
+            font-size: 14px;
+
+            li {
+                position: relative;
+                padding-left: 22px;
+                margin-bottom: 13px;
+                
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 4px;
+                    top: 5px;
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 100px;
+                    background-color: @blue;
+                }
+            }
+        }
+    }
     
 
     
