@@ -1,0 +1,25 @@
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 31px 0;
+    margin: 0;
+
+    li {
+        position: relative;
+        margin: 0 27px 5px 0;
+
+        &:not(:last-of-type) {
+            &:after {
+                content: '';
+                position: absolute;
+                right: -18px;
+                top: 8px;
+                width: 10px;
+                height: 1px;
+                background-color: @text;
+    
+            }
+        }
+    }
+}

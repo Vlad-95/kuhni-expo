@@ -1,0 +1,82 @@
+.wysiwyg {
+    & > * {
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    li {
+        line-height: 1.5;
+    }
+
+    p {
+        margin: 20px 0 25px;
+        line-height: 1.95;
+    }
+
+    a {
+        color: @blue;
+    }
+
+    p,
+    ul,
+    ol, 
+    table {
+        font-size: 17px;
+    }
+
+    ul {
+        padding: 0;
+        margin: 25px 0;
+        list-style: none;
+
+        li {
+            position: relative;
+            padding-left: 30px;
+
+            &:not(:last-of-type) {
+                margin-bottom: 10px;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 10px;
+                width: 5px;
+                height: 5px;
+                border-radius: 100px;
+                background-color: @blue;
+            }
+        }
+    }
+
+    ol {
+        padding: 0;
+        margin: 25px 0;
+        list-style: none;
+        counter-reset: item;
+
+        li {
+            position: relative;
+            padding-left: 30px;
+            counter-increment: item;
+
+            &:not(:last-of-type) {
+                margin-bottom: 10px;
+            }
+
+            &:before {
+                content: counter(item)".";
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+}
+  
