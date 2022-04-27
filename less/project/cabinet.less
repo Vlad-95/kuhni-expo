@@ -1,0 +1,224 @@
+.cabinet {
+
+    &:not(a) {
+        border-top: 1px solid #eaeaea;
+        margin-top: 23px;
+        padding-top: 29px;
+    }
+    
+
+    .input {
+        border: 1px solid #d5d5d5;
+        border-radius: 5px;
+        font-size: 15px;
+        font-weight: 500;
+        color: @text;
+        height: 40px;
+        padding: 0 15px;
+        background: none;
+    }
+
+    .profile {
+        &__top {
+            display: flex;
+            align-items: center;
+            padding-bottom: 30px;
+        }
+
+        .logo {
+            position: relative;
+            width: 70px;
+            height: 70px;
+            display: block;
+            margin-right: 30px;
+            cursor: pointer;
+
+            &__file {
+                position: absolute;
+                left: 0;
+                top: 0;
+                opacity: 0;
+                width: 0;
+                height: 0;
+                padding: 0;
+                border: none;
+                outline: none;
+            }
+
+            &__text {
+                position: relative;
+                font-size: 15px;
+                font-weight: 500;
+                text-transform: lowercase;
+                color: fade(@text, 50%);
+                border: 1px solid #d5d5d5;
+                width: 70px;
+                height: 70px;
+                text-align: center;
+                line-height: 65px;
+
+                &:after {
+                    content: '+';
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    right: -12px;
+                    top: -9px;
+                    border-radius: 100px;
+                    background-color: @blue;
+                    color: @white;
+                    line-height: 1;
+                    font-size: 17px;
+                    text-align: center;
+                }
+            }
+        }
+
+        .name {
+            position: relative;
+
+            .hidden {
+                font-size: 40px;
+                font-weight: 600;
+                opacity: 0;
+            }
+
+            &__input {
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+
+                input {
+                    font-size: 40px;
+                    font-weight: 600;
+                    width: 100%;
+
+                    &:disabled {
+                        border: none;
+                        padding: 0;
+                    }
+                }
+            }
+
+            .edit {
+                position: absolute;
+                right: -34px;
+                bottom: 0;
+                cursor: pointer;
+
+                svg {
+                    width: 21px;
+                    height: 20px;
+                    fill: @text;
+                }
+            }
+        }
+
+        .points {
+            margin-left: auto;
+            margin-right: 32px;
+            position: relative;
+            text-align: center;
+
+            .value {
+                color: @blue;
+                font-size: 40px;
+                font-weight: 600;
+            }
+
+            span {
+                position: absolute;
+                right: -23px;
+                top: 0;
+                display: block;
+                width: 20px;
+                height: 20px;
+                border-radius: 100px;
+                color: @white;
+                background-color: @blue;
+                text-align: center;
+                line-height: 20px;
+                font-size: 15px;
+                font-weight: 500;
+            }
+
+            .text {
+                margin: 0;
+                font-size: 15px;
+                font-weight: 500;
+            }
+        }
+
+        &__content {
+            border-top: 1px solid #eaeaea;
+            padding-bottom: 78px;
+
+            .info {
+                padding: 38px 0 0;
+
+                &__wrap {
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: 0 -35px;
+                }
+
+                &__item {
+                    width: calc(50% - 70px);
+                    margin: 0 35px 15px;
+                    position: relative;
+
+                    .name {
+                        font-size: 15px;
+                        font-weight: 500;
+                        color: #ababaa;
+                        margin: 0 0 7px;
+                    }
+
+                    input {
+                        width: 100%;
+
+                        &:disabled {
+                            background: none;
+                        }
+                    }
+
+                    .edit {
+                        position: absolute;
+                        bottom: 8px;
+                        right: 12px;
+                        cursor: pointer;
+
+                        svg {
+                            width: 21px;
+                            height: 20px;
+                            fill: #ababaa;
+                        }
+                    }
+
+                    .lock {
+                        position: absolute;
+                        bottom: 8px;
+                        right: 12px;
+
+                        svg {
+                            width: 20px;
+                            height: 22px;
+                            fill: #ababaa;
+                        }
+                    }
+                }
+
+                &__submit {
+                    .btn-blue;
+                    .fullrounded;
+                    border: 2px solid @blue;
+                    padding: 8px 16px;
+                    margin-top: 41px;
+                }
+            }
+        }
+    }
+}
+  

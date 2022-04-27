@@ -1,0 +1,53 @@
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+        .fullrounded;
+        font-size: 14px;
+        font-weight: 500;
+        background-color: #eff8fa;
+        transition: 0.3s;
+        position: relative;
+        padding: 11px 26px 13px 50px;
+        margin: 0 4px 8px 0;
+        border: 2px solid transparent;
+
+        &.active {
+            background-color: @white;
+            border: 2px solid @blue;
+        }
+        
+        .icon {
+            width: 22px;
+            height: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: 14px;
+            top: 7px;
+        }
+
+        &.profile {
+            svg {
+                width: 18px;
+                height: 20px;
+            }
+        }
+
+        &.history {
+            svg {
+                width: 22px;
+                height: 21px;
+            }
+        }
+
+        &.price {
+            svg {
+                width: 18px;
+                height: 22px;
+            }
+        }
+    }
+}
