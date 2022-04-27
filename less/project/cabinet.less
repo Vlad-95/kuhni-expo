@@ -18,6 +18,12 @@
         background: none;
     }
 
+    &__title {
+        font-size: 20px;
+        font-weight: 600;
+        margin: 0 0 21px;
+    }
+
     .profile {
         &__top {
             display: flex;
@@ -217,6 +223,35 @@
                     padding: 8px 16px;
                     margin-top: 41px;
                 }
+            }
+        }
+    }
+
+    .pricelist {
+        padding-bottom: 160px;
+        
+        &__item {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            border-top: 1px solid #eaeaea;
+            padding: 12px 0 12px 5px;
+
+            &:last-of-type {
+                border-bottom: 1px solid #eaeaea;
+            }
+
+            p {
+                margin: 0;
+                padding-right: 20px;
+            }
+
+            a {
+                .btn-orange;
+                .fullrounded;
+                font-size: 15px;
+                margin-left: auto;
+                padding: 5px 12px;
             }
         }
     }
