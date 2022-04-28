@@ -255,5 +255,199 @@
             }
         }
     }
+
+    .history {
+        padding-bottom: 89px;
+        &__table {
+            display: table;
+            width: 100%;
+
+            .head {
+                display: table-row;
+                width: 100%;
+                background-color: fade(@blue, 20%);                
+
+                div {
+                    display: table-cell;
+                    font-size: 16px;
+                    font-weight: 700;
+                    padding: 16px 25px 18px;
+                }
+            }
+
+            .date {
+                width: 198px;
+            }
+
+            .number {
+                width: 200px;
+            }
+
+            .qty {
+                width: 201px;
+            }
+
+            .summ {
+                width: 200px;
+            }
+
+            .content {
+                display: table-row;
+            }
+        }
+
+        &__item {
+            display: table-row;
+            position: relative;
+            width: 100%;
+
+            &>div {
+                &:not(.toggle):not(.more) {
+                    display: table-cell;
+                    padding: 16px 24px 19px;
+                    font-size: 15px;
+                    border-bottom: 1px solid #eaeaea;
+                }
+            }
+
+            .status {
+                a {
+                    position: relative;
+                    color: @white;
+                
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        left: -11px;
+                        top: -2px;
+                        width: calc(100% + 23px);
+                        height: calc(100% + 6px);
+                        background-color: @orange;
+                        border-radius: 100px;
+                        z-index: -1;
+                    }
+                }                
+            }
+
+            .toggle {
+                position: absolute;
+                right: 0;
+                top: 15px;
+                background-color: @blue;
+                color: @white;
+                border-radius: 100px;
+                width: 20px;
+                height: 20px;
+                transition: 0.3s;
+                cursor: pointer;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    top: 0;
+                    margin: auto;
+                    width: 10px;
+                    height: 2px;
+                    background-color: @white;
+                }
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    top: 0;
+                    margin: auto;
+                    width: 10px;
+                    height: 2px;
+                    background-color: @white;
+                    transform: rotate(90deg);
+                }
+            }
+
+            .more {
+                position: absolute;
+                left: 0;
+                top: 100%;
+                width: 100%;
+                box-shadow: 0px 3px 15px 0px rgba(20, 65, 72, 0.25);
+                background-color: @white;
+                z-index: 2;
+                display: none;
+
+                &__item {
+                    display: flex;
+                    align-items: center;
+                    padding: 20px 104px 16px 30px;
+
+                    &:not(:last-of-type) {
+                        border-bottom: 1px solid #eaeaea;
+                    }
+                }
+
+                .image {
+                    width: 70px;
+                    height: 70px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 31px;
+
+                    img {
+                        max-width: 100%;
+                        max-height: 100%;
+                    }
+                }
+
+                .name {
+                    margin-right: auto;
+                    padding-right: 20px;
+                    font-size: 15px;
+                    font-weight: 400;
+                    max-width: 340px;
+                }
+
+                .sale {
+                    font-weight: 700;
+                    font-size: 15px;
+                    color: @blue;
+                    margin-right: 69px;
+                }
+
+                .price {
+                    margin-right: 114px;
+                    .curr {
+                        font-weight: 700;
+                        font-size: 15px;
+                    }
+
+                    .old {
+                        display: inline-block;
+                        color: fade(@text, 50%);
+                        position: relative;
+                        font-size: 12px;
+
+                        &:after {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            height: 1px;
+                            width: 100%;
+                            background-color: fade(@text, 50%);
+                        }
+                    }
+                }
+
+                .qty {
+                    font-weight: 500;
+                }
+            }
+        }
+    }
 }
   
