@@ -1,65 +1,57 @@
-$(document).ready(function() {
+import $ from "jquery";
+import slick from "slick-carousel";
+import matchHeight from "jquery-match-height";
+
+function all() {
     //===========Мобильное меню
-    let body = $('body')
-    let windowWidth = window.innerWidth;
-    let header = $('.header');
-    let headerWrap = $('.header__wrap');
-    let time = header.find('.nav__item.time');
-    let mail = header.find('.nav__item.mail');
-    let address = header.find('.nav__item.address');
-    let phone = header.find('.nav__item.phone')
-    let burger = $('.burger');
-    let windowHeight = $(window).height();
+    // let body = $('body')
+    // let windowWidth = window.innerWidth;
+    // let header = $('.header');
+    // let headerWrap = $('.header__wrap');
+    // let time = header.find('.nav__item.time');
+    // let mail = header.find('.nav__item.mail');
+    // let address = header.find('.nav__item.address');
+    // let phone = header.find('.nav__item.phone')
+    // let burger = $('.burger');
+    // let windowHeight = $(window).height();
 
-    if (windowWidth <= 992) {
-        //создаем контейнер для менюшки
-        let mobileMenu = $(document.createElement('div'));
-        let nav = $(document.createElement('div'));
-        mobileMenu.addClass('mobile-menu');
-        nav.addClass('nav');
+    // if (windowWidth <= 992) {
+    //     //создаем контейнер для менюшки
+    //     let mobileMenu = $(document.createElement('div'));
+    //     let nav = $(document.createElement('div'));
+    //     mobileMenu.addClass('mobile-menu');
+    //     nav.addClass('nav');
 
-        headerWrap.append(mobileMenu)
-        mobileMenu.append(nav)
+    //     headerWrap.append(mobileMenu)
+    //     mobileMenu.append(nav)
 
-        //клонируем элементы хедера
-        let mobileTime = time.clone();
-        let mobileMail = mail.clone();
-        let mobileAddress = address.clone();
-        let mobilePhone = phone.clone();
+    //     //клонируем элементы хедера
+    //     let mobileTime = time.clone();
+    //     let mobileMail = mail.clone();
+    //     let mobileAddress = address.clone();
+    //     let mobilePhone = phone.clone();
         
-        nav.append(mobilePhone); 
-        nav.append(mobileMail);  
-        nav.append(mobileAddress);  
-        nav.append(mobileTime);   
+    //     nav.append(mobilePhone); 
+    //     nav.append(mobileMail);  
+    //     nav.append(mobileAddress);  
+    //     nav.append(mobileTime);   
               
-    }
+    // }
 
-    function showMenu() {
-        let mobileMenu = $('.mobile-menu');
+    // function showMenu() {
+    //     let mobileMenu = $('.mobile-menu');
 
-        burger.toggleClass('active');
-        body.toggleClass('no-scroll');
-        mobileMenu.toggleClass('active');
-        console.log(1)
-    }
+    //     burger.toggleClass('active');
+    //     body.toggleClass('no-scroll');
+    //     mobileMenu.toggleClass('active');
+    //     console.log(1)
+    // }
 
-    burger.click(showMenu);
+    // burger.click(showMenu);
 
     //============Мобильное меню (КОНЕЦ)
 
-    //выпадашка с брендами и каталогом
-    if($('.header .dropdown').length) {
-        const btns = $('.header .btns__item');
-
-        btns.click(function() {
-            let btnId = $(this).attr('data-id');
-            
-            $('.layer').fadeIn(100)
-            $('.dropdown').hide();
-            $(`#${btnId}`).fadeIn();
-            $(this).addClass('active')
-        })
-    }
+    
 
     //клик по layer
     if ($('.layer').length) {
@@ -67,7 +59,7 @@ $(document).ready(function() {
             $(this).fadeOut(100);
             
             $('.dropdown').hide();
-            $('.btns__item').removeClass('active')
+            $('.btns__item').removeClass('active');
         })
     }
 
@@ -104,4 +96,6 @@ $(document).ready(function() {
 
         $('.slider .slider__item .image').matchHeight();
     }
-});
+}
+
+export default all;
