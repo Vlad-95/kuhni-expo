@@ -1,0 +1,38 @@
+.catalog-list {
+    .page-title {
+        margin: 8px 0 15px;
+    }
+
+    .sort {
+        width: 100%;
+        margin-bottom: 17px;
+    }
+
+    &__wrap {
+        position: relative;
+        margin-top: 30px;
+        padding-top: 13px;
+        display: flex;
+        flex-wrap: wrap;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: -10000px;
+            top: 0;
+            width: calc(100% + 20000px);
+            height: 100%;
+            background-color: #fafafa;
+            z-index: -1;
+        }
+    }
+
+    &__sidebar {
+        width: 270px;
+    }
+
+    &__content {
+        width: calc(100% - 270px);
+        padding-left: 30px;
+    }
+}

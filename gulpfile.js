@@ -71,9 +71,21 @@ const buildJs = () => {
                                 }]]
                               }
                             }
-                          }
+                          },
+                          {
+                            test: /\.less$/i,
+                            use: ["style-loader", "css-loader", "less-loader"],
+                          },
                         ]
-                      }
+                    },
+                    resolve: {
+                        byDependency: {
+                            // More options can be found here https://webpack.js.org/configuration/resolve/
+                            less: {
+                            mainFiles: ["custom"],
+                            },
+                        },
+                    },
                 }))
                 .pipe(gulp.dest(paths.dist.js));
                 // .pipe(browsersync.stream());

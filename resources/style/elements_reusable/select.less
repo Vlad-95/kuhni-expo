@@ -1,0 +1,41 @@
+.select2-container--default {
+    border: 1px solid #ececec!important;
+    background-color: #fff!important;
+    border-radius: 100px!important;
+
+
+    .select2-selection--single {
+        background: none!important;
+        border-radius: 100px!important;
+        border: none!important;
+
+        .select2-selection__rendered {
+            color: @text!important;
+            line-height: 2!important;
+            padding-left: 14px!important;
+        }
+
+        .select2-selection__arrow {
+            right: 12px!important;
+
+            b {
+                background-image: url('../img/icons/chevron.svg')!important;
+                border: none!important;
+                width: 12px!important;
+                height: 7px!important;
+            }                
+        }
+    }
+
+    .select2-results__option--highlighted {
+        &.select2-results__option--selectable {
+            background-color: @blue!important;
+            color: #fff;
+        }
+    }
+}
+
+.select2-dropdown {
+    background-color: #fff;
+    border: 1px solid #ececec!important;
+}
