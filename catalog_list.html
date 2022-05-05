@@ -224,29 +224,43 @@
                         </div>
                     </form>
                     <div class="catalog-list__sidebar">
-                        <form action="" class="filter">
-                            <div class="filter__block brands">
+                        <div class="filter">
+                            <div class="filter__block brand">
                                 <div class="filter__block-head">
                                     <div class="label">Выбрать бренд:</div>
-                                    <div class="name">Locherber Milano</div>
-                                    <div class="js-acc-toggle toggle">
+                                    <!-- <div class="name">Locherber Milano</div> -->
+                                    <div class="js-filter-toggle toggle">
                                         <svg>
                                             <use xlink:href="img/icons/sprite.svg#arrow"></use>
                                         </svg>    
                                     </div>
+                                </div>
+
+                                <div class="filter__block-content js-filter-content">
+                                    <ul class="brands">
+                                        <li class="brands__item">
+                                            <a href="javascript:;">Locherber Milano</a>
+                                        </li>
+                                        <li class="brands__item">
+                                            <a href="javascript:;">Franke</a>
+                                        </li>
+                                        <li class="brands__item">
+                                            <a href="javascript:;">Gefest</a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
 
                             <div class="filter__block cats">
                                 <div class="filter__block-head">
                                     <div class="name">Категории</div>
-                                    <div class="js-acc-toggle toggle">
+                                    <div class="js-filter-toggle toggle">
                                         <svg>
                                             <use xlink:href="img/icons/sprite.svg#arrow"></use>
                                         </svg>    
                                     </div>
                                 </div>
-                                <div class="filter__block-content js-acc-content">
+                                <div class="filter__block-content js-filter-content">
                                     <ul class="category">
                                         <li class="category__item">
                                             <a href="javascript:;">Духовые шкафы</a>
@@ -265,13 +279,13 @@
                                                 </li>
                                                 <li class="sub-category__item">
                                                     <a href="javascript:;">Компактные</a>
-                                                    <div class="js-acc-toggle toggle">
+                                                    <div class="js-filter-toggle toggle">
                                                         <svg>
                                                             <use xlink:href="img/icons/sprite.svg#chevron-down"></use>
                                                         </svg>
                                                     </div>
 
-                                                    <ul class="js-acc-content sub-sub-category">
+                                                    <ul class="js-filter-content sub-sub-category">
                                                         <li class="sub-sub-category__item">
                                                             <a href="javascript:;" class="current">С функцией СВЧ</a>
                                                         </li>
@@ -295,19 +309,19 @@
                                 </div>
                             </div>
 
-                            <div class="filter__block params">
+                            <form class="filter__block params">
                                 <div class="filter__block-head">
                                     <div class="name">Параметры</div>
-                                    <div class="js-acc-toggle toggle">
+                                    <div class="js-filter-toggle toggle">
                                         <svg>
                                             <use xlink:href="img/icons/sprite.svg#arrow"></use>
                                         </svg>    
                                     </div>
                                 </div>
-                                <div class="filter__block-content js-acc-content">
+                                <div class="filter__block-content js-filter-content">
                                     <div class="parameters">
                                         <div class="parameters__item">
-                                            <div class="parameters__item-head js-acc-toggle">
+                                            <div class="parameters__item-head js-filter-toggle">
                                                 <div class="name">
                                                     Цена, &#8381;
                                                 </div>
@@ -317,7 +331,7 @@
                                                     </svg>
                                                 </div>                                                
                                             </div>
-                                            <div class="parameters__item-content js-acc-content">
+                                            <div class="parameters__item-content js-filter-content">
                                                 <div class="filter__range">
                                                     <div class="filter__range-row">
                                                         <input type="text" class="filter__range-input filter__range-input_from">
@@ -334,7 +348,7 @@
                                             </div>
                                         </div>
                                         <div class="parameters__item">
-                                            <div class="parameters__item-head js-acc-toggle">
+                                            <div class="parameters__item-head js-filter-toggle">
                                                 <div class="name">
                                                     Управление
                                                 </div>
@@ -344,57 +358,241 @@
                                                     </svg>
                                                 </div>                                                
                                             </div>
-                                            <div class="parameters__item-content js-acc-content">
+                                            <div class="parameters__item-content js-filter-content">
                                                 <label class="filter__checkbox">
                                                     <input type="checkbox" name="" id="">
                                                     <p>Сенсорное</p>
+                                                </label>
+                                                <label class="filter__checkbox">
+                                                    <input type="checkbox" name="" id="">
+                                                    <p>Электронное</p>
+                                                </label>
+                                                <label class="filter__checkbox">
+                                                    <input type="checkbox" name="" id="">
+                                                    <p>Колыбельное</p>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="parameters__item">
+                                            <div class="parameters__item-head js-filter-toggle">
+                                                <div class="name">
+                                                    Конвекция <span class="dot"></span>
+                                                </div>
+                                                <div class="toggle">
+                                                    <svg>
+                                                        <use xlink:href="img/icons/sprite.svg#chevron-down"></use>
+                                                    </svg>
+                                                </div>                                                
+                                            </div>
+                                            <div class="parameters__item-content js-filter-content">
+                                                <label class="filter__checkbox">
+                                                    <input type="checkbox" name="" id="">
+                                                    <p>Сенсорное</p>
+                                                </label>
+                                                <label class="filter__checkbox">
+                                                    <input type="checkbox" name="" id="">
+                                                    <p>Электронное</p>
+                                                </label>
+                                                <label class="filter__checkbox">
+                                                    <input type="checkbox" name="" id="">
+                                                    <p>Колыбельное</p>
                                                 </label>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
 
                     <div class="catalog-list__content">
-
-                    </div>
-                </div>
-
-                <div class="pagination">
-                    <ul class="pages">
-                        <li class="current">
-                            <a href="javascript:;">1</a>
-                        </li>                    
-                        <li>
-                            <a href="javascript:;">2</a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">3</a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">4</a>
-                        </li>
+                        <div class="catalog catalog_catalogpage">
+                            <div class="wrapper">
+                                <div class="catalog__wrap">            
+                                    <div class="catalog__item">
+                                        <a href="javascript:;" class="image">
+                                            <img src="img/catalog-item1.png" alt="">
+                                        </a>
+                                        <a href="javascript:;" class="name">Холодильник Liebherr CN 3915 Comfort NoFrost (CN...</a>
+                                        <div class="prices">
+                                            <div class="curr">59 500 &#8381;</div>
+                                            <div class="old">61 200</div>
+                                        </div>
+                                        <div class="btns">
+                                            <a href="javascript:;" class="btns__buy">
+                                                <svg>
+                                                    <use xlink:href="img/icons/sprite.svg#basket"></use>
+                                                </svg>   
+                                            </a>
+                    
+                                            <a href="javascript:;" class="btns__compare">
+                                                <svg>
+                                                    <use xlink:href="img/icons/sprite.svg#compare"></use>
+                                                </svg>   
+                                                
+                                                <div class="text">Сравнить</div>
+                                            </a>
+                                        </div>
+                                    </div>     
+                                    
+                                    <div class="catalog__item">
+                                        <a href="javascript:;" class="image">
+                                            <img src="img/catalog-item1.png" alt="">
+                                        </a>
+                                        <a href="javascript:;" class="name">Холодильник Liebherr CN 3915 Comfort NoFrost (CN...</a>
+                                        <div class="prices">
+                                            <div class="curr">59 500 &#8381;</div>
+                                            <div class="old">61 200</div>
+                                        </div>
+                                        <div class="btns">
+                                            <a href="javascript:;" class="btns__buy">
+                                                <svg>
+                                                    <use xlink:href="img/icons/sprite.svg#basket"></use>
+                                                </svg>   
+                                            </a>
+                    
+                                            <a href="javascript:;" class="btns__compare">
+                                                <svg>
+                                                    <use xlink:href="img/icons/sprite.svg#compare"></use>
+                                                </svg>   
+                                                
+                                                <div class="text">Сравнить</div>
+                                            </a>
+                                        </div>
+                                    </div>     
+                
+                                    <div class="catalog__item">
+                                        <a href="javascript:;" class="image">
+                                            <img src="img/catalog-item1.png" alt="">
+                                        </a>
+                                        <a href="javascript:;" class="name">Холодильник Liebherr CN 3915 Comfort NoFrost (CN...</a>
+                                        <div class="prices">
+                                            <div class="curr">59 500 &#8381;</div>
+                                            <div class="old">61 200</div>
+                                        </div>
+                                        <div class="btns">
+                                            <a href="javascript:;" class="btns__buy">
+                                                <svg>
+                                                    <use xlink:href="img/icons/sprite.svg#basket"></use>
+                                                </svg>   
+                                            </a>
+                    
+                                            <a href="javascript:;" class="btns__compare">
+                                                <svg>
+                                                    <use xlink:href="img/icons/sprite.svg#compare"></use>
+                                                </svg>   
+                                                
+                                                <div class="text">Сравнить</div>
+                                            </a>
+                                        </div>
+                                    </div>     
+                
+                                    <div class="catalog__item">
+                                        <a href="javascript:;" class="image">
+                                            <img src="img/catalog-item1.png" alt="">
+                                        </a>
+                                        <a href="javascript:;" class="name">Холодильник Liebherr CN 3915 Comfort NoFrost (CN...</a>
+                                        <div class="prices">
+                                            <div class="curr">59 500 &#8381;</div>
+                                            <div class="old">61 200</div>
+                                        </div>
+                                        <div class="btns">
+                                            <a href="javascript:;" class="btns__buy">
+                                                <svg>
+                                                    <use xlink:href="img/icons/sprite.svg#basket"></use>
+                                                </svg>   
+                                            </a>
+                    
+                                            <a href="javascript:;" class="btns__compare">
+                                                <svg>
+                                                    <use xlink:href="img/icons/sprite.svg#compare"></use>
+                                                </svg>   
+                                                
+                                                <div class="text">Сравнить</div>
+                                            </a>
+                                        </div>
+                                    </div>     
+                
+                                    <div class="catalog__item">
+                                        <a href="javascript:;" class="image">
+                                            <img src="img/catalog-item1.png" alt="">
+                                        </a>
+                                        <a href="javascript:;" class="name">Холодильник Liebherr CN 3915 Comfort NoFrost (CN...</a>
+                                        <div class="prices">
+                                            <div class="curr">59 500 &#8381;</div>
+                                            <div class="old">61 200</div>
+                                        </div>
+                                        <div class="btns">
+                                            <a href="javascript:;" class="btns__buy">
+                                                <svg>
+                                                    <use xlink:href="img/icons/sprite.svg#basket"></use>
+                                                </svg>   
+                                            </a>
+                    
+                                            <a href="javascript:;" class="btns__compare">
+                                                <svg>
+                                                    <use xlink:href="img/icons/sprite.svg#compare"></use>
+                                                </svg>   
+                                                
+                                                <div class="text">Сравнить</div>
+                                            </a>
+                                        </div>
+                                    </div>     
+                                </div>
+                            </div>
+                        </div>
                         
-                        <li>
-                            <a href="javascript:;">5</a>
-                        </li>
-                    </ul>
 
-                    <div class="arrows">
-                        <a href="javascript:;" class="arrows__item arrows__item_prev">
-                            <svg>
-                                <use xlink:href="img/icons/sprite.svg#chevron"></use>
-                            </svg>
-                        </a>
-                        <a href="javascript:;" class="arrows__item arrows__item_next">
-                            <svg>
-                                <use xlink:href="img/icons/sprite.svg#chevron"></use>
-                            </svg>
-                        </a>
+                        <div class="pagination">
+                            <ul class="pages">
+                                <li class="current">
+                                    <a href="javascript:;">1</a>
+                                </li>                    
+                                <li>
+                                    <a href="javascript:;">2</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">3</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">4</a>
+                                </li>
+                                
+                                <li>
+                                    <a href="javascript:;">5</a>
+                                </li>
+                            </ul>
+        
+                            <div class="arrows">
+                                <a href="javascript:;" class="arrows__item arrows__item_prev">
+                                    <svg>
+                                        <use xlink:href="img/icons/sprite.svg#chevron"></use>
+                                    </svg>
+                                </a>
+                                <a href="javascript:;" class="arrows__item arrows__item_next">
+                                    <svg>
+                                        <use xlink:href="img/icons/sprite.svg#chevron"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+
+            <div class="catalog-list__text">
+                <div class="wrapper">
+                    <h2 class="block-title">Компактные духовые шкафы с микроволновкой</h2>
+                    <div class="wysiwyg">
+                        <p>
+                            Мы рады предложить Вашем вниманию полный спектр продукции необходимой для создания удобной и эргономичной кухни.В каталоге товаров вы без труда сможете подобрать встраиваемую технику, кухонную вытяжку, мойку и смеситель, мусорную систему, кухонные аксессуары и  многое другое.Для Вашего удобства  действуют 3 выставочных зала, расположенных в разных частях города, где Вы сможете получить профессиональную консультацию по интересующим Вас товарам.  Наши специалисты быстро и качественно помогут решить все вопросы с выбором нужных приборов.
+                        </p>
+                        <p>
+                            Уважаемые покупатели, просим вас обратить внимание на то, что точная информация о товаре, его изготовителе, сроке службы и гарантийном сроке находится на официальном сайте производителя. Информация о товаре на нашем сайте является ознакомительной и не является публичной офертой. Производитель оставляет за собой право изменять внешний вид товара, его комплектацию и характеристики без уведомления. Если у вас возникли вопросы по поводу любого товара на нашем сайте, то обращайтесь к менеджерам за подробной консультацией.
+                        </p>
                     </div>
                 </div>
+                
             </div>
         </div>
         

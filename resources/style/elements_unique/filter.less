@@ -1,9 +1,10 @@
 .filter {
     &__block {
         border-radius: 6px;
+        overflow: hidden;
         margin-bottom: 10px;
 
-        &.brands {
+        &.brand {
             background-color: #e0f2f5;
 
             .filter__block-head {
@@ -11,6 +12,7 @@
 
                 .name {
                     font-size: 17px;
+                    margin-top: 8px;
                 }
 
                 .toggle {
@@ -57,7 +59,6 @@
             .label {
                 font-size: 15px;
                 font-weight: 400;
-                margin-bottom: 8px;
             }
 
             .name {
@@ -89,7 +90,27 @@
         }
 
         &-content {
-            
+            // display: none;
+        }
+    }
+
+    .brands {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        &__item {
+            a {
+                padding: 13px 20px;
+                border-top: 1px solid @white;
+                display: block;
+                transition: 0.3s;
+                background-color: transparent;
+
+                &:hover {
+                    background-color: fade(@blue, 20%);
+                }
+            }
         }
     }
 
@@ -165,6 +186,7 @@
         list-style: none;
         padding: 0;
         margin: 0;
+        display: none;
 
         &__item {
             border-top: 1px solid @white;
@@ -187,12 +209,13 @@
     }
 
     .parameters {
-        border-top: 1px solid @white;
+        
 
         &__item {
             &-head {
                 position: relative;
-                padding: 13px 20px;
+                padding: 13px 20px 12px;
+                border-top: 1px solid @white;
 
                 .name {
                     font-size: 15px;
@@ -208,6 +231,9 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    transform: scale(-1);
+                    transition: 0.3s;
+                    cursor: pointer;
 
                     svg {
                         fill: @text;
@@ -218,15 +244,17 @@
             }
 
             &-content {
-                padding: 13px 20px;
+                display: none;
             }
         }
     }
 
     &__range {
+        padding: 7px 20px 21px;
         &-row {
             display: flex;
             align-items: center;
+            margin-bottom: 10px;
         }
 
         .divider {
@@ -298,6 +326,11 @@
     &__checkbox {
         position: relative;
         cursor: pointer;
+        display: block;
+        height: 24px;
+        padding: 7px 20px 8px;
+        box-sizing: content-box;
+        border-top: 1px solid @white;
 
         input {
             position: absolute;
@@ -315,6 +348,7 @@
 
         p {
             font-size: 14px;
+            line-height: 24px;
             font-weight: 400;
             position: relative;
             margin: 0;
@@ -323,7 +357,7 @@
                 content: '';
                 position: absolute;
                 right: -3px;
-                top: -4px;
+                top: 0;
                 width: 24px;
                 height: 24px;
                 border-radius: 5px;
@@ -334,7 +368,7 @@
                 content: '';
                 position: absolute;
                 right: 2px;
-                top: 3px;
+                top: 7px;
                 width: 14px;
                 height: 9px;
                 background-image: url("../img/icons/check.svg");
