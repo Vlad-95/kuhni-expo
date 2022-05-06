@@ -64,8 +64,10 @@
 
 .catalog-detail {
     .block-title {
-        font-size: 25px;
-        font-weight: 600;
+        h2 {
+            font-size: 25px;
+            font-weight: 600;
+        }        
     }
 
     &__info {
@@ -334,6 +336,8 @@
     }
 
     &__char {
+        margin-bottom: 61px;
+
         .block-title {
             margin: 0 0 38px;
         }
@@ -356,6 +360,89 @@
             td {
                 &:nth-child(1) {
                     width: 50%;
+                }
+            }
+        }
+    }
+
+    &__similar {
+        padding: 56px 0 68px;
+        border-top: 1px solid #d5d5d5;
+
+        .block-title {
+            margin: 0 0 43px;
+        }
+    }
+
+    &__recently {
+        padding: 56px 0 58px;
+        border-top: 1px solid #d5d5d5;
+
+        .block-title {
+            margin: 0 0 43px;
+        }
+    }
+
+    &__info-list {
+        border-top: 1px solid #d5d5d5;
+        padding: 35px 0;
+
+        .block-title {
+            margin: 0 0 30px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+        }
+
+        .item {
+            width: calc((100% / 3) - 30px);
+            margin: 0 15px 30px;
+            position: relative;
+    
+            .image {
+                border-radius: 6px;
+                overflow: hidden;
+                height: 190px;
+                position: relative;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: fade(@text, 70%);
+                    transition: 0.3s;
+                    opacity: 1;
+                }
+    
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+    
+            .content {
+                padding: 17px 20px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+    
+                .name {
+                    font-size: 17px;
+                    font-weight: 600;
+                    line-height: 1.3;
+                    color: @white;
                 }
             }
         }
