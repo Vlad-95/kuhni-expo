@@ -8507,6 +8507,43 @@ var catalogDetail = function catalogDetail() {
 
 /***/ }),
 
+/***/ "./resources/js/modules/contacts.js":
+/*!******************************************!*\
+  !*** ./resources/js/modules/contacts.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var contacts = function contacts() {
+  ymaps.ready(init);
+
+  function init() {
+    // Создание карты.
+    var myMap = new ymaps.Map("map", {
+      // Координаты центра карты.
+      // Порядок по умолчанию: «широта, долгота».
+      // Чтобы не определять координаты центра карты вручную,
+      // воспользуйтесь инструментом Определение координат.
+      center: [55.76, 37.64],
+      // Уровень масштабирования. Допустимые значения:
+      // от 0 (весь мир) до 19.
+      zoom: 7
+    });
+  }
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (contacts);
+
+/***/ }),
+
 /***/ "./resources/js/modules/filter.js":
 /*!****************************************!*\
   !*** ./resources/js/modules/filter.js ***!
@@ -33742,6 +33779,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_all__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/all */ "./resources/js/modules/all.js");
 /* harmony import */ var _modules_filter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/filter */ "./resources/js/modules/filter.js");
 /* harmony import */ var _modules_catalog_detail__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/catalog-detail */ "./resources/js/modules/catalog-detail.js");
+/* harmony import */ var _modules_contacts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/contacts */ "./resources/js/modules/contacts.js");
+
 
 
 
@@ -33751,6 +33790,7 @@ window.addEventListener('DOMContentLoaded', function () {
   (0,_modules_all__WEBPACK_IMPORTED_MODULE_1__["default"])();
   (0,_modules_filter__WEBPACK_IMPORTED_MODULE_2__["default"])();
   (0,_modules_catalog_detail__WEBPACK_IMPORTED_MODULE_3__["default"])();
+  (0,_modules_contacts__WEBPACK_IMPORTED_MODULE_4__["default"])();
 });
 })();
 
