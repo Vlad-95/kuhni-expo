@@ -24,8 +24,8 @@ const paths = {
     },
     dist: {
         root: path.join(__dirname),
-        css: path.join(__dirname, "css"),
-        js: path.join(__dirname, "js")
+        css: path.join(__dirname, "public", "css"),
+        js: path.join(__dirname, "public", "js")
     },
 };
 
@@ -73,7 +73,7 @@ const buildJs = () => {
                             }
                           },
                           {
-                            test: /\.less$/i,
+                            test: /\.(le|sa)ss$/,
                             use: ["style-loader", "css-loader", "less-loader"],
                           },
                         ]
@@ -93,11 +93,11 @@ const buildJs = () => {
 
 const buildLess = () => {
     const info = {
-        name: "style.css",
+        name: "styles.css",
     };
 
     const lessStream = gulp
-        .src(path.join(paths.src.less, "style.less"))
+        .src(path.join(paths.src.less, "styles.less"))
         .pipe(sourcemaps.init())
         .pipe(less());
     
@@ -114,8 +114,8 @@ const buildLess = () => {
 
 const clean = () => {
     const files = [
-        path.join(paths.dist.css, "style.css"),
-        path.join(paths.dist.css, "style.css.map"),
+        path.join(paths.dist.css, "styles.css"),
+        path.join(paths.dist.css, "styles.css.map"),
     ];
 
     return del(files);
@@ -131,8 +131,8 @@ const watchFiles = () => {
         ["./resources/style/**/*.less"],
         gulp.series(
             selectedClean.bind(this, [
-                path.join(paths.dist.css, "style.css"),
-                path.join(paths.dist.css, "style.css.map"),
+                path.join(paths.dist.css, "styles.css"),
+                path.join(paths.dist.css, "styles.css.map"),
             ]),
             buildLess
         )
