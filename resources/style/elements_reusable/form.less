@@ -9,11 +9,15 @@
         flex-wrap: wrap;
         margin: 0 -15px;
 
+        .form__item,
+        .form__agree {
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
         &_half {
             .form__item {
                 width: calc(50% - 30px);
-                margin-left: 15px;
-                margin-right: 15px;
             }
         }
     }
@@ -64,6 +68,13 @@
         justify-content: space-between;
         align-items: center;
         margin-top: 12px;
+    }
+
+    .forgot-psw {
+        font-size: 14px;
+        font-weight: 400;
+        text-decoration: underline;
+        color: @text;
     }
 
     &__agree {

@@ -1,0 +1,74 @@
+.login {
+    .page-title {
+        margin: 8px 0 38px;
+    }
+
+    &__wrap {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -25px;
+    }
+
+    &__col {
+        width: calc(50% - 50px);
+        margin: 0 25px;
+    }
+
+    &__form {
+        width: 100%;
+        padding: 33px 30px;
+
+        &-title {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            border-bottom: 1px solid;
+            padding-bottom: 20px;
+            margin-bottom: 18px;
+
+            h3 {
+                font-size: 15px;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin: 0;
+            }
+        }
+
+        &.auth {
+            background-color: fade(@orange, 20%);
+
+            .login__form-title {
+                border-color: @orange;
+            }
+        }
+    }
+
+    .form {
+        &__item {
+            margin-bottom: 13px;
+        }
+
+        .forgot-psw {
+            margin-left: auto;
+            margin-right: 15px;
+        }
+
+        &__agree {
+            &-text {
+                &:after {
+                    background-image: url('/img/icons/orange-check.svg');
+                }
+            }
+        }
+
+        &__footer {
+            border-top: 1px solid @orange;
+            margin-top: 38px;
+            padding-top: 19px;
+        }
+
+        &__submit {
+            background-color: @orange;
+        }
+    }
+}

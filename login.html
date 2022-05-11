@@ -167,7 +167,7 @@
                     <a href="javascript:;">Главная</a>
                 </li>
                 <li>
-                    <span>Контакты</span>
+                    <span>Авторизация / Регистрация</span>
                 </li>
             </ul>
         </div>
@@ -177,11 +177,41 @@
                 <h1 class="page-title">Авторизация / Регистрация</h1>
 
                 <div class="login__wrap">
-                    <form action="" class="auth">
-                        <h3 class="login__title">Авторизация</h3>
+                    <div class="login__col">
+                        <form action="" class="form login__form auth">
+                            <div class="login__form-title">
+                                <h3>Авторизация</h3>
+                            </div>
+                            
+                            <label class="form__item">
+                                <p class="form__label">Email *</p>
+                                <input type="text" name="auth_email" class="form__input">
+                            </label>
+    
+                            <label class="form__item">
+                                <p class="form__label">Пароль *</p>
+                                <input type="psw" name="auth_psw" class="form__input">
+                            </label>
+    
+                            <div class="form__row">
+                                <label class="form__agree">
+                                    <input class="agree" type="checkbox" name="agree">
+                                    <p class="form__agree-text">Запомнить меня</p>
+                                </label>
 
-                        
-                    </form>
+                                <p class="forgot-psw">Забыли пароль?</p>
+                            </div>
+
+                            <div class="form__footer">
+                                <button class="form__submit">Войти</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="login__col">
+
+                    </div>
+                    
                 </div>
 
                 
