@@ -1,0 +1,142 @@
+.form {
+    &__item {
+        display: block;
+        margin-bottom: 33px;        
+    }
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+
+        &_half {
+            .form__item {
+                width: calc(50% - 30px);
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+        }
+    }
+
+    &__label {
+        font-size: 15px;
+        font-weight: 500;
+        margin: 0 0 7px;
+    }
+
+    &__input {
+        width: 100%;
+        height: 42px;
+        //background-color: @white;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        padding: 10px;
+        font-size: 13px;
+        color: @text;
+        font-family: @commissioner;
+
+        &.error {
+            border-color: red;
+        }
+    }
+
+    &__textarea {
+        width: 100%;
+        height: 120px;
+        //background-color: @white;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        padding: 10px;
+        font-size: 13px;
+        line-height: 1.5;
+        color: @text;
+        font-family: @commissioner;
+
+        &.error {
+            border-color: red;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 12px;
+    }
+
+    &__agree {
+        position: relative;
+        cursor: pointer;
+
+        .agree {
+            position: absolute;
+            left: 0;
+            display: inline-block;
+            visibility: hidden;
+            opacity: 0;
+
+            &.error + .form__agree-text {
+                &:before {
+                    border-color: red;
+                }
+                
+            }
+
+            &:checked + .form__agree-text {
+
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &-text {
+            font-size: 14px;
+            position: relative;
+            padding-left: 33px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                width: 24px;
+                height: 24px;
+                border-radius: 5px;
+                background-color: @white;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                left: 5px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                width: 14px;
+                height: 9px;
+                background-image: url("/img/icons/blue-check.svg");
+                background-size: cover;
+                opacity: 0;
+            }
+
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__submit {
+        background-color: #61cbdc;
+        border: none;
+        outline: none;
+        color: @white;
+        font-size: 14px;
+        border-radius: 100px;
+        padding: 10px 17px;
+    }
+}
