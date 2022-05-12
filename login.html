@@ -195,7 +195,7 @@
     
                             <div class="form__row">
                                 <label class="form__agree">
-                                    <input class="agree" type="checkbox" name="agree">
+                                    <input class="agree" type="checkbox" name="remember">
                                     <p class="form__agree-text">Запомнить меня</p>
                                 </label>
 
@@ -206,10 +206,68 @@
                                 <button class="form__submit">Войти</button>
                             </div>
                         </form>
+
+                        <div class="form login__form unreg">
+                            <div class="login__form-title">
+                                <h3>Без регистрации</h3>
+                            </div>
+                            
+                            <div class="login__form-text">
+                                <p>
+                                    Мы предоставляем скидки и бонусы постоянным клиентам, а регистрация займет всего пару минут. Тем не менее, вы можете совершать покупки и без регистрации.
+                                </p>
+
+                                <a class="btn" href="javascript:;">Продолжить без регистрации</a>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="login__col">
+                        <form action="" class="form login__form reg">
+                            <input type="hidden" name="reg_type_user">
+                            <div class="login__form-title">
+                                <h3>Регистрация</h3>
 
+                                <div class="user-type">
+                                    <a href="javascript:;">Физическое лицо</a>
+                                    <a href="javascript:;" class="active">Юридическое лицо</a>
+                                </div>
+                            </div>
+                            
+                            <label class="form__item">
+                                <p class="form__label">Email *</p>
+                                <input type="text" name="reg_email" class="form__input">
+                            </label>
+
+                            <label class="form__item">
+                                <p class="form__label">Название компании *</p>
+                                <input type="text" name="reg_company" class="form__input">
+                            </label>
+    
+                            <label class="form__item">
+                                <p class="form__label">ФИО контактного лица *</p>
+                                <input type="text" name="reg_email" class="form__input">
+                            </label>
+
+                            <label class="form__item">
+                                <p class="form__label">Телефон *</p>
+                                <input type="text" name="reg_phone" class="form__input">
+                            </label>
+
+                            <label class="form__item">
+                                <p class="form__label">Почтовый адрес *</p>
+                                <input type="text" name="reg_address" class="form__input">
+                            </label>
+    
+                            <label class="form__agree">
+                                <input class="agree" type="checkbox" name="reg_agree">
+                                <p class="form__agree-text">Я соглашаюсь с <a href="javascript:;">Политикой конфиденциальности</a></p>
+                            </label>
+
+                            <div class="form__footer">
+                                <button class="form__submit">Отправить</button>
+                            </div>
+                        </form>
                     </div>
                     
                 </div>
