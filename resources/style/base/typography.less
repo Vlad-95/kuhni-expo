@@ -65,7 +65,58 @@ li:last-child {
 }
 
 .page-title {
-  font-size: 40px;
-  font-weight: 600;
   margin: 8px 0 30px;
+
+  h1 {
+    font-size: 40px;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  &_cart {
+    display: flex;
+    align-items: flex-start;
+
+    h1 {
+      position: relative;
+      &:after {
+        content: attr(data-count);
+        position: absolute;
+        left: 100%;
+        top: 0;
+        font-size: 20px;
+        font-weight: 300;
+        color: #959695;
+      }
+    }
+
+    .delete-btn {
+      font-size: 14px;
+      font-weight: 400;
+      position: relative;
+      margin-left: auto;
+      margin-top: 18px;
+      text-decoration: underline;
+
+      .icon {
+        position: absolute;
+        left: -28px;
+        top: -2px;
+        background-color: #fbe6db;
+        width: 21px;
+        height: 21px;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      svg {
+        
+        width: 9px;
+        height: 8px;
+        fill: @text;
+      }
+    }
+  }
 }

@@ -184,5 +184,99 @@
             }
         }
     }
+
+    &__footer {
+        display: flex;
+        flex-wrap: wrap;
+        border-top: 1px solid #d5d5d5;
+        padding: 22px 0 52px;
+        align-items: flex-start;
+
+        .price {
+            margin: 11px 0;
+
+            .result {
+                font-size: 20px;
+                font-weight: 600;
+                margin: 0 0 13px;
+
+                .sale {
+                    color: @blue;
+                }
+            }
+
+            .bonus {
+                font-size: 14px;
+                font-weight: 600;
+                margin: 0;
+            }
+        }
+
+        .btns {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+
+            .credit {
+                position: relative;
+                margin-right: 114px;
+
+                input {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    opacity: 0;
+                    visibility: hidden;
+
+                    &:checked + .credit__text {
+                        &:after {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                &__text {
+                    font-size: 14px;
+                    position: relative;
+                    padding-left: 33px;
+                    margin: 0;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        bottom: 0;
+                        margin: auto;
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 5px;
+                        background-color: @white;
+                        border: 1px solid #d5d5d5;
+                    }
+        
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        left: 5px;
+                        top: 0;
+                        bottom: 0;
+                        margin: auto;
+                        width: 14px;
+                        height: 9px;
+                        background-image: url("/img/icons/blue-check.svg");
+                        background-size: cover;
+                        opacity: 0;
+                    }
+                }
+            }
+
+            .order {
+                .btn-orange;
+                .fullrounded;
+                padding: 10px 20px;
+            }
+        }
+    }
     
 }

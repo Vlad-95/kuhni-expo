@@ -173,7 +173,18 @@
         </div>
         <div class="cart">
             <div class="wrapper">
-                <h1 class="page-title">Корзина</h1>
+                <div class="page-title page-title_cart">
+                    <h1 data-count="3">Корзина</h1>
+                    <a href="javascript:;" class="delete-btn js-cart-remove_all">
+                        <div class="icon">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#close"></use>
+                            </svg>
+                        </div>                        
+
+                        Удалить все
+                    </a>
+                </div>
                 <div class="scroll-table">
                     <table class="cart__table">
                         <tr class="cart__table-item">
@@ -286,6 +297,19 @@
                 </div>
 
                 <div class="cart__footer">
+                    <div class="price">
+                        <p class="result">Итого: 330 000 &#8381; <span class="sale">(Ваша скидка — 30 000&#8381;)</span></p>
+                        <p class="bonus">Начислим 2000 баллов</p>
+                    </div>
+
+                    <div class="btns">
+                        <label class="credit">
+                            <input type="checkbox" name="credit">
+                            <p class="credit__text">В рассрочку</a></p>
+                        </label>
+
+                        <a href="javascript:;" class="order">Оформить заказ</a>
+                    </div>
                 </div>
             </div>
         </div>
