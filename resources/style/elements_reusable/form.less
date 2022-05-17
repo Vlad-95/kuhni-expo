@@ -20,6 +20,24 @@
                 width: calc(50% - 30px);
             }
         }
+
+        &_firstless {
+            .form__item {
+                &:nth-child(1) {
+                    width: calc(37% - 30px);
+                }
+                &:nth-child(2) {
+                    width: calc(63% - 30px);
+                }
+            }
+        }
+    }
+
+    &__vertical {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
     }
 
     &__label {
@@ -60,6 +78,137 @@
 
         &.error {
             border-color: red;
+        }
+    }
+
+    &__checkbox {
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+
+        .checkbox {
+            position: absolute;
+            left: 0;
+            display: inline-block;
+            visibility: hidden;
+            opacity: 0;
+
+            &:checked + .form__checkbox-text {
+
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &-text {
+            font-size: 15px;
+            font-weight: 500;
+            position: relative;
+            padding-left: 33px;
+            margin: 0;
+
+            span {
+                display: block;
+                font-weight: 500;
+                font-size: 13px;
+                color: fade(@text, 70%);
+                margin-top: 6px;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                
+                width: 24px;
+                height: 24px;
+                border-radius: 5px;
+                background-color: @white;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                left: 5px;
+                top: 8px;
+                width: 14px;
+                height: 9px;
+                background-image: url("/img/icons/blue-check.svg");
+                background-size: cover;
+                opacity: 0;
+                transition: 0.3s;
+            }
+        }
+    }
+
+    &__radio {
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+        margin-bottom: 21px;
+
+        .radio {
+            position: absolute;
+            left: 0;
+            display: inline-block;
+            visibility: hidden;
+            opacity: 0;
+
+            &:checked + .form__radio-text {
+
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &-text {
+            font-size: 15px;
+            font-weight: 500;
+            position: relative;
+            padding-left: 33px;
+            margin: 0;
+
+            span {
+                display: block;
+                font-weight: 500;
+                font-size: 13px;
+                color: fade(@text, 70%);
+                margin-top: 6px;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 20px;
+                height: 20px;
+                border-radius: 100px;
+                border: 1px solid @green;
+                background-color: @white;
+                  
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                left: 6px;
+                top: 6px;
+                width: 8px;
+                height: 8px;
+                border-radius: 100px;
+                background: @green;
+                background-size: cover;
+                opacity: 0;
+                transition: 0.3s;
+            }
+
+            a {
+                text-decoration: underline;
+            }
         }
     }
 
@@ -137,10 +286,19 @@
                 background-image: url("/img/icons/blue-check.svg");
                 background-size: cover;
                 opacity: 0;
+                transition: 0.3s;
             }
 
             a {
                 text-decoration: underline;
+            }
+
+            span {
+                display: block;
+                font-weight: 500;
+                font-size: 13px;
+                color: fade(@text, 70%);
+                margin-top: 6px;
             }
         }
     }
