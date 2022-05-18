@@ -83,3 +83,23 @@
         }
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .blog {
+        &__item {
+            .content {
+                .name {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .blog {
+        &__item {
+            width: calc((100% / 1) - 30px);
+        }
+    }
+}
