@@ -4,10 +4,13 @@
     .slider {
         margin: 0 -15px;
 
+        .slick-slide {
+            padding: 0 15px;
+        }
+
         &__item {
             background-color: #f4f4f4;
             border-radius: 6px;
-            margin: 0 15px;
             overflow: hidden;
 
             .image {
@@ -57,6 +60,20 @@
         &__prev {
             left: -6px;
             transform: rotate(180deg);
+        }
+    }
+}
+
+@media screen and (max-width: 1230px) {
+    .partners {
+        .slider {
+            &__prev {
+                left: 10px;
+            }
+
+            &__next {
+                right: 10px;
+            }
         }
     }
 }

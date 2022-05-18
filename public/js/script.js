@@ -8388,27 +8388,6 @@ function all() {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dropdown').hide();
       jquery__WEBPACK_IMPORTED_MODULE_0___default()('.btns__item').removeClass('active');
     });
-  } //Главная страница - слайдер акций
-
-
-  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.promo_mainpage').length) {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.promo_mainpage .slider').slick({
-      slidesToShow: 1,
-      dots: true,
-      prevArrow: '<button type="button" class="slider__prev"><svg><use xlink:href="img/icons/sprite.svg#chevron"></use></svg></button>',
-      nextArrow: '<button type="button" class="slider__next"><svg><use xlink:href="img/icons/sprite.svg#chevron"></use></svg></button>'
-    });
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.promo_mainpage .slider .content').matchHeight();
-  } //Главная страница - слайдер партнеров
-
-
-  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.partners').length) {
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.partners .slider').slick({
-      slidesToShow: 4,
-      dots: false,
-      prevArrow: '<button type="button" class="slider__prev"><svg><use xlink:href="img/icons/sprite.svg#chevron"></use></svg></button>',
-      nextArrow: '<button type="button" class="slider__next"><svg><use xlink:href="img/icons/sprite.svg#chevron"></use></svg></button>'
-    });
   } //Новость детальная - слайдер
 
 
@@ -8670,6 +8649,86 @@ function header() {
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (header);
+
+/***/ }),
+
+/***/ "./resources/js/modules/partners.js":
+/*!******************************************!*\
+  !*** ./resources/js/modules/partners.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! slick-carousel */ "./node_modules/slick-carousel/slick/slick.js");
+/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+function partners() {
+  //Главная страница - слайдер партнеров
+  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.partners').length) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.partners .slider').slick({
+      slidesToShow: 4,
+      dots: false,
+      prevArrow: '<button type="button" class="slider__prev"><svg><use xlink:href="img/icons/sprite.svg#chevron"></use></svg></button>',
+      nextArrow: '<button type="button" class="slider__next"><svg><use xlink:href="img/icons/sprite.svg#chevron"></use></svg></button>',
+      responsive: [{
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3
+        }
+      }, {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2
+        }
+      }]
+    });
+  }
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (partners);
+
+/***/ }),
+
+/***/ "./resources/js/modules/promo.js":
+/*!***************************************!*\
+  !*** ./resources/js/modules/promo.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! slick-carousel */ "./node_modules/slick-carousel/slick/slick.js");
+/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+function promo() {
+  //Главная страница - слайдер акций
+  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.promo_mainpage').length) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.promo_mainpage .slider').slick({
+      slidesToShow: 1,
+      dots: true,
+      prevArrow: '<button type="button" class="slider__prev"><svg><use xlink:href="img/icons/sprite.svg#chevron"></use></svg></button>',
+      nextArrow: '<button type="button" class="slider__next"><svg><use xlink:href="img/icons/sprite.svg#chevron"></use></svg></button>'
+    });
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.promo_mainpage .slider .content').matchHeight();
+  }
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (promo);
 
 /***/ }),
 
@@ -33810,10 +33869,14 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/header */ "./resources/js/modules/header.js");
 /* harmony import */ var _modules_catalog_list__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/catalog-list */ "./resources/js/modules/catalog-list.js");
-/* harmony import */ var _modules_all__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/all */ "./resources/js/modules/all.js");
-/* harmony import */ var _modules_filter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/filter */ "./resources/js/modules/filter.js");
-/* harmony import */ var _modules_catalog_detail__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/catalog-detail */ "./resources/js/modules/catalog-detail.js");
-/* harmony import */ var _modules_contacts__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/contacts */ "./resources/js/modules/contacts.js");
+/* harmony import */ var _modules_promo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/promo */ "./resources/js/modules/promo.js");
+/* harmony import */ var _modules_partners__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/partners */ "./resources/js/modules/partners.js");
+/* harmony import */ var _modules_all__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/all */ "./resources/js/modules/all.js");
+/* harmony import */ var _modules_filter__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/filter */ "./resources/js/modules/filter.js");
+/* harmony import */ var _modules_catalog_detail__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/catalog-detail */ "./resources/js/modules/catalog-detail.js");
+/* harmony import */ var _modules_contacts__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/contacts */ "./resources/js/modules/contacts.js");
+
+
 
 
 
@@ -33823,10 +33886,12 @@ __webpack_require__.r(__webpack_exports__);
 window.addEventListener('DOMContentLoaded', function () {
   (0,_modules_header__WEBPACK_IMPORTED_MODULE_0__["default"])();
   (0,_modules_catalog_list__WEBPACK_IMPORTED_MODULE_1__["default"])();
-  (0,_modules_all__WEBPACK_IMPORTED_MODULE_2__["default"])();
-  (0,_modules_filter__WEBPACK_IMPORTED_MODULE_3__["default"])();
-  (0,_modules_catalog_detail__WEBPACK_IMPORTED_MODULE_4__["default"])();
-  (0,_modules_contacts__WEBPACK_IMPORTED_MODULE_5__["default"])();
+  (0,_modules_promo__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  (0,_modules_partners__WEBPACK_IMPORTED_MODULE_3__["default"])();
+  (0,_modules_all__WEBPACK_IMPORTED_MODULE_4__["default"])();
+  (0,_modules_filter__WEBPACK_IMPORTED_MODULE_5__["default"])();
+  (0,_modules_catalog_detail__WEBPACK_IMPORTED_MODULE_6__["default"])();
+  (0,_modules_contacts__WEBPACK_IMPORTED_MODULE_7__["default"])();
 });
 })();
 

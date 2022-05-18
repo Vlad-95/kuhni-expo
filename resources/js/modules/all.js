@@ -14,28 +14,6 @@ function all() {
         })
     }
 
-    //Главная страница - слайдер акций
-    if ($('.promo_mainpage').length) {
-        $('.promo_mainpage .slider').slick({
-            slidesToShow: 1,
-            dots: true,
-            prevArrow: '<button type="button" class="slider__prev"><svg><use xlink:href="img/icons/sprite.svg#chevron"></use></svg></button>',
-            nextArrow: '<button type="button" class="slider__next"><svg><use xlink:href="img/icons/sprite.svg#chevron"></use></svg></button>',
-        });
-
-        $('.promo_mainpage .slider .content').matchHeight();
-    }
-    
-    //Главная страница - слайдер партнеров
-    if ($('.partners').length) {
-        $('.partners .slider').slick({
-            slidesToShow: 4,
-            dots: false,
-            prevArrow: '<button type="button" class="slider__prev"><svg><use xlink:href="img/icons/sprite.svg#chevron"></use></svg></button>',
-            nextArrow: '<button type="button" class="slider__next"><svg><use xlink:href="img/icons/sprite.svg#chevron"></use></svg></button>',
-        });
-    }
-
     //Новость детальная - слайдер
     if ($('.blog-detail .slider').length) {
         $('.slider').slick({
