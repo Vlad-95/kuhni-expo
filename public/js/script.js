@@ -8381,44 +8381,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function all() {
-  //===========Мобильное меню
-  // let body = $('body')
-  // let windowWidth = window.innerWidth;
-  // let header = $('.header');
-  // let headerWrap = $('.header__wrap');
-  // let time = header.find('.nav__item.time');
-  // let mail = header.find('.nav__item.mail');
-  // let address = header.find('.nav__item.address');
-  // let phone = header.find('.nav__item.phone')
-  // let burger = $('.burger');
-  // let windowHeight = $(window).height();
-  // if (windowWidth <= 992) {
-  //     //создаем контейнер для менюшки
-  //     let mobileMenu = $(document.createElement('div'));
-  //     let nav = $(document.createElement('div'));
-  //     mobileMenu.addClass('mobile-menu');
-  //     nav.addClass('nav');
-  //     headerWrap.append(mobileMenu)
-  //     mobileMenu.append(nav)
-  //     //клонируем элементы хедера
-  //     let mobileTime = time.clone();
-  //     let mobileMail = mail.clone();
-  //     let mobileAddress = address.clone();
-  //     let mobilePhone = phone.clone();
-  //     nav.append(mobilePhone); 
-  //     nav.append(mobileMail);  
-  //     nav.append(mobileAddress);  
-  //     nav.append(mobileTime);   
-  // }
-  // function showMenu() {
-  //     let mobileMenu = $('.mobile-menu');
-  //     burger.toggleClass('active');
-  //     body.toggleClass('no-scroll');
-  //     mobileMenu.toggleClass('active');
-  //     console.log(1)
-  // }
-  // burger.click(showMenu);
-  //============Мобильное меню (КОНЕЦ)
   //клик по layer
   if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.layer').length) {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.layer').click(function () {
@@ -8618,20 +8580,62 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.find.js */ "./node_modules/core-js/modules/es.array.find.js");
+/* harmony import */ var core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_2__);
+
+
 
 
 function header() {
+  //===========Мобильное меню
+  var body = jquery__WEBPACK_IMPORTED_MODULE_2___default()('body');
+  var windowWidth = jquery__WEBPACK_IMPORTED_MODULE_2___default()(window).width();
+  var header = jquery__WEBPACK_IMPORTED_MODULE_2___default()('.header');
+  var mobileMenu = jquery__WEBPACK_IMPORTED_MODULE_2___default()('.mobile-menu');
+  var nav = header.find('.nav');
+  var contacts = header.find('.contacts');
+  var btns = header.find('.btns');
+  var searchForm = header.find('.search-form');
+  var burger = jquery__WEBPACK_IMPORTED_MODULE_2___default()('.burger');
+  var windowHeight = jquery__WEBPACK_IMPORTED_MODULE_2___default()(window).height(); //клонируем элементы хедера
+
+  if (windowWidth <= 992) {
+    nav.detach().appendTo(mobileMenu.find('.mobile-menu__wrap'));
+    contacts.detach().appendTo(mobileMenu.find('.mobile-menu__wrap'));
+  }
+
+  if (windowWidth <= 768) {
+    mobileMenu.find('.nav').after(searchForm.detach());
+  }
+
+  if (windowWidth <= 576) {
+    mobileMenu.find('.nav').after(btns.detach());
+  }
+
+  function showMenu() {
+    var mobileMenu = jquery__WEBPACK_IMPORTED_MODULE_2___default()('.mobile-menu');
+    burger.toggleClass('active');
+    body.toggleClass('no-scroll');
+    mobileMenu.toggleClass('active');
+    console.log(1);
+  }
+
+  burger.click(showMenu); //============Мобильное меню (КОНЕЦ)
   //выпадашка с брендами и каталогом
-  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.header .dropdown').length) {
-    var btns = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.header .btns__item');
-    btns.click(function () {
-      var btnId = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('data-id');
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.layer').fadeIn(100);
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dropdown').hide();
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()("#".concat(btnId)).fadeIn();
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('active');
+
+  if (jquery__WEBPACK_IMPORTED_MODULE_2___default()('.header .dropdown').length) {
+    var _btns = jquery__WEBPACK_IMPORTED_MODULE_2___default()('.header .btns__item');
+
+    _btns.click(function () {
+      var btnId = jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).attr('data-id');
+      jquery__WEBPACK_IMPORTED_MODULE_2___default()('.layer').fadeIn(100);
+      jquery__WEBPACK_IMPORTED_MODULE_2___default()('.dropdown').hide();
+      jquery__WEBPACK_IMPORTED_MODULE_2___default()("#".concat(btnId)).fadeIn();
+      jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).addClass('active');
     });
   }
 }
