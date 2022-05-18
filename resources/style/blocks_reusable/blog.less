@@ -98,6 +98,23 @@
 
 @media screen and (max-width: 768px) {
     .blog {
+
+        &__item {
+            width: calc((100% / 2) - 30px);
+        }
+        
+        &_mainpage {
+            .blog__item {
+                width: calc((100% / 1) - 30px);
+            }
+        }
+        
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .blog {
+
         &__item {
             width: calc((100% / 1) - 30px);
         }
