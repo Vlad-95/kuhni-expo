@@ -43,13 +43,100 @@
 
         .dots {
             position: absolute;
-            right: 13px;
-            top: 13px;
+            right: 3px;
+            top: 9px;
             cursor: pointer;
+            width: 25px;
+            height: 25px;
+            border-radius: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s;
+            background-color: inherit;
+
+            &:hover {
+                background-color: @blue;
+
+                svg {
+                    fill: @white;
+                }
+            }
 
             svg {
                 width: 5px;
                 height: 18px;
+                fill: @text;
+                transition: 0.3s;
+            }
+        }
+
+        .hidden {
+            position: absolute;
+            left: 100%;
+            top: 0;
+            width: 250px;
+            background-color: @white;
+            padding: 20px;
+            z-index: 2;
+            box-shadow: 0 0 20px 0 fade(@text, 20%);
+            border-radius: 6px;
+            display: none;
+
+            &.top_left {
+                left: auto;
+                right: 100%;
+
+                &:before {
+                    left: auto;
+                    right: -16px;
+                    border: 8px solid transparent; 
+                    border-left: 8px solid @white;
+                }
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: -16px;
+                top: 14px;
+                border: 8px solid transparent; 
+                border-right: 8px solid @white;
+            }
+
+            .close {
+                position: absolute;
+                right: 10px;
+                top: 10px;
+                cursor: pointer;
+
+                svg {
+                    fill: @text;
+                    width: 9px;
+                    height: 8px;
+                }
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    position: relative;
+                    padding-left: 20px;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 5px;
+                        width: 6px;
+                        height: 6px;
+                        border-radius: 100px;
+                        background-color: @blue;
+                    }
+                }
             }
         }
     }
@@ -104,6 +191,10 @@
     .main-cat {
         &__item {
             width: calc((100% / 4) - 14px);
+
+            .dots {
+                display: none;
+            }
         }
 
         .advantages {

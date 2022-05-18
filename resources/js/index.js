@@ -2,6 +2,7 @@ import header from './modules/header';
 import catalogList from './modules/catalog-list';
 import promo from './modules/promo';
 import partners from './modules/partners';
+import mainCat from './modules/main-cat';
 import all from './modules/all';
 import filter from './modules/filter';
 import catalogDetail from './modules/catalog-detail';
@@ -12,6 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
     catalogList();
     promo();
     partners();
+    mainCat();
     all();
     filter();
     catalogDetail();
