@@ -105,3 +105,32 @@
     }
 }
   
+@media screen and (max-width: 1200px) {
+    .wysiwyg {
+        p,
+        ul,
+        ol, 
+        table {
+            font-size: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .wysiwyg {
+        p,
+        ul,
+        ol, 
+        table {
+            font-size: 12px;
+        }
+
+        ul {
+            li {
+                &:before {
+                    top: 7px;
+                }
+            }
+        }
+    }
+}
