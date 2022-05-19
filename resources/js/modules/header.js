@@ -34,7 +34,6 @@ function header() {
         burger.toggleClass('active');
         body.toggleClass('no-scroll');
         mobileMenu.toggleClass('active');
-        console.log(1)
     }
 
     burger.click(showMenu);
@@ -48,11 +47,24 @@ function header() {
         btns.click(function() {
             let btnId = $(this).attr('data-id');
             
-            $('.layer').fadeIn(100)
+            $('.layer').fadeIn(100);
             $('.dropdown').hide();
             $(`#${btnId}`).fadeIn();
-            $(this).addClass('active')
-        })
+            $(this).addClass('active');
+
+            if ($(window).width() <= 576) {
+                showMenu();
+                body.toggleClass('no-scroll');
+            }
+        });
+
+        if ($(window).width() <= 576) {
+            $('.dropdown .close').click(function() {
+                $('.layer').hide();
+                $('.dropdown').hide();
+                body.toggleClass('no-scroll');
+            })
+        }
     }
 }
 

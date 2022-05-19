@@ -8650,7 +8650,6 @@ function header() {
     burger.toggleClass('active');
     body.toggleClass('no-scroll');
     mobileMenu.toggleClass('active');
-    console.log(1);
   }
 
   burger.click(showMenu); //============Мобильное меню (КОНЕЦ)
@@ -8665,7 +8664,20 @@ function header() {
       jquery__WEBPACK_IMPORTED_MODULE_2___default()('.dropdown').hide();
       jquery__WEBPACK_IMPORTED_MODULE_2___default()("#".concat(btnId)).fadeIn();
       jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).addClass('active');
+
+      if (jquery__WEBPACK_IMPORTED_MODULE_2___default()(window).width() <= 576) {
+        showMenu();
+        body.toggleClass('no-scroll');
+      }
     });
+
+    if (jquery__WEBPACK_IMPORTED_MODULE_2___default()(window).width() <= 576) {
+      jquery__WEBPACK_IMPORTED_MODULE_2___default()('.dropdown .close').click(function () {
+        jquery__WEBPACK_IMPORTED_MODULE_2___default()('.layer').hide();
+        jquery__WEBPACK_IMPORTED_MODULE_2___default()('.dropdown').hide();
+        body.toggleClass('no-scroll');
+      });
+    }
   }
 }
 
