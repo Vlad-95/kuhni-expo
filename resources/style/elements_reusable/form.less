@@ -313,3 +313,68 @@
         padding: 10px 17px;
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .form {
+        &__label {
+            font-size: 12px;
+        }
+
+        &__input {
+            font-size: 12px;
+        }
+
+        &__textarea {
+            font-size: 12px;
+        }
+
+        &__checkbox {
+            &-text {
+                font-size: 12px;
+            }
+        }
+
+        &__radio {
+            &-text {
+                font-size: 12px;
+            }
+        }
+
+        .forgot-psw {
+            font-size: 12px;
+        }
+
+        &__agree {
+            &-text {
+                font-size: 12px;
+            }
+        }
+
+        &__submit {
+            font-size: 12px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .form {
+        &__row {
+            &_half {
+                .form__item {
+                    width: calc(100% - 30px);
+                }
+            }
+    
+            &_firstless {
+                .form__item {
+                    &:nth-child(1) {
+                        width: calc(100% - 30px);
+                    }
+                    &:nth-child(2) {
+                        width: calc(100% - 30px);
+                    }
+                }
+            }
+        }
+    }
+}

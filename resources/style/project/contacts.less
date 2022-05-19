@@ -52,3 +52,73 @@
         }
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .contacts {
+        &__list {
+            .head {
+                .name {
+                    font-size: 20px;
+                }
+
+                .type {
+                    font-size: 12px;
+                }
+            }
+
+            .content {
+                p,
+                a {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .contacts {
+        &__list {
+            .head {
+                width: 30%;
+            }
+
+            .content {
+                width: 70%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contacts {
+        &__list {
+            .head {
+                width: 40%;
+            }
+
+            .content {
+                width: 60%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .contacts {
+        &__list {
+            .item {
+                display: block;
+            }
+
+            .head {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .content {
+                width: 100%;
+            }
+        }
+    }
+}
