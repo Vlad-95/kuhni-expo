@@ -4,6 +4,7 @@ import promo from './modules/promo';
 import partners from './modules/partners';
 import mainCat from './modules/main-cat';
 import blogDetail from './modules/blog-detail';
+import cabinet from './modules/cabinet';
 import all from './modules/all';
 import filter from './modules/filter';
 import catalogDetail from './modules/catalog-detail';
@@ -16,6 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
     partners();
     mainCat();
     blogDetail();
+    cabinet();
     all();
     filter();
     catalogDetail();

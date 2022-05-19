@@ -259,54 +259,63 @@
     .history {
         padding-bottom: 89px;
         &__table {
-            display: table;
             width: 100%;
+            min-width: 962px;
 
             .head {
-                display: table-row;
+                display: flex;
                 width: 100%;
-                background-color: fade(@blue, 20%);                
+                background-color: fade(@blue, 20%);            
+                padding: 16px 0 18px;    
 
                 div {
-                    display: table-cell;
                     font-size: 16px;
                     font-weight: 700;
-                    padding: 16px 25px 18px;
+                    padding: 0 25px;
                 }
             }
 
             .date {
-                width: 198px;
+                min-width: 198px;
             }
 
             .number {
-                width: 200px;
+                min-width: 200px;
             }
 
             .qty {
-                width: 201px;
+                min-width: 201px;
             }
 
             .summ {
-                width: 200px;
+                min-width: 200px;
             }
 
-            .content {
-                display: table-row;
+            .status {
+                min-width: 200px;
             }
         }
 
         &__item {
-            display: table-row;
+            display: flex;
+            flex-wrap: wrap;
             position: relative;
             width: 100%;
+            min-width: 962px;
+            padding: 16px 0 19px;
+            border-bottom: 1px solid #eaeaea;
+            transition: 0.3s;
+
+            &.open {
+                padding-bottom: 30px;
+                border-color: transparent;
+            }
 
             &>div {
                 &:not(.toggle):not(.more) {
-                    display: table-cell;
-                    padding: 16px 24px 19px;
+                    padding: 0 24px;
                     font-size: 15px;
-                    border-bottom: 1px solid #eaeaea;
+                    
                 }
             }
 
@@ -331,7 +340,7 @@
 
             .toggle {
                 position: absolute;
-                right: 0;
+                right: 4px;
                 top: 15px;
                 background-color: @blue;
                 color: @white;
@@ -367,13 +376,19 @@
                     background-color: @white;
                     transform: rotate(90deg);
                 }
+
+                &.active {
+                    background-color: @orange;
+                    transform: rotate(45deg);
+                }
             }
 
             .more {
-                position: absolute;
-                left: 0;
-                top: 100%;
-                width: 100%;
+                position: relative;
+                left: 9px;
+                top: 20px;
+                min-width: 944px;
+                width: calc(100% - 18px);
                 box-shadow: 0px 3px 15px 0px rgba(20, 65, 72, 0.25);
                 background-color: @white;
                 z-index: 2;
@@ -420,6 +435,7 @@
 
                 .price {
                     margin-right: 114px;
+                    min-width: 85px;
                     .curr {
                         font-weight: 700;
                         font-size: 15px;
@@ -445,9 +461,81 @@
 
                 .qty {
                     font-weight: 500;
+                    min-width: auto;
                 }
             }
         }
     }
 }
   
+@media screen and (max-width: 1200px) {
+    .cabinet {
+        .history { 
+            &__table {
+                .head {
+                    div {
+                        font-size: 12px;
+                    }
+                }
+
+                .date {
+                    min-width: 190px;
+                }
+    
+                .number {
+                    min-width: 190px;
+                }
+    
+                .qty {
+                    min-width: 190px;
+                }
+    
+                .summ {
+                    min-width: 190px;
+                }
+    
+                .status {
+                    min-width: 190px;
+                }
+            }
+            &__item {
+    
+                &>div {
+                    &:not(.toggle):not(.more) {                       
+                        font-size: 12px;
+                    }
+                }
+
+                .more {
+                    .name {
+                        font-size: 12px;
+                    }
+
+                    .sale { 
+                        font-size: 12px;
+                    }
+
+                    .price {
+                        .curr {
+                            font-size: 12px;
+                        }
+                    }
+
+                    .qty {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .cabinet {
+        .history {
+            &__table {
+                
+            }
+        }
+    }
+}

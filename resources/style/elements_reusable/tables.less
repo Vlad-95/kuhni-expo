@@ -6,6 +6,25 @@ table {
     }
 }
 
+.scroll-table {
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: @blue @white;
+    
+    &::-webkit-scrollbar {
+        height: 3px;
+        width: 3px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: @white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: @blue;
+    }
+}
+
 .blue-table {
     tr {
         &:nth-child(even) {

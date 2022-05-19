@@ -57,3 +57,53 @@
         }
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .tabs {
+        &__item {
+            font-size: 12px;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .tabs {
+        &__item {
+            padding: 11px 14px 13px 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tabs {
+        &__item {
+            padding: 9px 14px 11px 40px;
+
+            .icon {
+                width: 16px;
+                height: 16px;
+            }
+
+            &.profile {
+                svg {
+                    width: 12px;
+                    height: 14px;
+                }
+            }
+    
+            &.history {
+                svg {
+                    width: 16px;
+                    height: 15px;
+                }
+            }
+    
+            &.price {
+                svg {
+                    width: 13px;
+                    height: 16px;
+                }
+            }
+        }
+    }
+}
