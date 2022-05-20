@@ -136,6 +136,55 @@
         &__item {
             width: calc((100% / 4) - 10px);
         }
+
+        &_catalogpage {
+            .catalog__item {
+                width: calc((100% / 3) - 10px);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .catalog {
+        &__item {
+            .name {
+                font-size: 12px;
+            }
+
+            .prices {
+                .curr {
+                    font-size: 15px;
+                }
+
+                .old {
+                    font-size: 12px;
+                }
+            }
+
+            .btns {
+                &__buy {
+                    padding: 5px 15px;
+
+                    svg {
+                        height: 17px;
+                        width: 16px;
+                    }
+                }
+
+                &__compare {
+                    .text {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+
+        &_catalogpage {
+            .catalog__item {
+                width: calc((100% / 4) - 10px);
+            }
+        }
     }
 }
 
@@ -144,6 +193,12 @@
         &__item {
             width: calc((100% / 3) - 10px);
         }
+
+        &_catalogpage {
+            .catalog__item {
+                width: calc((100% / 3) - 10px);
+            }
+        }
     }
 }
 
@@ -151,6 +206,12 @@
     .catalog {
         &__item {
             width: calc((100% / 2) - 10px);
+        }
+
+        &_catalogpage {
+            .catalog__item {
+                width: calc((100% / 2) - 10px);
+            }
         }
     }
 }
@@ -207,8 +268,23 @@
                     }
                 }
             }
+        }
 
+        &_catalogpage {
+            .catalog__item {
+                width: calc((100% / 1) - 10px);
+                margin: 0 5px 10px;
 
+                .prices {
+                    margin-right: 0;
+                    width: calc(50% - 20px);
+                }
+
+                .btns {
+                    margin-left: 0;
+                    width: calc(50% - 20px);
+                }
+            }
         }
     }
 }
