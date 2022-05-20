@@ -91,7 +91,7 @@
                     </a>
                 </div>
 
-<div class="burger">
+                <div class="burger">
                     <span></span><span></span><span></span>
                 </div>
             </div>
@@ -240,15 +240,17 @@
                             <div class="filter__block brand">
                                 <div class="filter__block-head">
                                     <div class="label">Выбрать бренд:</div>
+                                    <!-- Эта строчка появляется, если бренд выбран -->
                                     <!-- <div class="name">Locherber Milano</div> -->
-                                    <div class="js-filter-toggle toggle">
+                                    <!-- ===== -->
+                                    <div class="js-block-filter-toggle toggle active">
                                         <svg>
                                             <use xlink:href="img/icons/sprite.svg#arrow"></use>
                                         </svg>    
                                     </div>
                                 </div>
 
-                                <div class="filter__block-content js-filter-content">
+                                <div class="filter__block-content js-block-filter-content">
                                     <ul class="brands">
                                         <li class="brands__item">
                                             <a href="javascript:;">Locherber Milano</a>
@@ -266,13 +268,13 @@
                             <div class="filter__block cats">
                                 <div class="filter__block-head">
                                     <div class="name">Категории</div>
-                                    <div class="js-filter-toggle toggle">
+                                    <div class="js-block-filter-toggle toggle active">
                                         <svg>
                                             <use xlink:href="img/icons/sprite.svg#arrow"></use>
                                         </svg>    
                                     </div>
                                 </div>
-                                <div class="filter__block-content js-filter-content">
+                                <div class="filter__block-content js-block-filter-content">
                                     <ul class="category">
                                         <li class="category__item">
                                             <a href="javascript:;">Духовые шкафы</a>
@@ -324,20 +326,20 @@
                             <form class="filter__block params">
                                 <div class="filter__block-head">
                                     <div class="name">Параметры</div>
-                                    <div class="js-filter-toggle toggle">
+                                    <div class="js-block-filter-toggle toggle active">
                                         <svg>
                                             <use xlink:href="img/icons/sprite.svg#arrow"></use>
                                         </svg>    
                                     </div>
                                 </div>
-                                <div class="filter__block-content js-filter-content">
+                                <div class="filter__block-content js-block-filter-content">
                                     <div class="parameters">
                                         <div class="parameters__item">
-                                            <div class="parameters__item-head js-filter-toggle">
+                                            <div class="parameters__item-head">
                                                 <div class="name">
                                                     Цена, &#8381;
                                                 </div>
-                                                <div class="toggle">
+                                                <div class="toggle js-filter-toggle">
                                                     <svg>
                                                         <use xlink:href="img/icons/sprite.svg#chevron-down"></use>
                                                     </svg>
@@ -360,11 +362,11 @@
                                             </div>
                                         </div>
                                         <div class="parameters__item">
-                                            <div class="parameters__item-head js-filter-toggle">
+                                            <div class="parameters__item-head">
                                                 <div class="name">
                                                     Управление
                                                 </div>
-                                                <div class="toggle">
+                                                <div class="toggle js-filter-toggle">
                                                     <svg>
                                                         <use xlink:href="img/icons/sprite.svg#chevron-down"></use>
                                                     </svg>
@@ -386,11 +388,11 @@
                                             </div>
                                         </div>
                                         <div class="parameters__item">
-                                            <div class="parameters__item-head js-filter-toggle">
+                                            <div class="parameters__item-head">
                                                 <div class="name">
                                                     Конвекция <span class="dot"></span>
                                                 </div>
-                                                <div class="toggle">
+                                                <div class="toggle js-filter-toggle">
                                                     <svg>
                                                         <use xlink:href="img/icons/sprite.svg#chevron-down"></use>
                                                     </svg>

@@ -80,6 +80,11 @@
                 bottom: 0;
                 margin: auto;
                 cursor: pointer;
+                transition: 0.3s;
+
+                &.active {
+                    transform: rotate(180deg);
+                }
 
                 svg {
                     width: 12px;
@@ -173,6 +178,11 @@
                 justify-content: center;
                 align-items: center;
                 cursor: pointer;
+                transition: 0.3s;
+
+                &.active {
+                    transform: rotate(180deg);
+                }
 
                 svg {
                     width: 12px;
@@ -231,9 +241,12 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    transform: scale(-1);
                     transition: 0.3s;
                     cursor: pointer;
+
+                    &.active {
+                        transform: rotate(180deg);
+                    }
 
                     svg {
                         fill: @text;
@@ -371,7 +384,7 @@
                 top: 7px;
                 width: 14px;
                 height: 9px;
-                background-image: url("../img/icons/check.svg");
+                background-image: url("/img/icons/blue-check.svg");
                 opacity: 0;
                 transition: 0.3s;
             }
@@ -382,6 +395,14 @@
 @media screen and (max-width: 1200px) {
     .filter {
         &__block {
+            &.brand {
+                .filter__block-head {
+                    .name {
+                        font-size: 12px;
+                    }
+                }
+            }
+
             &-head {
                 .label {
                     font-size: 12px;
@@ -453,6 +474,26 @@
         &__checkbox {
             p {
                 font-size: 12px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .filter {
+        &__block {
+            &-head {
+                .toggle {
+                    transform: rotate(180deg);
+
+                    &.active {
+                        transform: rotate(0);
+                    }
+                }
+            }
+
+            &-content {
+                display: none;
             }
         }
     }

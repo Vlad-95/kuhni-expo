@@ -1,5 +1,6 @@
 .sort {
     display: flex;
+    flex-wrap: wrap;
 
     &__item {
         display: flex;
@@ -11,6 +12,16 @@
             margin: 0 12px 0 0;
             font-size: 14px;
             font-weight: 400;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sort {
+        flex-direction: column;
+
+        &__item {
+            margin-bottom: 15px;
         }
     }
 }
