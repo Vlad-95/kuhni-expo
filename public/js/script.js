@@ -8496,8 +8496,38 @@ var catalogDetail = function catalogDetail() {
       slidesToShow: 5,
       prevArrow: '<button type="button" class="slider-nav__prev"><svg><use xlink:href="img/icons/sprite.svg#chevron"></use></svg></button>',
       nextArrow: '<button type="button" class="slider-nav__next"><svg><use xlink:href="img/icons/sprite.svg#chevron"></use></svg></button>',
-      focusOnSelect: true
-    }); //fancybox
+      focusOnSelect: true,
+      responsive: [{
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4
+        }
+      }, {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3
+        }
+      }, {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 5
+        }
+      }, {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 4
+        }
+      }, {
+        breakpoint: 460,
+        settings: {
+          slidesToShow: 3
+        }
+      }]
+    });
+  }
+
+  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.catalog-detail .prices .bonus').length) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.catalog-detail .prices').addClass('prices_bonus');
   }
 };
 

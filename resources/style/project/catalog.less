@@ -212,7 +212,6 @@
 
             .curr {
                 font-weight: 700;
-                font-size: 20px;
                 color: @blue;
                 font-size: 40px;
             }
@@ -444,6 +443,188 @@
                     line-height: 1.3;
                     color: @white;
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1230px) {
+    .catalog-detail {
+        .gallery {
+            .slider-nav {
+                &__prev {
+                    left: -4px;
+                }
+                &__next {
+                    right: -4px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .catalog-detail {
+        .gallery {
+            width: 400px;
+
+            .label {
+                font-size: 12px;
+                padding: 8px 15px 8px 35px;
+
+                svg {
+                    height: 14px;
+                    width: 14px;
+                    left: 11px;
+                    top: 8px;
+                }
+            }
+
+            .slider {
+                &__item {
+                    .image {
+                        height: 400px;
+                    }
+                }
+            }
+
+            .slider-nav {
+                &__item {
+                    .image {
+                        height: 94px;
+                    }
+                }
+            }
+        }
+
+        .info { 
+            padding-left: 40px;
+
+            .prices {
+                .curr {
+                    font-size: 30px;
+                }
+
+                .old {
+                    font-size: 15px;
+                }
+
+                .bonus {
+                    span {
+                        &:not([class^=]) {
+                            font-size: 25px;
+                        }
+                    }
+                }
+            }
+
+            .btns {
+                margin-bottom: 30px;
+
+                &__buy {
+                    padding: 12px 15px 13px 45px;
+
+                    svg {
+                        top: 9px;
+                        left: 14px;
+                    }
+
+                    .text {
+                        font-size: 12px;
+                    }
+                }
+
+                &__compare {
+                    padding: 12px 15px 13px 28px;
+
+                    svg {
+                        top: 8px;
+                    }
+
+                    .text {
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            .list {
+                font-size: 12px;
+            }
+        }
+
+        &__char {
+            table {
+                font-size: 12px;
+            }
+        }
+
+        &__info-list {
+            .item {
+                .content {
+                    .name {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .catalog-detail {
+        .gallery {
+            width: 320px;
+
+            .slider {
+                &__item {
+                    .image {
+                        height: 320px;
+                    }
+                }
+            }
+        }
+
+        .info { 
+            .prices {
+                &_bonus {
+                    position: relative;
+                    padding-bottom: 70px;
+                }
+                .bonus {
+                    position: absolute;
+                    left: 0;
+                    bottom: 19px;
+                }
+            }
+        }
+
+        &__char {
+            .col {
+                width: calc(100% - 30px);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .catalog-detail {
+        &__info {
+            flex-wrap: wrap;
+        }
+
+        .gallery {
+            width: 100%;
+        }
+
+        .info {
+            width: 100%;
+            padding-left: 0;
+            margin-top: 40px;
+        }
+
+        &__info-list {
+            .item {
+                width: calc(100% - 30px);
             }
         }
     }
