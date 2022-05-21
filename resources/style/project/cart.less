@@ -280,3 +280,52 @@
     }
     
 }
+
+@media screen and (max-width: 1200px) {
+    .cart {
+        &__table {
+            min-width: 963px;
+            .name {
+                width: 375px;
+
+                a {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        &__footer {
+            .price {
+                .result {
+                    font-size: 15px;
+                }
+
+                .bonus {
+                    font-size: 12px;
+                }
+            }
+
+            .btns {
+                .credit {
+                    margin-right: 50px;
+
+                    &__text {
+                        font-size: 12px;
+                    }
+                }
+
+                .order {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cart {
+        &__footer {
+            display: block;
+        }
+    }
+}
