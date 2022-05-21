@@ -89,3 +89,47 @@
         }
     }
 }
+
+@media screen and (max-width: 1230px) {
+    .promo-list {
+
+        &__wrap {
+            margin: 0 -15px;
+        }
+
+        &__item {
+            width: calc(50% - 30px);
+            margin: 0 15px 39px;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .promo-list {
+        &__item {
+            .image {
+                height: 180px;
+            }
+
+            .name {
+                font-size: 15px;
+            }
+
+            .text {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .promo-list {
+        &__item {
+            width: calc(100% - 30px);
+
+            &:nth-last-of-type(2) {
+                border-bottom: 1px solid #e9eae9;
+            }
+        }
+    }
+}
