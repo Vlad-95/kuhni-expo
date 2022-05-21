@@ -241,8 +241,8 @@
                                 <h3>Регистрация</h3>
 
                                 <div class="user-type">
-                                    <a href="javascript:;">Физическое лицо</a>
-                                    <a href="javascript:;" class="active">Юридическое лицо</a>
+                                    <a href="javascript:;" data-user-type="fl">Физическое лицо</a>
+                                    <a href="javascript:;" data-user-type="ul" class="active">Юридическое лицо</a>
                                 </div>
                             </div>
                             
@@ -251,12 +251,17 @@
                                 <input type="text" name="reg_email" class="form__input">
                             </label>
 
-                            <label class="form__item">
+                            <label class="form__item" data-user-type="fl">
+                                <p class="form__label">Имя *</p>
+                                <input type="text" name="reg_company" class="form__input">
+                            </label>
+
+                            <label class="form__item" data-user-type="ul">
                                 <p class="form__label">Название компании *</p>
                                 <input type="text" name="reg_company" class="form__input">
                             </label>
     
-                            <label class="form__item">
+                            <label class="form__item" data-user-type="ul">
                                 <p class="form__label">ФИО контактного лица *</p>
                                 <input type="text" name="reg_email" class="form__input">
                             </label>

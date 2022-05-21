@@ -8901,6 +8901,54 @@ function header() {
 
 /***/ }),
 
+/***/ "./resources/js/modules/login.js":
+/*!***************************************!*\
+  !*** ./resources/js/modules/login.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.find.js */ "./node_modules/core-js/modules/es.array.find.js");
+/* harmony import */ var core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+function login() {
+  if (jquery__WEBPACK_IMPORTED_MODULE_2___default()('.login').length) {
+    //функция показа полей
+    var onUserType = function onUserType() {
+      var activeUserType = jquery__WEBPACK_IMPORTED_MODULE_2___default()('.user-type a.active').attr('data-user-type');
+      var hiddenUserTypeInput = jquery__WEBPACK_IMPORTED_MODULE_2___default()('input[name="reg_type_user"]'); //записываем значение типа пользователя в скрытый инпут
+
+      hiddenUserTypeInput.val(activeUserType); //скрываем ненужные поля
+
+      jquery__WEBPACK_IMPORTED_MODULE_2___default()('.form__item[data-user-type]').hide().find('input').prop('disabled', true);
+      jquery__WEBPACK_IMPORTED_MODULE_2___default()(".form__item[data-user-type=\"".concat(activeUserType, "\"]")).show().find('input').prop('disabled', false);
+    }; //Вызываем при загрузке
+
+
+    onUserType(); //клик по табам
+
+    jquery__WEBPACK_IMPORTED_MODULE_2___default()('.user-type a').click(function () {
+      jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).addClass('active').siblings().removeClass('active');
+      onUserType();
+    });
+  }
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (login);
+
+/***/ }),
+
 /***/ "./resources/js/modules/main-cat.js":
 /*!******************************************!*\
   !*** ./resources/js/modules/main-cat.js ***!
@@ -36848,10 +36896,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_main_cat__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/main-cat */ "./resources/js/modules/main-cat.js");
 /* harmony import */ var _modules_blog_detail__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/blog-detail */ "./resources/js/modules/blog-detail.js");
 /* harmony import */ var _modules_cabinet__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/cabinet */ "./resources/js/modules/cabinet.js");
-/* harmony import */ var _modules_all__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/all */ "./resources/js/modules/all.js");
-/* harmony import */ var _modules_filter__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/filter */ "./resources/js/modules/filter.js");
-/* harmony import */ var _modules_catalog_detail__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/catalog-detail */ "./resources/js/modules/catalog-detail.js");
-/* harmony import */ var _modules_contacts__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/contacts */ "./resources/js/modules/contacts.js");
+/* harmony import */ var _modules_login__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/login */ "./resources/js/modules/login.js");
+/* harmony import */ var _modules_all__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/all */ "./resources/js/modules/all.js");
+/* harmony import */ var _modules_filter__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/filter */ "./resources/js/modules/filter.js");
+/* harmony import */ var _modules_catalog_detail__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/catalog-detail */ "./resources/js/modules/catalog-detail.js");
+/* harmony import */ var _modules_contacts__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/contacts */ "./resources/js/modules/contacts.js");
+
 
 
 
@@ -36871,10 +36921,11 @@ window.addEventListener('DOMContentLoaded', function () {
   (0,_modules_main_cat__WEBPACK_IMPORTED_MODULE_4__["default"])();
   (0,_modules_blog_detail__WEBPACK_IMPORTED_MODULE_5__["default"])();
   (0,_modules_cabinet__WEBPACK_IMPORTED_MODULE_6__["default"])();
-  (0,_modules_all__WEBPACK_IMPORTED_MODULE_7__["default"])();
-  (0,_modules_filter__WEBPACK_IMPORTED_MODULE_8__["default"])();
-  (0,_modules_catalog_detail__WEBPACK_IMPORTED_MODULE_9__["default"])();
-  (0,_modules_contacts__WEBPACK_IMPORTED_MODULE_10__["default"])();
+  (0,_modules_login__WEBPACK_IMPORTED_MODULE_7__["default"])();
+  (0,_modules_all__WEBPACK_IMPORTED_MODULE_8__["default"])();
+  (0,_modules_filter__WEBPACK_IMPORTED_MODULE_9__["default"])();
+  (0,_modules_catalog_detail__WEBPACK_IMPORTED_MODULE_10__["default"])();
+  (0,_modules_contacts__WEBPACK_IMPORTED_MODULE_11__["default"])();
 });
 })();
 

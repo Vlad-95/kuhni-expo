@@ -5,6 +5,7 @@ import partners from './modules/partners';
 import mainCat from './modules/main-cat';
 import blogDetail from './modules/blog-detail';
 import cabinet from './modules/cabinet';
+import login from './modules/login';
 import all from './modules/all';
 import filter from './modules/filter';
 import catalogDetail from './modules/catalog-detail';
@@ -18,6 +19,7 @@ window.addEventListener('DOMContentLoaded', () => {
     mainCat();
     blogDetail();
     cabinet();
+    login();
     all();
     filter();
     catalogDetail();

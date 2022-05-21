@@ -165,3 +165,83 @@
         }
     }
 }
+
+@media screen and (max-width: 1230px) {
+    .login {
+        &__wrap {
+            margin: 0 -15px;
+        }
+
+        &__col {
+            width: calc(50% - 30px);
+            margin: 0 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .login {
+        &__form {    
+            &-title {
+                h3 {
+                    font-size: 12px;
+                }
+
+                .user-type {
+                    right: 0;
+
+                    a {
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            &-text {
+                p {
+                    font-size: 12px;
+                }
+
+                .btn {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .login {
+        &__wrap {
+            margin: 0 -15px;
+
+        }
+
+        &__col {
+            width: calc(100% - 30px);
+            margin: 0 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .login {
+        &__form {
+            padding: 33px 25px 20px;
+            &-title {
+                display: block;
+
+                .user-type {
+                    position: static;
+                    margin-top: 10px;
+
+                    a {
+                        margin-left: 0;
+                        margin-right: 5px;
+                        padding: 6px 12px;
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
