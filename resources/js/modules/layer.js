@@ -1,8 +1,6 @@
 import $ from "jquery";
-import slick from "slick-carousel";
-import matchHeight from "jquery-match-height";
 
-function all() {
+function layer() {
     
     //клик по layer
     if ($('.layer').length) {
@@ -12,9 +10,7 @@ function all() {
             $('.dropdown').hide();
             $('.btns__item').removeClass('active');
         })
-    }
-
-    
+    }    
 }
 
-export default all;
+export default layer;

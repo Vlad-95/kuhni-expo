@@ -6,7 +6,8 @@ import mainCat from './modules/main-cat';
 import blogDetail from './modules/blog-detail';
 import cabinet from './modules/cabinet';
 import login from './modules/login';
-import all from './modules/all';
+import layer from './modules/layer';
+import popup from './modules/popup';
 import filter from './modules/filter';
 import catalogDetail from './modules/catalog-detail';
 import contacts from './modules/contacts';
@@ -20,8 +21,10 @@ window.addEventListener('DOMContentLoaded', () => {
     blogDetail();
     cabinet();
     login();
-    all();
     filter();
     catalogDetail();
     contacts();
+
+    layer();
+    popup();
 });
