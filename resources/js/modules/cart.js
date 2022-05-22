@@ -11,6 +11,10 @@ function cart() {
                 $('.btns .order').removeClass('js-open-popup btn-credit').removeAttr('data-type').text('Оформить заказ');
             }
         })
+
+        //изменение количества товара
+        
+
     }
 }
 

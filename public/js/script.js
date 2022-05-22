@@ -8451,7 +8451,7 @@ function cart() {
       } else {
         jquery__WEBPACK_IMPORTED_MODULE_0___default()('.btns .order').removeClass('js-open-popup btn-credit').removeAttr('data-type').text('Оформить заказ');
       }
-    });
+    }); //изменение количества товара
   }
 }
 
