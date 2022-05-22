@@ -8894,6 +8894,13 @@ function header() {
         body.toggleClass('no-scroll');
       });
     }
+  } //выпадашка при клике на кабинет
+
+
+  if (jquery__WEBPACK_IMPORTED_MODULE_2___default()('.icons__item.cabinet').length) {
+    jquery__WEBPACK_IMPORTED_MODULE_2___default()('.icons__item.cabinet').click(function () {
+      jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).toggleClass('active').find('.content').fadeToggle();
+    });
   }
 }
 

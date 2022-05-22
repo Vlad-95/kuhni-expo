@@ -201,6 +201,7 @@
             position: relative;
             padding: 0 10px;
             margin: 0 9px;
+            border: none;
 
             .label {
                 position: absolute;
@@ -239,11 +240,46 @@
                 }
             }
 
-            &.cabinet {
+            &.login {
                 svg {
                     width: 18px;
                     height: 20px;
                     fill: @text;
+                }
+            }
+
+            &.cabinet {
+                position: relative;
+
+                .icon {
+                    cursor: pointer;
+                }
+
+                .label {
+                    padding: 1px 2px 2px;
+                    transition: 0.3s;
+
+                    svg {
+                        width: 9px;
+                        height: 6px;
+                        fill: @white;
+                    }
+                }
+
+                svg {
+                    width: 18px;
+                    height: 20px;
+                    fill: @text;
+                }
+
+                .text {
+                    cursor: pointer;
+                }
+
+                &.active {
+                    .label {
+                        transform: rotate(180deg);
+                    }
                 }
             }
 
@@ -252,6 +288,112 @@
                     width: 19px;
                     height: 20px;
                     fill: @text;
+                }
+            }
+
+            .content {
+                display: none;
+                width: 180px;
+                text-align: left;
+                position: absolute;
+                left: -3px;
+                border-radius: 10px;
+                top: calc(100% + 9px);
+                z-index: 2;
+                background-color: @white;
+                box-shadow: 0px 3px 15px 0px rgba(20, 65, 72, 0.25);
+                  
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 24px;
+                    top: -15px;
+                    border: 8px solid transparent; 
+                    border-bottom: 8px solid @white;
+                }
+
+                .name {
+                    font-weight: 700;
+                    font-size: 14px;
+                    border-bottom: 1px solid #eaeaea;
+                    padding: 20px 20px 16px;
+                }
+                .bonus {
+                    padding: 13px 20px;
+
+                    p {
+                        font-weight: 400;
+                        font-size: 12px;
+                        margin: 0;
+                        padding-left: 20px;
+                        position: relative;
+
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            left: 2px;
+                            top: 10px;
+                            width: 5px;
+                            height: 5px;
+                            background-color: @orange;
+                            border-radius: 100px;
+                        }
+
+                        span {
+                            font-size: 20px;
+                            font-weight: 700;
+                            color: @orange;
+                            display: block;
+                        }
+                    }
+                }
+
+                .list {
+                    margin: 0;
+                    padding: 4px 20px;
+                    list-style: none;
+
+                    li {
+                        padding-left: 20px;
+                        position: relative;
+
+                        &:not(:last-of-type) {
+                            margin-bottom: 13px;
+                        }
+
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            left: 2px;
+                            top: 5px;
+                            width: 5px;
+                            height: 5px;
+                            background-color: @blue;
+                            border-radius: 100px;
+                        }
+                    }
+                }
+
+                .link {
+                    display: block;
+                    padding: 15px 20px;
+
+                    a {
+                        position: relative;
+                        display: block;
+                        padding: 5px 20px;
+
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            left: 2px;
+                            top: 9px;
+                            width: 5px;
+                            height: 5px;
+                            background-color: @blue;
+                            border-radius: 100px;
+                        }
+                    }
                 }
             }
         }
@@ -600,6 +742,30 @@
                 .text {
                     font-size: 12px;
                 }
+
+                .content {
+                    left: auto;
+                    right: 0;
+
+                    &:before {
+                        left: auto;
+                        right: 24px;
+                    }
+
+                    .name {
+                        font-size: 12px;
+                    }
+                    
+                    .list {
+                        font-size: 12px;
+                    }
+
+                    .link {
+                        a {
+                            font-size: 12px;
+                        }
+                    }
+                }
             }
         }
     }
@@ -652,6 +818,10 @@
 
                 .text {
                     display: none;
+                }
+
+                .content {
+                    right: -12px;
                 }
             }
         }

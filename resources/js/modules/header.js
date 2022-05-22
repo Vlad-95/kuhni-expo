@@ -66,6 +66,13 @@ function header() {
             })
         }
     }
+
+    //выпадашка при клике на кабинет
+    if ($('.icons__item.cabinet').length) {
+        $('.icons__item.cabinet').click(function() {
+            $(this).toggleClass('active').find('.content').fadeToggle();
+        })
+    }
 }
 
 export default header;
