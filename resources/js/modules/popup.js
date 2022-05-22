@@ -1,7 +1,8 @@
 import $ from 'jquery';
 
 function popup() {
-    function openPopup() {
+    function openPopup(e) {
+        e.preventDefault();
         let btnTarget = $(this).attr('data-type');
         
         $('body').addClass('no-scroll');

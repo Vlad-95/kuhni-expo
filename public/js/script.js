@@ -8427,6 +8427,38 @@ function cabinet() {
 
 /***/ }),
 
+/***/ "./resources/js/modules/cart.js":
+/*!**************************************!*\
+  !*** ./resources/js/modules/cart.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function cart() {
+  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.cart').length) {
+    //чекбокс кредита
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('input[name="credit"]').on('change', function () {
+      if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).is(':checked')) {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()('.btns .order').addClass('js-open-popup btn-credit').attr('data-type', 'credit').text('Отправить запрос');
+      } else {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()('.btns .order').removeClass('js-open-popup btn-credit').removeAttr('data-type').text('Оформить заказ');
+      }
+    });
+  }
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (cart);
+
+/***/ }),
+
 /***/ "./resources/js/modules/catalog-detail.js":
 /*!************************************************!*\
   !*** ./resources/js/modules/catalog-detail.js ***!
@@ -9064,7 +9096,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function popup() {
-  function openPopup() {
+  function openPopup(e) {
+    e.preventDefault();
     var btnTarget = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('data-type');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('no-scroll');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(".popup.".concat(btnTarget)).fadeIn();
@@ -36939,6 +36972,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_filter__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/filter */ "./resources/js/modules/filter.js");
 /* harmony import */ var _modules_catalog_detail__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/catalog-detail */ "./resources/js/modules/catalog-detail.js");
 /* harmony import */ var _modules_contacts__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/contacts */ "./resources/js/modules/contacts.js");
+/* harmony import */ var _modules_cart__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/cart */ "./resources/js/modules/cart.js");
+
 
 
 
@@ -36964,6 +36999,7 @@ window.addEventListener('DOMContentLoaded', function () {
   (0,_modules_filter__WEBPACK_IMPORTED_MODULE_10__["default"])();
   (0,_modules_catalog_detail__WEBPACK_IMPORTED_MODULE_11__["default"])();
   (0,_modules_contacts__WEBPACK_IMPORTED_MODULE_12__["default"])();
+  (0,_modules_cart__WEBPACK_IMPORTED_MODULE_13__["default"])();
   (0,_modules_layer__WEBPACK_IMPORTED_MODULE_8__["default"])();
   (0,_modules_popup__WEBPACK_IMPORTED_MODULE_9__["default"])();
 });

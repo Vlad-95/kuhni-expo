@@ -11,6 +11,7 @@ import popup from './modules/popup';
 import filter from './modules/filter';
 import catalogDetail from './modules/catalog-detail';
 import contacts from './modules/contacts';
+import cart from './modules/cart';
 
 window.addEventListener('DOMContentLoaded', () => {
     header();
@@ -24,6 +25,7 @@ window.addEventListener('DOMContentLoaded', () => {
     filter();
     catalogDetail();
     contacts();
+    cart();
 
     layer();
     popup();
