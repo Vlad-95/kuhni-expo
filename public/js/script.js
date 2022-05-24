@@ -8823,7 +8823,7 @@ var contacts = function contacts() {
     }; //Первоначальная подгрузка
 
 
-    getResource('/public/js/data.json').then(function (result) {
+    getResource('./public/js/data.json').then(function (result) {
       var activeCity = jquery__WEBPACK_IMPORTED_MODULE_10___default()('.tabs__item.active').text().trim();
       getCityInfo(activeCity, result);
     }); //Клик по табам
