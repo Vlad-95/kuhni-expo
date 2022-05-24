@@ -1,13 +1,16 @@
 .cart {
+    padding-bottom: 52px;
+
     &__table {
         width: 100%;
+        table-layout: fixed;
 
         &-item {
             border-top: 1px solid #d5d5d5;
         }
 
         td {
-            padding: 17px 14px 20px;
+            padding: 19px 14px 20px;
         }
 
         .image {
@@ -28,14 +31,47 @@
         }
 
         .name {
-            width: 650px;
+            width: 652px;
             a {
                 font-size: 15px;
                 font-weight: 400;
             }
         }
 
+        .sale {
+            width: 90px;
+
+            div {
+                position: relative;
+
+                &:after {
+                    content: '%';
+                    position: absolute;
+                    right: 0px;
+                    top: 8px;
+                    font-weight: 700;
+                    font-size: 15px;
+                    color: @blue;
+                }
+            }
+
+            &__input {
+                border: 1px solid #d5d5d5;
+                border-radius: 5px;
+                outline: none;
+                height: 30px;
+                text-align: center;
+                width: 100%;
+                padding: 0 5px;
+                font-size: 15px;
+                font-weight: 700;
+                width: 40px;
+            }
+        }
+
         .price {
+            width: 140px;
+
             .curr {
                 font-weight: 700;
                 font-size: 15px;
@@ -183,13 +219,19 @@
                 fill: @white;
             }
         }
+
+        &_ul {
+            .name {
+                width: 564px;
+            }
+        }
     }
 
     &__footer {
         display: flex;
         flex-wrap: wrap;
         border-top: 1px solid #d5d5d5;
-        padding: 22px 0 52px;
+        padding: 22px 0 0;
         align-items: flex-start;
 
         .price {
@@ -271,6 +313,15 @@
                 }
             }
 
+            .calc {
+                background-color: fade(@orange, 30%);
+                color: @text;
+                border-radius: 100px;
+                padding: 10px 20px;
+                transition: 0.3s;
+                margin: 0 6px 0 -92px;
+            }
+
             .order {
                 .btn-orange;
                 .fullrounded;
@@ -283,6 +334,37 @@
             }
         }
     }
+
+    .commercial {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #e8f4f3;
+        margin-top: 20px;
+        padding: 24px 41px 24px 28px;
+
+        .text {
+            font-weight: 700;
+            font-size: 17px;
+            margin-right: auto;
+        }
+
+        .item {
+            position: relative;
+            font-size: 14px;
+            text-decoration: underline;
+            padding-left: 34px;
+            margin-left: 43px;
+            
+            svg {
+                width: 20px;
+                height: 20px;
+                fill: @text;
+                position: absolute;
+                left: 0;
+                top: -3px;
+            }
+        }
+    }
     
 }
 
@@ -291,10 +373,16 @@
         &__table {
             min-width: 963px;
             .name {
-                width: 375px;
+                width: 447px;
 
                 a {
                     font-size: 12px;
+                }
+            }
+
+            &_ul {
+                .name {
+                    width: 357px;
                 }
             }
         }
@@ -319,18 +407,74 @@
                     }
                 }
 
+                .calc {
+                    margin: 0 6px 0 -35px;
+                    font-size: 12px;
+                }
+
                 .order {
                     font-size: 12px;
                 }
             }
+        }
+
+        .commercial {
+            .text {
+                font-size: 15px
+            }
+
+            .item {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .cart {
+        &__footer {
+            display: block;
         }
     }
 }
 
 @media screen and (max-width: 768px) {
     .cart {
+
+        .commercial {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 24px;
+
+            .text {
+                font-size: 15px
+            }
+
+            .item {
+                font-size: 12px;
+                margin-left: 0;
+                margin-top: 15px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .cart {
         &__footer {
-            display: block;
+            .btns { 
+                flex-direction: column;
+                align-items: flex-start;
+
+                .credit {
+                    margin-right: 0;
+                    margin-bottom: 10px;
+                }
+
+                .calc {
+                    margin: 0 0 10px;
+                }
+            }
         }
     }
 }

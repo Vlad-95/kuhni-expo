@@ -12,6 +12,7 @@ import filter from './modules/filter';
 import catalogDetail from './modules/catalog-detail';
 import contacts from './modules/contacts';
 import cart from './modules/cart';
+import compare from './modules/compare';
 
 window.addEventListener('DOMContentLoaded', () => {
     header();
@@ -26,6 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
     catalogDetail();
     contacts();
     cart();
+    compare();
 
     layer();
     popup();

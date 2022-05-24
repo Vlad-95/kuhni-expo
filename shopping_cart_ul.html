@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Корзина</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="/public/css/styles.css" rel="stylesheet" media="all"/>
+</head>
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <div class="header__top">
+                <div class="nav">
+                    <a href="javascript:;" class="nav__item">О нас</a>
+                    <a href="javascript:;" class="nav__item">Оплата</a>
+                    <a href="javascript:;" class="nav__item">Доставка</a>
+                    <a href="javascript:;" class="nav__item active">Акции</a>
+                    <a href="javascript:;" class="nav__item">Распродажа</a>
+                    <a href="javascript:;" class="nav__item">Полезная информация</a>
+                    <a href="javascript:;" class="nav__item">Блог</a>
+                    <a href="javascript:;" class="nav__item">Контакты</a>
+                </div>
+                <div class="contacts">
+                    <a href="tel:+78129554434" class="phone">+7 (812) 955-44-34</a>
+                    <div class="time">Пн-Пт: 11.00 — 20.00</div>
+                    <a href="javascript:;" class="callback js-popup-open" data-type="callback">Обратный звонок</a>
+                </div>
+                
+            </div>
+
+            <div class="header__bottom">
+                <a href="index.html" class="logo">
+                    <svg>
+                        <use xlink:href="img/icons/sprite.svg#logo"></use>
+                    </svg>
+                </a>
+                <div class="btns">
+                    <div class="btns__item catalog-btn" data-id="catalog">
+                        <svg>
+                            <use xlink:href="img/icons/sprite.svg#search-list"></use>
+                        </svg>
+                        Каталог
+                    </div>
+    
+                    <div class="btns__item brands-btn" data-id="brands">
+                        Бренды
+                    </div>
+                </div>
+                
+
+                <form class="search-form">
+                    <input type="text" name="search" class="search-form__input" placeholder="Искать товары">
+                    <button class="search-form__submit">
+                        <svg>
+                            <use xlink:href="img/icons/sprite.svg#search"></use>
+                        </svg>
+                    </button>
+                </form>
+
+                <div class="icons">
+                    <a href="javascript:;" class="icons__item compare">
+                        <div class="icon">
+                            <div class="label">15</div>
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#compare"></use>
+                            </svg>    
+                        </div>
+                        
+                        <div class="text">Сравнение</div>
+                    </a>
+                    <!-- ==================Не залогинен ================ -->
+                    
+                    <!-- <a href="javascript:;" class="icons__item login">
+                        <div class="icon">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#user"></use>
+                            </svg>    
+                        </div>
+                        
+                        <div class="text">Войти</div>
+                    </a> -->
+
+                    <!-- ==================Залогинен ================== -->
+                    <div class="icons__item cabinet">
+                        <div class="icon">
+                            <div class="label">
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#chevron-down"></use>
+                                </svg>
+                            </div>
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#user"></use>
+                            </svg>    
+                        </div>
+                        
+                        <div class="text">Кабинет</div>
+
+                        <div class="content">
+                            <div class="name">Artemis LTD</div>
+                            <div class="bonus">
+                                <p><span>300</span>бонусных баллов</p>
+                            </div>
+                            <ul class="list">
+                                <li><a href="cabinet_profile.html">Профиль</a></li>
+                                <li><a href="cabinet_history.html">История покупок</a></li>
+                                <li><a href="cabinet_pricelist.html">Прайс-листы</a></li>
+                            </ul>
+                            <div class="link">
+                                <a href="javascript:;">Выйти</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ===================== -->
+                    <a href="javascript:;" class="icons__item basket">
+                        <div class="icon">
+                            <div class="label">15</div>
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#basket"></use>
+                            </svg>    
+                        </div>
+                        
+                        <div class="text">Корзина</div>
+                    </a>
+                </div>
+
+<div class="burger">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="mobile-menu">
+            <div class="mobile-menu__wrap">
+
+            </div>
+        </div>
+        
+        <div class="dropdown" id="catalog">
+            <div class="close">
+                <span></span><span></span>
+            </div>
+            <div class="wrapper">
+                <ul class="dropdown__list">
+                    <li><a href="javascript:;">Аромадекор для дома</a></li>
+                    <li><a href="javascript:;">Варочные панели</a></li>
+                    <li><a href="javascript:;">Водоочистители</a></li>
+                    <li><a href="javascript:;">Вытяжки</a></li>
+                    
+                    <li><a href="javascript:;">Духовые шкафы</a></li>
+                    <li><a href="javascript:;">Измельчители пищевых отходов</a></li>
+                    <li><a href="javascript:;">Кофемашины</a></li>
+                    <li><a href="javascript:;">Кухонные мойки</a></li>
+                    
+                    <li><a href="javascript:;">Мусорные системы</a></li>
+                    <li><a href="javascript:;">Посуда</a></li>
+                    <li><a href="javascript:;">Посудомоечные машины</a></li>
+                    <li><a href="javascript:;">Смесители</a></li>
+
+                    <li><a href="javascript:;">СВЧ</a></li>
+                    <li><a href="javascript:;">Стиральные машины</a></li>
+                    <li><a href="javascript:;">Телевизоры для кухни и ванной</a></li>
+                    <li><a href="javascript:;">Холодильники</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="dropdown" id="brands">
+            <div class="close">
+                <span></span><span></span>
+            </div>
+            <div class="wrapper">
+                <ul class="dropdown__list">
+                    <li><a href="javascript:;">Bosch</a></li>
+                    <li><a href="javascript:;">Gorenje</a></li>
+                    <li><a href="javascript:;">Gefest</a></li>
+                    <li><a href="javascript:;">Electrolux</a></li>
+                    <li><a href="javascript:;">Hansa</a></li>
+                    <li><a href="javascript:;">Hotpoint-Ariston</a></li>
+
+                    <li><a href="javascript:;">Bosch</a></li>
+                    <li><a href="javascript:;">Gorenje</a></li>
+                    <li><a href="javascript:;">Gefest</a></li>
+                    <li><a href="javascript:;">Electrolux</a></li>
+                    <li><a href="javascript:;">Hansa</a></li>
+                    <li><a href="javascript:;">Hotpoint-Ariston</a></li>
+
+                    <li><a href="javascript:;">Bosch</a></li>
+                    <li><a href="javascript:;">Gorenje</a></li>
+                    <li><a href="javascript:;">Gefest</a></li>
+                    <li><a href="javascript:;">Electrolux</a></li>
+                    <li><a href="javascript:;">Hansa</a></li>
+                    <li><a href="javascript:;">Hotpoint-Ariston</a></li>
+
+                    <li><a href="javascript:;">Bosch</a></li>
+                    <li><a href="javascript:;">Gorenje</a></li>
+                    <li><a href="javascript:;">Gefest</a></li>
+                    <li><a href="javascript:;">Electrolux</a></li>
+                    <li><a href="javascript:;">Hansa</a></li>
+                    <li><a href="javascript:;">Hotpoint-Ariston</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="wrapper">
+            <ul class="breadcrumbs">
+                <li>
+                    <a href="javascript:;">Главная</a>
+                </li>
+                <li>
+                    <span>Корзина</span>
+                </li>
+            </ul>
+        </div>
+        <div class="cart">
+            <div class="wrapper">
+                <div class="page-title page-title_cart">
+                    <h1 data-count="3">Корзина</h1>
+                    <a href="javascript:;" class="delete-btn js-cart-remove_all">
+                        <div class="icon">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#close"></use>
+                            </svg>
+                        </div>                        
+
+                        Удалить все
+                    </a>
+                </div>
+                <div class="scroll-table">
+                    <table class="cart__table cart__table_ul">
+                        <tr class="cart__table-item">
+                            <td class="image">
+                                <a href="javascript:;">
+                                    <img src="img/history-item.png" alt="">
+                                </a>
+                            </td>
+                            <td class="name">
+                                <a href="javascript:;">Духовой шкаф Franke Mythos FMY 45 MW XS</a>
+                            </td>
+                            <td class="sale">
+                                <div>
+                                    <input class="sale__input" name="item_sale[1]" type="text" value="30">
+                                </div>
+                            </td>
+                            <td class="price">
+                                <div>
+                                    <div class="curr">215 980 &#8381;</div>
+                                    <div class="old">110 990</div>
+                                </div>
+                            </td>
+                            <td class="bonus">
+                                <div>
+                                    <p><span>1000</span>баллов</p>
+                                </div>
+                            </td>
+                            <td class="count">
+                                <div>
+                                    <input type="text" name="item_count[1]" class="count__input" value="1">
+                                    <div class="count__btn dec"></div>
+                                    <div class="count__btn inc"></div>
+                                </div>
+                            </td>
+                            <td class="remove">
+                                <div class="js-cart-remove">
+                                    <svg>
+                                        <use xlink:href="img/icons/sprite.svg#close"></use>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="cart__table-item">
+                            <td class="image">
+                                <a href="javascript:;">
+                                    <img src="img/history-item.png" alt="">
+                                </a>
+                            </td>
+                            <td class="name">
+                                <a href="javascript:;">Духовой шкаф Franke Mythos FMY 45 MW XS</a>
+                            </td>
+                            <td class="sale">
+                                <div>
+                                    <input class="sale__input" name="item_sale[1]" type="text" value="30">
+                                </div>
+                            </td>
+                            <td class="price">
+                                <div>
+                                    <div class="curr">2 150 980 &#8381;</div>
+                                    <div class="old">110 990</div>
+                                </div>
+                            </td>
+                            <td class="bonus">
+                                <div>
+                                    <p><span>1000</span>баллов</p>
+                                </div>
+                            </td>
+                            <td class="count">
+                                <div>
+                                    <input type="text" name="item_count[1]" class="count__input" value="1">
+                                    <div class="count__btn dec"></div>
+                                    <div class="count__btn inc"></div>
+                                </div>
+                            </td>
+                            <td class="remove">
+                                <div class="js-cart-remove">
+                                    <svg>
+                                        <use xlink:href="img/icons/sprite.svg#close"></use>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr class="cart__table-item">
+                            <td class="image">
+                                <a href="javascript:;">
+                                    <img src="img/history-item.png" alt="">
+                                </a>
+                            </td>
+                            <td class="name">
+                                <a href="javascript:;">Духовой шкаф Franke Mythos FMY 45 MW XS</a>
+                            </td>
+                            <td class="sale">
+                                <div>
+                                    <input class="sale__input" name="item_sale[1]" type="text" value="30">
+                                </div>
+                            </td>
+                            <td class="price">
+                                <div>
+                                    <div class="curr">2 150 980 &#8381;</div>
+                                    <div class="old">110 990</div>
+                                </div>
+                            </td>
+                            <td class="bonus">
+                                <div>
+                                    <p><span>1000</span>баллов</p>
+                                </div>
+                            </td>
+                            <td class="count">
+                                <div>
+                                    <input type="text" name="item_count[1]" class="count__input" value="1">
+                                    <div class="count__btn dec"></div>
+                                    <div class="count__btn inc"></div>
+                                </div>
+                            </td>
+                            <td class="remove">
+                                <div class="js-cart-remove">
+                                    <svg>
+                                        <use xlink:href="img/icons/sprite.svg#close"></use>
+                                    </svg>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="cart__footer">
+                    <div class="price">
+                        <p class="result">Итого: 330 000 &#8381; <span class="sale">(Ваша скидка — 30 000&#8381;)</span></p>
+                        <p class="bonus">Начислим 2000 баллов</p>
+                    </div>
+
+                    <div class="btns">
+                        <label class="credit">
+                            <input type="checkbox" name="credit">
+                            <p class="credit__text">В рассрочку</a></p>
+                        </label>
+                        <a href="javascript:;" class="calc">Пересчитать со скидкой</a>
+                        <a href="javascript:;" class="order">Оформить заказ</a>
+                    </div>
+                </div>
+
+                <div class="commercial">
+                    <div class="text">Коммерческие предложения</div>
+
+                    <a href="javascript:;" class="item">
+                        <svg>
+                            <use xlink:href="img/icons/sprite.svg#download"></use>
+                        </svg>
+                        Экспорт в XLS
+                    </a>
+                    <a href="javascript:;" class="item">
+                        <svg>
+                            <use xlink:href="img/icons/sprite.svg#download"></use>
+                        </svg>
+                        Экспорт в PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+
+        
+        
+    </main>
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer__top">
+                <a href="index.html" class="logo">
+                    <svg>
+                        <use xlink:href="img/icons/sprite.svg#logo"></use>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="footer__middle">
+                <div class="footer__wrap">
+                    <div class="cats">
+                        <div class="footer__name">Каталог</div>
+                        <ul class="cats__list">
+                            <li><a href="javascript:;">Аромадекор для дома</a></li>
+                            <li><a href="javascript:;">Варочные панели</a></li>
+                            <li><a href="javascript:;">Водоочистители</a></li>
+                            <li><a href="javascript:;">Вытяжки</a></li>
+                            <li><a href="javascript:;">Духовые шкафы</a></li>
+                            <li><a href="javascript:;">Измельчители пищевых отходов</a></li>
+                            <li><a href="javascript:;">Кофемашины</a></li>
+                            <li><a href="javascript:;">Кухонные мойки</a></li>
+                            <li><a href="javascript:;">Мусорные системы</a></li>
+                            <li><a href="javascript:;">Посуда</a></li>
+                            <li><a href="javascript:;">Посудомоечные машины</a></li>
+                            <li><a href="javascript:;">Смесители</a></li>
+                            <li><a href="javascript:;">СВЧ</a></li>
+                            <li><a href="javascript:;">Стиральные машины</a></li>
+                            <li><a href="javascript:;">Телевизоры для кухни и ванной</a></li>
+                            <li><a href="javascript:;">Холодильники</a></li>
+                        </ul>
+                    </div>
+                    <div class="nav">
+                        <div class="footer__name">Помощь покупателю</div>
+                        <nav class="nav__list">
+                            <a href="javascript:;">О нас</a>
+                            <a href="javascript:;">Каталог</a>
+                            <a href="javascript:;">Оплата</a>
+                            <a href="javascript:;">Доставка</a>
+                            <a href="javascript:;">Акции</a>
+                            <a href="javascript:;">Специальные предложения</a>
+                            <a href="javascript:;">Полезная информация</a>
+                            <a href="javascript:;">Блог</a>
+                        </nav>
+                    </div>
+
+                    <div class="contacts">
+                        <div class="footer__name">Контакты</div>
+
+                        <div class="contacts__item">
+                            <a href="tel:+78129554434">+7 (812) 955-44-34</a>
+                            <p>Телефон</p>
+                        </div>
+
+                        <div class="contacts__item">
+                            <p>Пн-Пт, 10:00-20:00</p>
+                            <p>Телефон</p>
+                        </div>
+
+                        <div class="contacts__item">
+                            <a href="mailto:info@kuhni-expo.ru">info@kuhni-expo.ru</a>
+                            <p>Телефон</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rights">
+                <div class="footer__wrap">
+                    <p class="rights__item copyright">
+                        <span>&#169;</span>Kuhni-expo.ru, 2014 - 2022
+                    </p>
+
+                    <a href="javascript:;" class="rights__item siluet">
+                        <svg>
+                            <use xlink:href="img/icons/sprite.svg#siluet"></use>
+                        </svg>
+                        Веб-студия «Силуэт»: создание сайтов
+                    </a>
+
+                    <a href="javascript:;" class="rights__item">Политика конфиденциальности</a>
+
+                    <a href="javascript:;" class="rights__item">Карта сайта</a>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+
+    <div class="layer"></div>
+
+    <div class="popup callback">
+        <div class="popup__wrap">
+            <div class="popup__content">
+                <h3 class="block-title">Обратный звонок</h2>
+                <div class="close js-popup-close">
+                    <svg>
+                        <use xlink:href="img/icons/sprite.svg#close"></use>
+                    </svg>
+                </div>
+                <form action="" class="form callback__form">
+                    <label class="form__item">
+                        <p class="form__label">Ваше имя *</p>
+                        <input type="text" name="name" class="form__input">
+                    </label>
+                    <label class="form__item">
+                        <p class="form__label">Телефон *</p>
+                        <input type="text" name="phone" class="form__input">
+                    </label>
+                    <label class="form__agree">
+                        <input class="agree" type="checkbox" name="agree">
+                        <p class="form__agree-text">Я соглашаюсь с <a href="javascript:;">Политикой конфиденциальности</a></p>
+                    </label>
+                    <div class="form__footer">
+                        <button class="form__submit">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup credit">
+        <div class="popup__wrap">
+            <div class="popup__content">
+                <h3 class="block-title">Обратный звонок</h2>
+                <div class="close">
+                    <svg>
+                        <use xlink:href="img/icons/sprite.svg#close"></use>
+                    </svg>
+                </div>
+                <form action="" class="form credit__form">
+                    <label class="form__item">
+                        <p class="form__label">Ваше имя *</p>
+                        <input type="text" name="name" class="form__input">
+                    </label>
+                    <label class="form__item">
+                        <p class="form__label">Телефон *</p>
+                        <input type="text" name="phone" class="form__input">
+                    </label>
+                    <label class="form__agree">
+                        <input class="agree" type="checkbox" name="agree">
+                        <p class="form__agree-text">Я соглашаюсь с <a href="javascript:;">Политикой конфиденциальности</a></p>
+                    </label>
+                    <div class="form__footer">
+                        <button class="form__submit">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/public/js/script.js"></script>
+    
+    </body>
+</html>
