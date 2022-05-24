@@ -13,6 +13,7 @@ import catalogDetail from './modules/catalog-detail';
 import contacts from './modules/contacts';
 import cart from './modules/cart';
 import compare from './modules/compare';
+import order from './modules/order';
 
 window.addEventListener('DOMContentLoaded', () => {
     header();
@@ -28,6 +29,7 @@ window.addEventListener('DOMContentLoaded', () => {
     contacts();
     cart();
     compare();
+    order();
 
     layer();
     popup();

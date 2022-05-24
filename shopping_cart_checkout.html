@@ -286,35 +286,20 @@
                                 <h3>Способ доставки</h3>
 
                                 <div class="delivery-type">
-                                    <a href="javascript:;">Самовывоз</a>
-                                    <a href="javascript:;" class="active">Курьером</a>
+                                    <a href="javascript:;" data-delivery-type="pickup">Самовывоз</a>
+                                    <a href="javascript:;" data-delivery-type="courier" class="active">Курьером</a>
                                 </div>
                             </div>
 
-                            <label class="form__item">
+                            <label class="form__item" data-delivery-type="courier">
                                 <p class="form__label">Адрес доставки:</p>
                                 <input type="text" name="order_address" class="form__input">
                             </label>     
                             
-                            <div class="form__vertical" style="display: none;">
+                            <div class="form__item form__vertical" data-delivery-type="pickup">
                                 <label class="form__radio">
                                     <input class="radio" type="radio" name="order_delivery">
                                     <p class="form__radio-text">Адрес 1</p>
-                                </label>
-    
-                                <label class="form__radio">
-                                    <input class="radio" type="radio" name="order_delivery">
-                                    <p class="form__radio-text">Оплата по карте <span>Мы принимаем к оплате карты Мир, Union Pay</span></p>
-                                </label>
-
-                                <label class="form__radio">
-                                    <input class="radio" type="radio" name="order_delivery">
-                                    <p class="form__radio-text">Онлайн-оплата (Ю.Касса) <span>Мы принимаем к оплате карты Мир, Union Pay</span></p>
-                                </label>
-
-                                <label class="form__radio">
-                                    <input class="radio" type="radio" name="order_delivery">
-                                    <p class="form__radio-text">Оплата по безналичному расчету <span>Мы очень любим наших корпоративных клиентов</span></p>
                                 </label>
                             </div>                            
                         </div>
