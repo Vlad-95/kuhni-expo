@@ -8671,63 +8671,59 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_map_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.map.js */ "./node_modules/core-js/modules/es.array.map.js");
+/* harmony import */ var core_js_modules_es_array_map_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_map_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_1__);
+
 
 
 function compare() {
-  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.compare__head').length) {
+  if (jquery__WEBPACK_IMPORTED_MODULE_1___default()('.compare__head').length) {
     //одинаковая высота характеристик
-    var setEqualHeight = function setEqualHeight(elems) {
-      var tallestElem = 0;
-      elems.each(function () {
-        var currentHeight = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).height();
-
-        if (currentHeight > tallestElem) {
-          tallestElem = currentHeight;
-        }
-      });
-      elems.height(tallestElem);
-    }; //перебираем характеристики в дефолтном элементе
-    // let charMaxHeight = [];
-    // $('.compare__content .item.item_default div[data-char]').each(function() {
-    //     let char = $(this).attr('data-char');
-    //     let charHeight = $(this).height();
-    //     charMaxHeight.push({[char] : charHeight})
-    // })
-    // console.log(charMaxHeight);
-    //Перебираем характеристики в остальных элементах и перезаписываем высоты
-    // charMaxHeight.forEach(item => {
-    //     console.log(item)
-    //     let charName = Object.keys(item)[0]
-    //     let char = $(`.compare__content .item:not(.item_default) div[data-char="${charName}"]`);
-    //     console.log(charName)
-    //     // let charHeight = $(`.compare__content .item:not(.item_default) div[data-char="${Object.keys(item)[0]}"]`).height();
-    //     char.each(function() {
-    //         let charHeight = $(this).height();
-    //         console.log(charMaxHeight)
-    //         if (charHeight > charMaxHeight[Object.keys(item)[0]]) {
-    //             charMaxHeight[Object.keys(item)[0]] = charHeight
+    // function setEqualHeight(elems){
+    //     let  tallestElem = 0;
+    //     elems.each(function() {
+    //         let currentHeight = $(this).height();
+    //         if(currentHeight > tallestElem) {
+    //         tallestElem = currentHeight;
     //         }
-    //     })
-    // })
-    // console.log(charMaxHeight)
-    // $('.compare__content .item:not(.item_default) div[data-char]').each(function() {
-    //     let char = $(this).attr('data-char');
-    //     let charHeight = $(this).outerHeight();
-    //     let findChar = charMaxHeight.findIndex(item => item[char] == 1);
-    // })
-    //Смена отображения при скролле
+    //     });
+    //     elems.height(tallestElem);
+    // }
+    //перебираем характеристики в дефолтном элементе
+    var charMaxHeight = [];
+    jquery__WEBPACK_IMPORTED_MODULE_1___default()('.compare__content .item.item_default div[data-char]').each(function () {
+      var _char = jquery__WEBPACK_IMPORTED_MODULE_1___default()(this).attr('data-char');
 
+      var charHeight = jquery__WEBPACK_IMPORTED_MODULE_1___default()(this).height();
+      charMaxHeight.push({
+        name: _char,
+        height: charHeight
+      });
+    });
+    console.log(charMaxHeight); //Перебираем характеристики в остальных элементах и перезаписываем высоты
 
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scroll(function () {
-      var headOffsetTop = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.compare__head').offset().top + jquery__WEBPACK_IMPORTED_MODULE_0___default()('.compare__head').height() - jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).scrollTop();
+    jquery__WEBPACK_IMPORTED_MODULE_1___default()('.compare__content .item:not(.item_default) div[data-char]').each(function () {
+      // let tallestElem = 0;
+      var _char2 = jquery__WEBPACK_IMPORTED_MODULE_1___default()(this).attr('data-char');
+
+      var charHeight = jquery__WEBPACK_IMPORTED_MODULE_1___default()(this).height(); // if (charHeight > tallestElem) {
+      //     tallestElem = charHeight;
+      // }
+      // console.log(tallestElem)
+
+      var arrCharElem = charMaxHeight.map(function (item) {}); // console.log(elem)
+    }); //Смена отображения при скролле
+
+    jquery__WEBPACK_IMPORTED_MODULE_1___default()(window).scroll(function () {
+      var headOffsetTop = jquery__WEBPACK_IMPORTED_MODULE_1___default()('.compare__head').offset().top + jquery__WEBPACK_IMPORTED_MODULE_1___default()('.compare__head').height() - jquery__WEBPACK_IMPORTED_MODULE_1___default()(document).scrollTop();
 
       if (headOffsetTop < 0) {
-        jquery__WEBPACK_IMPORTED_MODULE_0___default()('.compare__head').addClass('fixed');
+        jquery__WEBPACK_IMPORTED_MODULE_1___default()('.compare__head').addClass('fixed');
       } else {
-        jquery__WEBPACK_IMPORTED_MODULE_0___default()('.compare__head').removeClass('fixed');
-        jquery__WEBPACK_IMPORTED_MODULE_0___default()('.compare__head-wrap').css({
+        jquery__WEBPACK_IMPORTED_MODULE_1___default()('.compare__head').removeClass('fixed');
+        jquery__WEBPACK_IMPORTED_MODULE_1___default()('.compare__head-wrap').css({
           '-webkit-transform': "translateX(0px)",
           '-ms-transform': "translateX(0px)",
           'transform': "translateX(0px)"
@@ -8735,17 +8731,17 @@ function compare() {
       }
     }); //горизонтальный скролл
 
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".scroll-table").on("scroll", function (e) {
+    jquery__WEBPACK_IMPORTED_MODULE_1___default()(".scroll-table").on("scroll", function (e) {
       var horizontal = e.currentTarget.scrollLeft; //перемещение подписей строк характеристик
 
-      jquery__WEBPACK_IMPORTED_MODULE_0___default()('.compare__content .label').css({
+      jquery__WEBPACK_IMPORTED_MODULE_1___default()('.compare__content .label').css({
         '-webkit-transform': "translateX(".concat(horizontal, "px)"),
         '-ms-transform': "translateX(".concat(horizontal, "px)"),
         'transform': "translateX(".concat(horizontal, "px)")
       });
 
-      if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('.compare__head').hasClass('fixed')) {
-        jquery__WEBPACK_IMPORTED_MODULE_0___default()('.compare__head-wrap').css({
+      if (jquery__WEBPACK_IMPORTED_MODULE_1___default()('.compare__head').hasClass('fixed')) {
+        jquery__WEBPACK_IMPORTED_MODULE_1___default()('.compare__head-wrap').css({
           '-webkit-transform': "translateX(-".concat(horizontal, "px)"),
           '-ms-transform': "translateX(-".concat(horizontal, "px)"),
           'transform': "translateX(-".concat(horizontal, "px)")
@@ -8753,8 +8749,8 @@ function compare() {
       }
     }); //Удаление элементов
 
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.btns__delete').click(function () {
-      var itemId = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).closest('.item').attr('data-id');
+    jquery__WEBPACK_IMPORTED_MODULE_1___default()('.btns__delete').click(function () {
+      var itemId = jquery__WEBPACK_IMPORTED_MODULE_1___default()(this).closest('.item').attr('data-id');
     });
   }
 }
