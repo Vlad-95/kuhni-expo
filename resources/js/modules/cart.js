@@ -33,10 +33,10 @@ function cart() {
         //чекбокс кредита
         $('input[name="credit"]').on('change', function() {
             if ($(this).is(':checked')) {
-                $('.btns .order').addClass('js-open-popup btn-credit').attr('data-type', 'credit').text('Отправить запрос');
+                $('.btns .order').addClass('js-popup-open btn-credit').attr('data-type', 'credit').text('Отправить запрос');
 
             } else {
-                $('.btns .order').removeClass('js-open-popup btn-credit').removeAttr('data-type').text('Оформить заказ');
+                $('.btns .order').removeClass('js-popup-open btn-credit').removeAttr('data-type').text('Оформить заказ');
             }
         })
 
@@ -74,6 +74,7 @@ function cart() {
             totalSum();
         })
 
+        //Удалить всё
         $('.js-cart-remove_all').click(function() {
             $('.cart__table').remove();
             $('.cart__footer .price .bonus, .cart__footer .btns').remove();

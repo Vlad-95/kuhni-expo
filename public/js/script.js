@@ -8492,9 +8492,9 @@ function cart() {
 
     jquery__WEBPACK_IMPORTED_MODULE_5___default()('input[name="credit"]').on('change', function () {
       if (jquery__WEBPACK_IMPORTED_MODULE_5___default()(this).is(':checked')) {
-        jquery__WEBPACK_IMPORTED_MODULE_5___default()('.btns .order').addClass('js-open-popup btn-credit').attr('data-type', 'credit').text('Отправить запрос');
+        jquery__WEBPACK_IMPORTED_MODULE_5___default()('.btns .order').addClass('js-popup-open btn-credit').attr('data-type', 'credit').text('Отправить запрос');
       } else {
-        jquery__WEBPACK_IMPORTED_MODULE_5___default()('.btns .order').removeClass('js-open-popup btn-credit').removeAttr('data-type').text('Оформить заказ');
+        jquery__WEBPACK_IMPORTED_MODULE_5___default()('.btns .order').removeClass('js-popup-open btn-credit').removeAttr('data-type').text('Оформить заказ');
       }
     }); //изменение количества товара
 
@@ -8522,7 +8522,8 @@ function cart() {
       jquery__WEBPACK_IMPORTED_MODULE_5___default()('.page-title_cart h1').attr('data-count', "".concat(curValue - 1)); //пересчет суммы
 
       totalSum();
-    });
+    }); //Удалить всё
+
     jquery__WEBPACK_IMPORTED_MODULE_5___default()('.js-cart-remove_all').click(function () {
       jquery__WEBPACK_IMPORTED_MODULE_5___default()('.cart__table').remove();
       jquery__WEBPACK_IMPORTED_MODULE_5___default()('.cart__footer .price .bonus, .cart__footer .btns').remove();
@@ -9302,10 +9303,12 @@ __webpack_require__.r(__webpack_exports__);
 
 function popup() {
   function openPopup(e) {
-    e.preventDefault();
-    var btnTarget = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('data-type');
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('no-scroll');
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()(".popup.".concat(btnTarget)).fadeIn();
+    if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).hasClass('js-popup-open')) {
+      e.preventDefault();
+      var btnTarget = jquery__WEBPACK_IMPORTED_MODULE_0___default()(e.target).attr('data-type');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').addClass('no-scroll');
+      jquery__WEBPACK_IMPORTED_MODULE_0___default()(".popup.".concat(btnTarget)).fadeIn();
+    }
   }
 
   function closePopup() {
@@ -9313,7 +9316,7 @@ function popup() {
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.popup').fadeOut();
   }
 
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-popup-open').click(openPopup);
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).click(openPopup);
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-popup-close').click(closePopup);
 }
 

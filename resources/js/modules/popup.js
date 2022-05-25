@@ -1,12 +1,18 @@
 import $ from 'jquery';
 
 function popup() {
+
     function openPopup(e) {
-        e.preventDefault();
-        let btnTarget = $(this).attr('data-type');
         
-        $('body').addClass('no-scroll');
-        $(`.popup.${btnTarget}`).fadeIn();
+        if ($(e.target).hasClass('js-popup-open')) {
+            e.preventDefault();
+
+            let btnTarget = $(e.target).attr('data-type');
+        
+            $('body').addClass('no-scroll');
+            $(`.popup.${btnTarget}`).fadeIn();
+        }        
+        
     }
     
     function closePopup () {
@@ -14,7 +20,7 @@ function popup() {
         $('.popup').fadeOut();
     }
     
-    $('.js-popup-open').click(openPopup);
+    $(document).click(openPopup);
     $('.js-popup-close').click(closePopup);
 }
 
