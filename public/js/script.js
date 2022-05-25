@@ -8414,11 +8414,19 @@ __webpack_require__.r(__webpack_exports__);
 
 function cabinet() {
   var historyPage = jquery__WEBPACK_IMPORTED_MODULE_2___default()('.history');
+  var profilePage = jquery__WEBPACK_IMPORTED_MODULE_2___default()('.profile');
 
   if (historyPage.length) {
     var itemToggle = jquery__WEBPACK_IMPORTED_MODULE_2___default()('.history__item .toggle');
     itemToggle.click(function () {
       jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).toggleClass('active').closest('.history__item').toggleClass('open').find('.more').slideToggle();
+    });
+  }
+
+  if (profilePage.length) {
+    //включение/отключение редактирования
+    jquery__WEBPACK_IMPORTED_MODULE_2___default()('.edit').click(function () {
+      jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).parent().find('input').prop('disabled', false);
     });
   }
 }
