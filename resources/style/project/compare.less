@@ -34,6 +34,9 @@
                 display: block;
                 margin-top: 17px;
                 line-height: 1.4;
+                max-height: 40px;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
     
             .prices {
@@ -106,11 +109,65 @@
 
             .scroll-head {
                 position: fixed;
+                z-index: 2;
                 top: 0;
                 left: 0;
                 right: 0;
                 margin: 0 auto;
-                max-width: 1170px;
+                background-color: rgb(255, 255, 255);
+                box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);  
+                padding: 25px 0 10px;         
+                animation: slideDown;
+                transition: 0.3s;       
+            }
+
+            .overflow-head {
+                overflow: hidden;
+                max-width: 1200px;
+                padding: 0 15px;
+                margin: 0 auto;
+            }
+
+            .compare__head-wrap {
+                .item {
+                    display: flex;
+                    position: relative;
+                    min-height: 95px;
+
+                    .image {
+                        width: 73px;
+                        height: 73px;
+                        padding: 6px;
+                    }
+
+                    .name {
+                        font-size: 12px;
+                        width: calc(100% - 73px);
+                        max-height: 50px;
+                        margin: 5px 0 0;
+                    }
+
+                    .prices {
+                        position: absolute;
+                        top: 60px;
+                        left: 73px;
+                        flex-direction: column;
+                        align-items: flex-start;
+
+                        .curr {
+                            font-size: 15px;
+                        }
+
+                        .old {
+                            font-size: 12px;
+                            margin-left: 0;
+                        }
+                    }
+
+                    .btns {
+                        display: none;
+                    }
+                }
             }
         }
     }
@@ -191,11 +248,10 @@
     &__content {
         display: flex;
         min-width: 1170px;
-
-        border-top: 1px solid #d5d5d5;
         
         .item {
-            min-width: 234px;                       
+            min-width: 234px;    
+            border-top: 1px solid #d5d5d5;                   
 
             div:not(.label) {
                 border-bottom: 1px solid #d5d5d5;
@@ -212,5 +268,15 @@
             position: absolute;
             top: 20px;
         }
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100px);
+    }
+
+    to {
+        transform: translateY(0);
     }
 }

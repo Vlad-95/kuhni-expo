@@ -67,6 +67,16 @@ function header() {
         }
     }
 
+    //клик по layer
+    if ($('.layer').length) {
+        $('.layer').click(function() {
+            $(this).fadeOut(100);
+            
+            $('.dropdown').hide();
+            $('.btns__item').removeClass('active');
+        })
+    } 
+
     //выпадашка при клике на кабинет
     if ($('.icons__item.cabinet').length) {
         $('.icons__item.cabinet').click(function() {

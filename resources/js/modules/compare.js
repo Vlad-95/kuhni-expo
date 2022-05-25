@@ -13,6 +13,20 @@ function compare () {
             }
             
         })
+
+        //горизонтальный скролл
+        $(".scroll-table").on("scroll", function (e) {
+            if ($('.compare__head').hasClass('fixed')) {                
+                let horizontal = e.currentTarget.scrollLeft;
+
+                $('.compare__head-wrap').css({
+                    '-webkit-transform': `translateX(-${horizontal}px)`,
+                    '-ms-transform': `translateX(-${horizontal}px)`,
+                    'transform': `translateX(-${horizontal}px)`
+                })            
+            }
+        });
+        
     }
 }
 

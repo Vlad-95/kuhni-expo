@@ -6,7 +6,6 @@ import mainCat from './modules/main-cat';
 import blogDetail from './modules/blog-detail';
 import cabinet from './modules/cabinet';
 import login from './modules/login';
-import layer from './modules/layer';
 import popup from './modules/popup';
 import filter from './modules/filter';
 import catalogDetail from './modules/catalog-detail';
@@ -30,7 +29,5 @@ window.addEventListener('DOMContentLoaded', () => {
     cart();
     compare();
     order();
-
-    layer();
     popup();
 });
