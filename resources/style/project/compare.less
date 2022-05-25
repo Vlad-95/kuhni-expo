@@ -1,6 +1,10 @@
 .compare {
     padding-bottom: 128px;
 
+    .scroll-head { 
+        background-color: @white;
+    }
+
     &__head {
        
         &-wrap {
@@ -114,7 +118,6 @@
                 left: 0;
                 right: 0;
                 margin: 0 auto;
-                background-color: rgb(255, 255, 255);
                 box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);  
                 padding: 25px 0 10px;         
                 animation: slideDown;
@@ -248,6 +251,7 @@
     &__content {
         display: flex;
         min-width: 1170px;
+        margin: 0 -5px;
         
         .item {
             min-width: 234px;    
@@ -255,9 +259,10 @@
 
             div:not(.label) {
                 border-bottom: 1px solid #d5d5d5;
-                padding: 40px 0 15px;
+                padding: 40px 5px 15px;
                 position: relative;
             }
+            
         }
 
         .label {
