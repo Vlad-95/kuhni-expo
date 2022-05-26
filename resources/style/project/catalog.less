@@ -1,5 +1,7 @@
 .catalog-list {
     overflow: hidden;
+    margin-top: -20px;
+
     .page-title {
         margin: 8px 0 15px;
     }
@@ -64,6 +66,12 @@
 }
 
 .catalog-detail {
+    .page-title {
+        h1 {
+            font-size: 30px;
+        }
+    }
+
     .block-title {
         h2 {
             font-size: 25px;
@@ -279,11 +287,31 @@
                     fill: @white;
                     width: 19px;
                     height: 20px;
+                    transition: 0.3s;
                 }
 
                 .text {
                     font-size: 15px;
                     font-weight: 700;
+                }
+
+                &:hover {
+                    svg {
+                        fill: @orange;
+                    }
+                }
+
+                &.active {
+                    border: 1px solid @orange;
+                    background-color: @white;
+
+                    .text {
+                        color: @orange;
+                    }
+
+                    svg {
+                        fill: @orange;
+                    }
                 }
             }
 
@@ -466,6 +494,8 @@
 
 @media screen and (max-width: 1200px) {
     .catalog-list {
+        margin-top: 0;
+
         &__sidebar {
             width: 250px;
         }    
@@ -595,6 +625,12 @@
     }
 
     .catalog-detail {
+        .page-title {
+            h1 {
+                font-size: 25px;
+            }
+        }
+    
         .gallery {
             width: 320px;
 
