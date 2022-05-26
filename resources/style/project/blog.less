@@ -104,7 +104,13 @@
     }
 
     &__video {
-        padding: 74px 0 54px;
+        margin: 74px 0 54px;
+        height: 546px;
+
+        iframe {
+            height: 100%;
+            width: 100%;
+        }
     }
 
     &__docs {
@@ -185,8 +191,29 @@
 
 @media screen and (max-width: 992px) {
     .blog-detail {
+
         &__img {
             margin-bottom: 20px;
+        }
+
+        &__video {
+            height: 400px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .blog-detail {
+        .page-title {
+            margin: 11px 0 30px;
+            
+            h1 {
+                font-size: 20px;
+            }
+        }
+        
+        &__video {
+            height: 320px;
         }
     }
 }
