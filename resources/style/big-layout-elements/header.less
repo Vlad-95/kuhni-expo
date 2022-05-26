@@ -134,6 +134,13 @@
                     width: 23px;
                     height: 16px;
                     fill: @white;
+                    transition: 0.3s;
+                }
+
+                &:hover {
+                    svg {
+                        fill: @orange;
+                    }
                 }
             }
         
@@ -187,6 +194,13 @@
                 width: 19px;
                 height: 18px;
                 fill: @white;
+                transition: 0.3s;
+            }
+
+            &:hover {
+                svg {
+                    fill: @orange;
+                }
             }
         }
     }
@@ -202,6 +216,12 @@
             padding: 0 10px;
             margin: 0 9px;
             border: none;
+
+            &.active {
+                .label {
+                    opacity: 1;
+                }
+            }
 
             .label {
                 position: absolute;
@@ -233,6 +253,11 @@
             }
 
             &.compare {
+                .label {
+                    opacity: 0;
+                    transition: 0.3s;
+                }
+
                 svg {
                     width: 14px;
                     height: 18px;
@@ -284,6 +309,11 @@
             }
 
             &.basket {
+                .label {
+                    opacity: 0;
+                    transition: 0.3s;
+                }
+
                 svg {
                     width: 19px;
                     height: 20px;
@@ -702,6 +732,10 @@
                 padding: 8px 12px;
                 font-size: 12px;
 
+                &:after {
+                    top: calc(100% + 10px);
+                }
+
                 &.catalog-btn {
                     padding-left: 35px;
 
@@ -804,6 +838,14 @@
 
 @media screen and (max-width: 768px) {
     .header {
+        .btns {
+            &__item {
+                &:after {
+                    top: calc(100% + 17px);
+                }
+            }
+        }
+
         .search-form {
             display: none;
         }

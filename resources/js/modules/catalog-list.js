@@ -2,9 +2,20 @@ import $ from "jquery";
 import 'jquery-match-height';
 
 function catalogList() {
-    //одинаковая высота карточек товаров
+    
     if ($('.catalog__item').length) {
+        //одинаковая высота карточек товаров
         $('.catalog__item .name').matchHeight();
+
+        //добавление в корзину
+        $('.btns__buy:not(.active)').click(function() {
+            $(this).addClass('active');
+        });
+
+        //добавление в сравнение
+        $('.btns__compare:not(.active)').click(function() {
+            $(this).addClass('active').find('.text').text('В сравнении');
+        });
     }
 
     //фильтр

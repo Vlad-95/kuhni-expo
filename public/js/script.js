@@ -8636,9 +8636,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function catalogList() {
-  //одинаковая высота карточек товаров
   if (jquery__WEBPACK_IMPORTED_MODULE_2___default()('.catalog__item').length) {
-    jquery__WEBPACK_IMPORTED_MODULE_2___default()('.catalog__item .name').matchHeight();
+    //одинаковая высота карточек товаров
+    jquery__WEBPACK_IMPORTED_MODULE_2___default()('.catalog__item .name').matchHeight(); //добавление в корзину
+
+    jquery__WEBPACK_IMPORTED_MODULE_2___default()('.btns__buy:not(.active)').click(function () {
+      jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).addClass('active');
+    }); //добавление в сравнение
+
+    jquery__WEBPACK_IMPORTED_MODULE_2___default()('.btns__compare:not(.active)').click(function () {
+      jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).addClass('active').find('.text').text('В сравнении');
+    });
   } //фильтр
 
 
@@ -9177,34 +9185,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var jquery_match_height__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! jquery-match-height */ "./node_modules/jquery-match-height/dist/jquery.matchHeight.js");
+/* harmony import */ var jquery_match_height__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(jquery_match_height__WEBPACK_IMPORTED_MODULE_3__);
+
 
 
 
 
 function mainCat() {
   if (jquery__WEBPACK_IMPORTED_MODULE_2___default()('.main-cat').length) {
-    if (jquery__WEBPACK_IMPORTED_MODULE_2___default()(window).width() >= 992) {
-      // Позиционирование всплывашки
-      var items = jquery__WEBPACK_IMPORTED_MODULE_2___default()('.main-cat__item');
-      var itemsHiddenContentWidth = jquery__WEBPACK_IMPORTED_MODULE_2___default()('.hidden').outerWidth();
-      items.each(function () {
-        var item = jquery__WEBPACK_IMPORTED_MODULE_2___default()(this);
-        var itemWidth = item.width();
-        var itemOffsetRight = jquery__WEBPACK_IMPORTED_MODULE_2___default()(window).width() - (itemWidth + item.offset().left);
+    jquery__WEBPACK_IMPORTED_MODULE_2___default()('.main-cat__item .text').matchHeight(); // Позиционирование всплывашки
 
-        if (itemOffsetRight <= itemsHiddenContentWidth) {
-          jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).find('.hidden').addClass('top_left');
-        }
-      }); // показ/скрытие высплывашки
+    var items = jquery__WEBPACK_IMPORTED_MODULE_2___default()('.main-cat__item');
+    var itemsHiddenContentWidth = jquery__WEBPACK_IMPORTED_MODULE_2___default()('.hidden').outerWidth();
+    items.each(function () {
+      var item = jquery__WEBPACK_IMPORTED_MODULE_2___default()(this);
+      var itemWidth = item.width();
+      var itemOffsetRight = jquery__WEBPACK_IMPORTED_MODULE_2___default()(window).width() - (itemWidth + item.offset().left);
 
-      items.find('.dots').click(function () {
-        jquery__WEBPACK_IMPORTED_MODULE_2___default()('.hidden').fadeOut();
-        jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).next().fadeIn();
-      });
-      jquery__WEBPACK_IMPORTED_MODULE_2___default()('.hidden .close').click(function () {
-        jquery__WEBPACK_IMPORTED_MODULE_2___default()('.hidden').fadeOut();
-      });
-    }
+      if (itemOffsetRight <= itemsHiddenContentWidth) {
+        jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).find('.hidden').addClass('top_left');
+      }
+    }); // показ/скрытие высплывашки
+
+    items.find('.dots').click(function () {
+      items.find('.hidden').fadeOut();
+      jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).next().fadeIn();
+    });
+    jquery__WEBPACK_IMPORTED_MODULE_2___default()(document).click(function (e) {
+      var target = e.target;
+
+      if (!jquery__WEBPACK_IMPORTED_MODULE_2___default()(target).is('.dots') && !jquery__WEBPACK_IMPORTED_MODULE_2___default()(target).parents().is('.dots')) {
+        items.find('.hidden').fadeOut();
+      }
+    });
   }
 }
 
