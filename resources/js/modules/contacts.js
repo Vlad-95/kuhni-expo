@@ -92,7 +92,7 @@ const contacts = () => {
 
                 $(this).addClass('active').siblings().removeClass('active');
 
-                getResource('/public/js/data.json')
+                getResource('./public/js/data.json')
                     .then(result => {
                         let activeCity = $('.tabs__item.active').text().trim();
                         getCityInfo(activeCity, result)
