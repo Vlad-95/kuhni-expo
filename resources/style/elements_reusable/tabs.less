@@ -1,6 +1,7 @@
 .tabs {
     display: flex;
     flex-wrap: wrap;
+    margin-top: -9px;
 
     &__item {
         .fullrounded;
@@ -52,6 +53,8 @@
     }
 
     &_map {
+        margin-top: 0;
+
         .tabs__item {
             padding: 11px 16px 13px;
         }
@@ -60,6 +63,8 @@
 
 @media screen and (max-width: 1200px) {
     .tabs {
+        margin-top: 0;
+        
         &__item {
             font-size: 12px;
         }
