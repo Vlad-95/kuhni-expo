@@ -8488,6 +8488,8 @@ function cart() {
     }; // Подсчитываем сумму при загрузке
 
 
+    //количество товара в заголовке
+    jquery__WEBPACK_IMPORTED_MODULE_5___default()('.page-title_cart h1').attr('data-count', jquery__WEBPACK_IMPORTED_MODULE_5___default()('.cart__table-item').length);
     totalSum(); //чекбокс кредита
 
     jquery__WEBPACK_IMPORTED_MODULE_5___default()('input[name="credit"]').on('change', function () {
@@ -8671,86 +8673,105 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var core_js_modules_es_array_map_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.map.js */ "./node_modules/core-js/modules/es.array.map.js");
-/* harmony import */ var core_js_modules_es_array_map_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_map_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.find.js */ "./node_modules/core-js/modules/es.array.find.js");
+/* harmony import */ var core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.array.for-each.js */ "./node_modules/core-js/modules/es.array.for-each.js");
+/* harmony import */ var core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_for_each_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var jquery_match_height__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! jquery-match-height */ "./node_modules/jquery-match-height/dist/jquery.matchHeight.js");
+/* harmony import */ var jquery_match_height__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(jquery_match_height__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
 
 
 
 function compare() {
-  if (jquery__WEBPACK_IMPORTED_MODULE_1___default()('.compare__head').length) {
-    //одинаковая высота характеристик
-    // function setEqualHeight(elems){
-    //     let  tallestElem = 0;
-    //     elems.each(function() {
-    //         let currentHeight = $(this).height();
-    //         if(currentHeight > tallestElem) {
-    //         tallestElem = currentHeight;
-    //         }
-    //     });
-    //     elems.height(tallestElem);
-    // }
-    //перебираем характеристики в дефолтном элементе
-    var charMaxHeight = [];
-    jquery__WEBPACK_IMPORTED_MODULE_1___default()('.compare__content .item.item_default div[data-char]').each(function () {
-      var _char = jquery__WEBPACK_IMPORTED_MODULE_1___default()(this).attr('data-char');
+  if (jquery__WEBPACK_IMPORTED_MODULE_3___default()('.compare').length) {
+    //количество товара в заголовке
+    var countItems = function countItems() {
+      jquery__WEBPACK_IMPORTED_MODULE_3___default()('.page-title_cart h1').attr('data-count', jquery__WEBPACK_IMPORTED_MODULE_3___default()('.compare__head-wrap .item').length);
+    };
 
-      var charHeight = jquery__WEBPACK_IMPORTED_MODULE_1___default()(this).height();
-      charMaxHeight.push({
-        name: _char,
-        height: charHeight
+    //Удаление элементов
+    var removeAll = function removeAll() {
+      jquery__WEBPACK_IMPORTED_MODULE_3___default()('.compare__head').remove();
+      jquery__WEBPACK_IMPORTED_MODULE_3___default()('.compare__btns').remove();
+      jquery__WEBPACK_IMPORTED_MODULE_3___default()('.compare__content').remove();
+    };
+
+    countItems(); //одинаковая высота характеристик
+
+    var charNames = []; //подставляем какие-нибудь рандомные атрибуты к характеристикам
+
+    jquery__WEBPACK_IMPORTED_MODULE_3___default()('.compare__content .item').each(function () {
+      jquery__WEBPACK_IMPORTED_MODULE_3___default()(this).find('> div').each(function (i) {
+        jquery__WEBPACK_IMPORTED_MODULE_3___default()(this).attr('data-char', i);
       });
-    });
-    console.log(charMaxHeight); //Перебираем характеристики в остальных элементах и перезаписываем высоты
+    }); //перебираем характеристики в дефолтном элементе
 
-    jquery__WEBPACK_IMPORTED_MODULE_1___default()('.compare__content .item:not(.item_default) div[data-char]').each(function () {
-      // let tallestElem = 0;
-      var _char2 = jquery__WEBPACK_IMPORTED_MODULE_1___default()(this).attr('data-char');
+    jquery__WEBPACK_IMPORTED_MODULE_3___default()('.compare__content .item.item_default div[data-char]').each(function () {
+      var _char = jquery__WEBPACK_IMPORTED_MODULE_3___default()(this).attr('data-char');
 
-      var charHeight = jquery__WEBPACK_IMPORTED_MODULE_1___default()(this).height(); // if (charHeight > tallestElem) {
-      //     tallestElem = charHeight;
-      // }
-      // console.log(tallestElem)
+      charNames.push(_char);
+    }); //Перебираем характеристики и подставляем высоты
 
-      var arrCharElem = charMaxHeight.map(function (item) {}); // console.log(elem)
+    charNames.forEach(function (item) {
+      jquery__WEBPACK_IMPORTED_MODULE_3___default()(".compare__content .item div[data-char=\"".concat(item, "\"]")).matchHeight();
     }); //Смена отображения при скролле
 
-    jquery__WEBPACK_IMPORTED_MODULE_1___default()(window).scroll(function () {
-      var headOffsetTop = jquery__WEBPACK_IMPORTED_MODULE_1___default()('.compare__head').offset().top + jquery__WEBPACK_IMPORTED_MODULE_1___default()('.compare__head').height() - jquery__WEBPACK_IMPORTED_MODULE_1___default()(document).scrollTop();
+    jquery__WEBPACK_IMPORTED_MODULE_3___default()(window).scroll(function () {
+      if (jquery__WEBPACK_IMPORTED_MODULE_3___default()('.compare__head').length) {
+        var headOffsetTop = jquery__WEBPACK_IMPORTED_MODULE_3___default()('.compare__head').offset().top + jquery__WEBPACK_IMPORTED_MODULE_3___default()('.compare__head').height() - jquery__WEBPACK_IMPORTED_MODULE_3___default()(document).scrollTop();
 
-      if (headOffsetTop < 0) {
-        jquery__WEBPACK_IMPORTED_MODULE_1___default()('.compare__head').addClass('fixed');
-      } else {
-        jquery__WEBPACK_IMPORTED_MODULE_1___default()('.compare__head').removeClass('fixed');
-        jquery__WEBPACK_IMPORTED_MODULE_1___default()('.compare__head-wrap').css({
-          '-webkit-transform': "translateX(0px)",
-          '-ms-transform': "translateX(0px)",
-          'transform': "translateX(0px)"
-        });
+        if (headOffsetTop < 0) {
+          jquery__WEBPACK_IMPORTED_MODULE_3___default()('.compare__head').addClass('fixed');
+        } else {
+          jquery__WEBPACK_IMPORTED_MODULE_3___default()('.compare__head').removeClass('fixed');
+          jquery__WEBPACK_IMPORTED_MODULE_3___default()('.compare__head-wrap').css({
+            '-webkit-transform': "translateX(0px)",
+            '-ms-transform': "translateX(0px)",
+            'transform': "translateX(0px)"
+          });
+        }
       }
     }); //горизонтальный скролл
 
-    jquery__WEBPACK_IMPORTED_MODULE_1___default()(".scroll-table").on("scroll", function (e) {
+    jquery__WEBPACK_IMPORTED_MODULE_3___default()(".scroll-table").on("scroll", function (e) {
       var horizontal = e.currentTarget.scrollLeft; //перемещение подписей строк характеристик
 
-      jquery__WEBPACK_IMPORTED_MODULE_1___default()('.compare__content .label').css({
+      jquery__WEBPACK_IMPORTED_MODULE_3___default()('.compare__content .label').css({
         '-webkit-transform': "translateX(".concat(horizontal, "px)"),
         '-ms-transform': "translateX(".concat(horizontal, "px)"),
         'transform': "translateX(".concat(horizontal, "px)")
       });
 
-      if (jquery__WEBPACK_IMPORTED_MODULE_1___default()('.compare__head').hasClass('fixed')) {
-        jquery__WEBPACK_IMPORTED_MODULE_1___default()('.compare__head-wrap').css({
+      if (jquery__WEBPACK_IMPORTED_MODULE_3___default()('.compare__head').hasClass('fixed')) {
+        jquery__WEBPACK_IMPORTED_MODULE_3___default()('.compare__head-wrap').css({
           '-webkit-transform': "translateX(-".concat(horizontal, "px)"),
           '-ms-transform': "translateX(-".concat(horizontal, "px)"),
           'transform': "translateX(-".concat(horizontal, "px)")
         });
       }
-    }); //Удаление элементов
+    });
+    jquery__WEBPACK_IMPORTED_MODULE_3___default()('.btns__delete').click(function () {
+      var itemId = jquery__WEBPACK_IMPORTED_MODULE_3___default()(this).closest('.item').attr('data-id');
+      jquery__WEBPACK_IMPORTED_MODULE_3___default()("div[data-id=\"".concat(itemId, "\"]")).remove(); //количество товара в заголовке
 
-    jquery__WEBPACK_IMPORTED_MODULE_1___default()('.btns__delete').click(function () {
-      var itemId = jquery__WEBPACK_IMPORTED_MODULE_1___default()(this).closest('.item').attr('data-id');
+      countItems();
+
+      if (!jquery__WEBPACK_IMPORTED_MODULE_3___default()('.item:not(.item_default)').length) {
+        removeAll();
+      }
+    }); //Удалить всё
+
+    jquery__WEBPACK_IMPORTED_MODULE_3___default()('.compare__btns .delete').click(function () {
+      removeAll(); //количество товара в заголовке
+
+      countItems();
     });
   }
 }

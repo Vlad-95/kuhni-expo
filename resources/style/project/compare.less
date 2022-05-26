@@ -10,11 +10,13 @@
         &-wrap {
             display: flex;
             min-width: 1170px;
+            max-width: 1170px;
             margin: 0 -5px;
         }
 
         .item {
             min-width: 224px;
+            width: 224px;
             margin: 0 5px 10px;
             border-radius: 5px;
     
@@ -234,6 +236,7 @@
             display: flex;
             align-items: center;
             margin-left: 28px;
+            cursor: pointer;
 
             svg {
                 width: 18px;
@@ -251,10 +254,13 @@
     &__content {
         display: flex;
         min-width: 1170px;
+        max-width: 1170px;
         margin: 0 -5px;
+        position: relative;
         
         .item {
             min-width: 234px;    
+            width: 234px;
             border-top: 1px solid #d5d5d5;                   
 
             div:not(.label) {
@@ -263,6 +269,11 @@
                 position: relative;
             }
             
+            &_default {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
         }
 
         .label {

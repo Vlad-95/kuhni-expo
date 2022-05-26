@@ -2,6 +2,9 @@ import $ from 'jquery';
 
 function cart() {
     if ($('.cart').length) {
+        //количество товара в заголовке
+        $('.page-title_cart h1').attr('data-count', $('.cart__table-item').length);
+
         //функция подсчета цены
         function totalSum() {
             let total = 0;

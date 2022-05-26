@@ -1,63 +1,57 @@
 import $ from 'jquery';
+import 'jquery-match-height';
 
 function compare () {
-    if ($('.compare__head').length) {
-        //одинаковая высота характеристик
-        // function setEqualHeight(elems){
-        //     let  tallestElem = 0;
-        //     elems.each(function() {
-        //         let currentHeight = $(this).height();
-        //         if(currentHeight > tallestElem) {
-        //         tallestElem = currentHeight;
-        //         }
-        //     });
+    if ($('.compare').length) {
+        //количество товара в заголовке
+        function countItems() {
+            $('.page-title_cart h1').attr('data-count', $('.compare__head-wrap .item').length);
+        }
+
+        countItems();
         
-        //     elems.height(tallestElem);
-        // }
-        //перебираем характеристики в дефолтном элементе
-        let charMaxHeight = [];
 
-        $('.compare__content .item.item_default div[data-char]').each(function() {
-            let char = $(this).attr('data-char');
-            let charHeight = $(this).height();
+        //одинаковая высота характеристик
+        let charNames = [];
 
-            charMaxHeight.push({name: char, height: charHeight})
+        //подставляем какие-нибудь рандомные атрибуты к характеристикам
+        $('.compare__content .item').each(function() {
+            $(this).find('> div').each(function(i) {
+                $(this).attr('data-char', i);
+            })
         })
 
-        console.log(charMaxHeight);
-
-        //Перебираем характеристики в остальных элементах и перезаписываем высоты
-        $('.compare__content .item:not(.item_default) div[data-char]').each(function() {
-            // let tallestElem = 0;
+        //перебираем характеристики в дефолтном элементе
+        $('.compare__content .item.item_default div[data-char]').each(function() {
             let char = $(this).attr('data-char');
-            let charHeight = $(this).height();
 
-            // if (charHeight > tallestElem) {
-            //     tallestElem = charHeight;
-            // }
+            charNames.push(char);
+        })
 
-            // console.log(tallestElem)
-            let arrCharElem = charMaxHeight.map(item => {})
-
-            // console.log(elem)
-
+        //Перебираем характеристики и подставляем высоты
+        charNames.forEach(item => {
+            $(`.compare__content .item div[data-char="${item}"]`).matchHeight();
         })
         
         //Смена отображения при скролле
         $(window).scroll(function() {
-            let headOffsetTop = ($('.compare__head').offset().top + $('.compare__head').height()) - $(document).scrollTop()
+            if($('.compare__head').length) {
+                let headOffsetTop = ($('.compare__head').offset().top + $('.compare__head').height()) - $(document).scrollTop()
             
-            if (headOffsetTop < 0) {
-                $('.compare__head').addClass('fixed');
-            } else {
-                $('.compare__head').removeClass('fixed');
-
-                $('.compare__head-wrap').css({
-                    '-webkit-transform': `translateX(0px)`,
-                    '-ms-transform': `translateX(0px)`,
-                    'transform': `translateX(0px)`
-                }) 
+                if (headOffsetTop < 0) {
+                    $('.compare__head').addClass('fixed');
+                } else {
+                    $('.compare__head').removeClass('fixed');
+    
+                    $('.compare__head-wrap').css({
+                        '-webkit-transform': `translateX(0px)`,
+                        '-ms-transform': `translateX(0px)`,
+                        'transform': `translateX(0px)`
+                    }) 
+                }
             }
+            
+            
             
         })
 
@@ -84,8 +78,32 @@ function compare () {
         });
 
         //Удаление элементов
+        function removeAll() {
+            $('.compare__head').remove();
+            $('.compare__btns').remove();
+            $('.compare__content').remove();
+        }
+
+
         $('.btns__delete').click(function() {
             let itemId = $(this).closest('.item').attr('data-id');
+
+            $(`div[data-id="${itemId}"]`).remove();
+
+            //количество товара в заголовке
+            countItems();
+
+            if (!$('.item:not(.item_default)').length) {
+                removeAll();
+            }
+        })
+
+        //Удалить всё
+        $('.compare__btns .delete').click(function() {
+            removeAll(); 
+                  
+            //количество товара в заголовке
+            countItems();
         })
         
     }
