@@ -8427,6 +8427,20 @@ function cabinet() {
     //включение/отключение редактирования
     jquery__WEBPACK_IMPORTED_MODULE_2___default()('.edit').click(function () {
       jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).parent().find('input').prop('disabled', false);
+    }); //Показ превьюшки логотипа        
+
+    jquery__WEBPACK_IMPORTED_MODULE_2___default()('.logo__file').change(function () {
+      if (this.files[0]) {
+        var fr = new FileReader();
+
+        fr.onload = function () {
+          jquery__WEBPACK_IMPORTED_MODULE_2___default()('.logo__text').addClass('active').css({
+            'background-image': "url(".concat(fr.result, ")")
+          });
+        };
+
+        fr.readAsDataURL(this.files[0]);
+      }
     });
   }
 }

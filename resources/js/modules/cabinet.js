@@ -17,6 +17,22 @@ function cabinet() {
         $('.edit').click(function() {
             $(this).parent().find('input').prop('disabled', false);
         })
+
+        //Показ превьюшки логотипа        
+        $('.logo__file').change(function () {
+            
+            if (this.files[0]) {
+                const fr = new FileReader();
+
+                fr.onload = function() {
+                    $('.logo__text').addClass('active').css({
+                        'background-image' : `url(${fr.result})` 
+                    })
+                }
+
+                fr.readAsDataURL(this.files[0]);
+            }
+        });
     }
 }
 
