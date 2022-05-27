@@ -3,6 +3,18 @@ import { Select2 } from "select2";
 import { IonRangeSliderEvent } from "ion-rangeslider";
 
 const filter = () => {
+    //Клик по бренду (ЭТОТ ФУНКЦИОНАЛ СКОРЕЕ ВСЕГО ВЫПИЛИТСЯ)
+    $('.brands__item a').click(function () {
+        let brand = $(this).text();
+        let activeBrand = `<div class="name">${brand}</div>`;
+
+        $('.brands__item').removeClass('active');
+        $(this).parent().addClass('active');        
+        $('.filter__block.brand .filter__block-head .name').remove();
+        $('.filter__block.brand .filter__block-head').append(activeBrand)
+    })
+
+
     if ($('.js-sort__select').length) {
         $('.js-sort__select').select2({
             width: '170',

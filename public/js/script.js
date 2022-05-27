@@ -8995,6 +8995,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var filter = function filter() {
+  //Клик по бренду (ЭТОТ ФУНКЦИОНАЛ СКОРЕЕ ВСЕГО ВЫПИЛИТСЯ)
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()('.brands__item a').click(function () {
+    var brand = jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).text();
+    var activeBrand = "<div class=\"name\">".concat(brand, "</div>");
+    jquery__WEBPACK_IMPORTED_MODULE_2___default()('.brands__item').removeClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).parent().addClass('active');
+    jquery__WEBPACK_IMPORTED_MODULE_2___default()('.filter__block.brand .filter__block-head .name').remove();
+    jquery__WEBPACK_IMPORTED_MODULE_2___default()('.filter__block.brand .filter__block-head').append(activeBrand);
+  });
+
   if (jquery__WEBPACK_IMPORTED_MODULE_2___default()('.js-sort__select').length) {
     jquery__WEBPACK_IMPORTED_MODULE_2___default()('.js-sort__select').select2({
       width: '170',
