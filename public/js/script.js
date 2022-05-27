@@ -8940,7 +8940,7 @@ var contacts = function contacts() {
     }; //Первоначальная подгрузка
 
 
-    getResource('./public/js/data.json').then(function (result) {
+    getResource('./public/js/city.json').then(function (result) {
       var activeCity = jquery__WEBPACK_IMPORTED_MODULE_10___default()('.tabs__item.active').text().trim();
       getCityInfo(activeCity, result);
     }); //Клик по табам
@@ -8954,7 +8954,7 @@ var contacts = function contacts() {
         jquery__WEBPACK_IMPORTED_MODULE_10___default()('#map').html('');
         jquery__WEBPACK_IMPORTED_MODULE_10___default()('.contacts__list').html('');
         jquery__WEBPACK_IMPORTED_MODULE_10___default()(this).addClass('active').siblings().removeClass('active');
-        getResource('./public/js/data.json').then(function (result) {
+        getResource('./public/js/city.json').then(function (result) {
           var activeCity = jquery__WEBPACK_IMPORTED_MODULE_10___default()('.tabs__item.active').text().trim();
           getCityInfo(activeCity, result);
         });
