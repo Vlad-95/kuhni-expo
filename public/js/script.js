@@ -9280,34 +9280,66 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.find.js */ "./node_modules/core-js/modules/es.array.find.js");
-/* harmony import */ var core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
-/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_parse_int_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.parse-int.js */ "./node_modules/core-js/modules/es.parse-int.js");
+/* harmony import */ var core_js_modules_es_parse_int_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_parse_int_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.replace.js */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.array.find.js */ "./node_modules/core-js/modules/es.array.find.js");
+/* harmony import */ var core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
 
 
 
 
 function order() {
-  //функция показа полей доставки
+  //функция подсчета цены
+  function totalSum() {
+    var curr = parseInt(jquery__WEBPACK_IMPORTED_MODULE_5___default()('.order__sidebar-content .curr').text().replace(/\s/g, ''));
+    var sale = parseInt(jquery__WEBPACK_IMPORTED_MODULE_5___default()('.order__sidebar-content .sale').text().replace(/\s/g, ''));
+    var delivery = parseInt(jquery__WEBPACK_IMPORTED_MODULE_5___default()('.order__sidebar-content .delivery').text().replace(/\s/g, ''));
+    var bonus = jquery__WEBPACK_IMPORTED_MODULE_5___default()('.order__sidebar-content .bonus').length ? parseInt(jquery__WEBPACK_IMPORTED_MODULE_5___default()('.order__sidebar-content .bonus .bonus-value').text().replace(/\s/g, '')) : 0;
+    var total = curr - sale + delivery - bonus;
+    jquery__WEBPACK_IMPORTED_MODULE_5___default()('.order__sidebar-price .total').html("".concat(total, "&#8381;"));
+  }
+
+  totalSum(); //функция показа полей доставки
+
   var onDeliveryType = function onDeliveryType() {
-    var activeDeliveryType = jquery__WEBPACK_IMPORTED_MODULE_2___default()('.delivery-type a.active').attr('data-delivery-type');
-    var hiddenDeliveryTypeInput = jquery__WEBPACK_IMPORTED_MODULE_2___default()('input[name="order_type_delivery"]'); //записываем значение типа пользователя в скрытый инпут
+    var activeDeliveryType = jquery__WEBPACK_IMPORTED_MODULE_5___default()('.delivery-type a.active').attr('data-delivery-type');
+    var hiddenDeliveryTypeInput = jquery__WEBPACK_IMPORTED_MODULE_5___default()('input[name="order_type_delivery"]'); //записываем значение типа пользователя в скрытый инпут
 
     hiddenDeliveryTypeInput.val(activeDeliveryType); //скрываем ненужные поля
 
-    jquery__WEBPACK_IMPORTED_MODULE_2___default()('.form__item[data-delivery-type]').hide().find('input').prop('disabled', true);
-    jquery__WEBPACK_IMPORTED_MODULE_2___default()(".form__item[data-delivery-type=\"".concat(activeDeliveryType, "\"]")).show().find('input').prop('disabled', false);
+    jquery__WEBPACK_IMPORTED_MODULE_5___default()('.form__item[data-delivery-type]').hide().find('input').prop('disabled', true);
+    jquery__WEBPACK_IMPORTED_MODULE_5___default()(".form__item[data-delivery-type=\"".concat(activeDeliveryType, "\"]")).show().find('input').prop('disabled', false);
   }; //Вызываем при загрузке
 
 
   onDeliveryType(); //клик по табам
 
-  jquery__WEBPACK_IMPORTED_MODULE_2___default()('.delivery-type a').click(function () {
-    jquery__WEBPACK_IMPORTED_MODULE_2___default()(this).addClass('active').siblings().removeClass('active');
+  jquery__WEBPACK_IMPORTED_MODULE_5___default()('.delivery-type a').click(function () {
+    jquery__WEBPACK_IMPORTED_MODULE_5___default()(this).addClass('active').siblings().removeClass('active');
     onDeliveryType();
+  }); //чекбокс бонусов
+
+  var bonusValue = jquery__WEBPACK_IMPORTED_MODULE_5___default()('[name="order_bonus"]').closest('.bonus').find('.form__checkbox-text strong').text();
+  var sidebarBonus = "<div class=\"bonus\">\n                            <p>\u041E\u043F\u043B\u0430\u0442\u0430 \u0431\u043E\u043D\u0443\u0441\u043D\u044B\u043C\u0438 \u0431\u0430\u043B\u043B\u0430\u043C\u0438</p>\n                            <p class=\"bonus-value\">".concat(bonusValue, "</p>\n                        </div>");
+  jquery__WEBPACK_IMPORTED_MODULE_5___default()('[name="order_bonus"]').change(function () {
+    if (jquery__WEBPACK_IMPORTED_MODULE_5___default()(this).is(':checked')) {
+      jquery__WEBPACK_IMPORTED_MODULE_5___default()('.order__sidebar-content').append(sidebarBonus);
+    } else {
+      jquery__WEBPACK_IMPORTED_MODULE_5___default()('.order__sidebar-content .bonus').remove();
+    }
+
+    totalSum();
   });
 }
 
