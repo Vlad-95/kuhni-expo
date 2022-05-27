@@ -1,3 +1,5 @@
+import $ from 'jquery'
+
 import header from './modules/header';
 import catalogList from './modules/catalog-list';
 import promo from './modules/promo';
@@ -13,8 +15,9 @@ import contacts from './modules/contacts';
 import cart from './modules/cart';
 import compare from './modules/compare';
 import order from './modules/order';
+import forms from './modules/forms';
 
-window.addEventListener('DOMContentLoaded', () => {
+$(document).ready(function() {
     header();
     catalogList();
     promo();
@@ -30,4 +33,5 @@ window.addEventListener('DOMContentLoaded', () => {
     compare();
     order();
     popup();
+    forms();
 });
