@@ -11,7 +11,7 @@ function compare () {
         countItems();
         
 
-        //одинаковая высота характеристик
+        //==================одинаковая высота характеристик
         let charNames = [];
 
         //подставляем какие-нибудь рандомные атрибуты к характеристикам
@@ -32,14 +32,23 @@ function compare () {
         charNames.forEach(item => {
             $(`.compare__content .item div[data-char="${item}"]`).matchHeight();
         })
+        // ===============================
         
         //Смена отображения при скролле
         $(window).scroll(function() {
             if($('.compare__head').length) {
-                let headOffsetTop = ($('.compare__head').offset().top + $('.compare__head').height()) - $(document).scrollTop()
+                let headOffsetTop = ($('.compare__head').offset().top + $('.compare__head').height()) - $(document).scrollTop();
+                let contentOffsetTop = ($('.compare__content').offset().top + $('.compare__content').height() - 140) - $(document).scrollTop()
             
                 if (headOffsetTop < 0) {
                     $('.compare__head').addClass('fixed');
+
+                    if (contentOffsetTop < 0) {
+                        $('.compare__head').removeClass('fixed');
+                    } else {
+                        $('.compare__head').addClass('fixed');
+                    }
+
                 } else {
                     $('.compare__head').removeClass('fixed');
     
@@ -50,9 +59,6 @@ function compare () {
                     }) 
                 }
             }
-            
-            
-            
         })
 
         //горизонтальный скролл

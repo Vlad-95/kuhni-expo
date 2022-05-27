@@ -8717,7 +8717,7 @@ function compare() {
       jquery__WEBPACK_IMPORTED_MODULE_3___default()('.compare__content').remove();
     };
 
-    countItems(); //одинаковая высота характеристик
+    countItems(); //==================одинаковая высота характеристик
 
     var charNames = []; //подставляем какие-нибудь рандомные атрибуты к характеристикам
 
@@ -8735,14 +8735,22 @@ function compare() {
 
     charNames.forEach(function (item) {
       jquery__WEBPACK_IMPORTED_MODULE_3___default()(".compare__content .item div[data-char=\"".concat(item, "\"]")).matchHeight();
-    }); //Смена отображения при скролле
+    }); // ===============================
+    //Смена отображения при скролле
 
     jquery__WEBPACK_IMPORTED_MODULE_3___default()(window).scroll(function () {
       if (jquery__WEBPACK_IMPORTED_MODULE_3___default()('.compare__head').length) {
         var headOffsetTop = jquery__WEBPACK_IMPORTED_MODULE_3___default()('.compare__head').offset().top + jquery__WEBPACK_IMPORTED_MODULE_3___default()('.compare__head').height() - jquery__WEBPACK_IMPORTED_MODULE_3___default()(document).scrollTop();
+        var contentOffsetTop = jquery__WEBPACK_IMPORTED_MODULE_3___default()('.compare__content').offset().top + jquery__WEBPACK_IMPORTED_MODULE_3___default()('.compare__content').height() - 140 - jquery__WEBPACK_IMPORTED_MODULE_3___default()(document).scrollTop();
 
         if (headOffsetTop < 0) {
           jquery__WEBPACK_IMPORTED_MODULE_3___default()('.compare__head').addClass('fixed');
+
+          if (contentOffsetTop < 0) {
+            jquery__WEBPACK_IMPORTED_MODULE_3___default()('.compare__head').removeClass('fixed');
+          } else {
+            jquery__WEBPACK_IMPORTED_MODULE_3___default()('.compare__head').addClass('fixed');
+          }
         } else {
           jquery__WEBPACK_IMPORTED_MODULE_3___default()('.compare__head').removeClass('fixed');
           jquery__WEBPACK_IMPORTED_MODULE_3___default()('.compare__head-wrap').css({
