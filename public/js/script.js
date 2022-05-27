@@ -9048,7 +9048,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function forms() {}
+function forms() {
+  //маска телефона
+  inputmask__WEBPACK_IMPORTED_MODULE_1___default()({
+    "mask": "+7 (999) 999-9999"
+  }).mask(jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-phone'));
+}
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (forms);
 
