@@ -8460,18 +8460,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var core_js_modules_es_parse_int_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.parse-int.js */ "./node_modules/core-js/modules/es.parse-int.js");
-/* harmony import */ var core_js_modules_es_parse_int_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_parse_int_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.replace.js */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.array.find.js */ "./node_modules/core-js/modules/es.array.find.js");
-/* harmony import */ var core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
-/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.replace.js */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_date_to_string_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.date.to-string.js */ "./node_modules/core-js/modules/es.date.to-string.js");
+/* harmony import */ var core_js_modules_es_date_to_string_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_date_to_string_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_regexp_to_string_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string.js */ "./node_modules/core-js/modules/es.regexp.to-string.js");
+/* harmony import */ var core_js_modules_es_regexp_to_string_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_es_parse_int_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.parse-int.js */ "./node_modules/core-js/modules/es.parse-int.js");
+/* harmony import */ var core_js_modules_es_parse_int_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_parse_int_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.array.find.js */ "./node_modules/core-js/modules/es.array.find.js");
+/* harmony import */ var core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_7__);
+
+
 
 
 
@@ -8480,71 +8486,78 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function cart() {
-  if (jquery__WEBPACK_IMPORTED_MODULE_5___default()('.cart').length) {
+  if (jquery__WEBPACK_IMPORTED_MODULE_7___default()('.cart').length) {
+    //разбиение числа на разряды
+    var numberWithSpaces = function numberWithSpaces(x) {
+      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+    }; //количество товара в заголовке
+
+
+    var countItems = function countItems() {
+      jquery__WEBPACK_IMPORTED_MODULE_7___default()('.page-title_cart h1').attr('data-count', jquery__WEBPACK_IMPORTED_MODULE_7___default()('.cart__table-item').length);
+    };
+
     //функция подсчета цены
     var totalSum = function totalSum() {
       var total = 0;
       var totalOldPrice = 0;
       var totalSale = 0;
       var totalBonus = 0;
-      jquery__WEBPACK_IMPORTED_MODULE_5___default()('.cart__table-item').each(function () {
-        var price = parseInt(jquery__WEBPACK_IMPORTED_MODULE_5___default()(this).find('.price .curr').text().replace(/\s/g, '')) * +jquery__WEBPACK_IMPORTED_MODULE_5___default()(this).find('.count__input').val();
-        var oldPrice = parseInt(jquery__WEBPACK_IMPORTED_MODULE_5___default()(this).find('.price .old').text().replace(/\s/g, '')) * +jquery__WEBPACK_IMPORTED_MODULE_5___default()(this).find('.count__input').val();
-        var bonus = parseInt(jquery__WEBPACK_IMPORTED_MODULE_5___default()(this).find('.bonus span').text().replace(/\s/g, ''));
+      jquery__WEBPACK_IMPORTED_MODULE_7___default()('.cart__table-item').each(function () {
+        var price = parseInt(jquery__WEBPACK_IMPORTED_MODULE_7___default()(this).find('.price .curr').text().replace(/\s/g, '')) * +jquery__WEBPACK_IMPORTED_MODULE_7___default()(this).find('.count__input').val();
+        var oldPrice = parseInt(jquery__WEBPACK_IMPORTED_MODULE_7___default()(this).find('.price .old').text().replace(/\s/g, '')) * +jquery__WEBPACK_IMPORTED_MODULE_7___default()(this).find('.count__input').val();
+        var bonus = parseInt(jquery__WEBPACK_IMPORTED_MODULE_7___default()(this).find('.bonus span').text().replace(/\s/g, ''));
         totalBonus += bonus;
         totalOldPrice += oldPrice;
         total += price;
       });
       totalSale = totalOldPrice - total;
-      jquery__WEBPACK_IMPORTED_MODULE_5___default()('.cart__footer .price .sum').text(total);
-      jquery__WEBPACK_IMPORTED_MODULE_5___default()('.cart__footer .price .sale').html("(\u0412\u0430\u0448\u0430 \u0441\u043A\u0438\u0434\u043A\u0430 \u2014 ".concat(totalSale, "&#8381;)"));
-      jquery__WEBPACK_IMPORTED_MODULE_5___default()('.cart__footer .bonus').text("\u041D\u0430\u0447\u0438\u0441\u043B\u0438\u043C ".concat(totalBonus, " \u0431\u0430\u043B\u043B\u043E\u0432"));
+      jquery__WEBPACK_IMPORTED_MODULE_7___default()('.cart__footer .price .sum').text(numberWithSpaces(total));
+      jquery__WEBPACK_IMPORTED_MODULE_7___default()('.cart__footer .price .sale').html("(\u0412\u0430\u0448\u0430 \u0441\u043A\u0438\u0434\u043A\u0430 \u2014 ".concat(numberWithSpaces(totalSale), " &#8381;)"));
+      jquery__WEBPACK_IMPORTED_MODULE_7___default()('.cart__footer .bonus').text("\u041D\u0430\u0447\u0438\u0441\u043B\u0438\u043C ".concat(totalBonus, " \u0431\u0430\u043B\u043B\u043E\u0432"));
     }; // Подсчитываем сумму при загрузке
 
 
-    //количество товара в заголовке
-    jquery__WEBPACK_IMPORTED_MODULE_5___default()('.page-title_cart h1').attr('data-count', jquery__WEBPACK_IMPORTED_MODULE_5___default()('.cart__table-item').length);
+    countItems();
     totalSum(); //чекбокс кредита
 
-    jquery__WEBPACK_IMPORTED_MODULE_5___default()('input[name="credit"]').on('change', function () {
-      if (jquery__WEBPACK_IMPORTED_MODULE_5___default()(this).is(':checked')) {
-        jquery__WEBPACK_IMPORTED_MODULE_5___default()('.btns .order').addClass('js-popup-open btn-credit').attr('data-type', 'credit').text('Отправить запрос');
+    jquery__WEBPACK_IMPORTED_MODULE_7___default()('input[name="credit"]').on('change', function () {
+      if (jquery__WEBPACK_IMPORTED_MODULE_7___default()(this).is(':checked')) {
+        jquery__WEBPACK_IMPORTED_MODULE_7___default()('.btns .order').addClass('js-popup-open btn-credit').attr('data-type', 'credit').text('Отправить запрос');
       } else {
-        jquery__WEBPACK_IMPORTED_MODULE_5___default()('.btns .order').removeClass('js-popup-open btn-credit').removeAttr('data-type').text('Оформить заказ');
+        jquery__WEBPACK_IMPORTED_MODULE_7___default()('.btns .order').removeClass('js-popup-open btn-credit').removeAttr('data-type').text('Оформить заказ');
       }
     }); //изменение количества товара
 
-    jquery__WEBPACK_IMPORTED_MODULE_5___default()('.count__btn.dec').click(function () {
-      var curValue = +jquery__WEBPACK_IMPORTED_MODULE_5___default()(this).siblings('.count__input').val();
+    jquery__WEBPACK_IMPORTED_MODULE_7___default()('.count__btn.dec').click(function () {
+      var curValue = +jquery__WEBPACK_IMPORTED_MODULE_7___default()(this).siblings('.count__input').val();
 
       if (curValue > 1) {
-        jquery__WEBPACK_IMPORTED_MODULE_5___default()(this).siblings('.count__input').val(curValue - 1);
+        jquery__WEBPACK_IMPORTED_MODULE_7___default()(this).siblings('.count__input').val(curValue - 1);
       } //пересчет суммы
 
 
       totalSum();
     });
-    jquery__WEBPACK_IMPORTED_MODULE_5___default()('.count__btn.inc').click(function () {
-      var curValue = +jquery__WEBPACK_IMPORTED_MODULE_5___default()(this).siblings('input').val();
-      jquery__WEBPACK_IMPORTED_MODULE_5___default()(this).siblings('input').val(curValue + 1); //пересчет суммы
+    jquery__WEBPACK_IMPORTED_MODULE_7___default()('.count__btn.inc').click(function () {
+      var curValue = +jquery__WEBPACK_IMPORTED_MODULE_7___default()(this).siblings('input').val();
+      jquery__WEBPACK_IMPORTED_MODULE_7___default()(this).siblings('input').val(curValue + 1); //пересчет суммы
 
       totalSum();
     }); //Удаление товара
 
-    jquery__WEBPACK_IMPORTED_MODULE_5___default()('.js-cart-remove').click(function () {
-      jquery__WEBPACK_IMPORTED_MODULE_5___default()(this).closest('.cart__table-item').remove(); //количество товара в заголовке
-
-      var curValue = +jquery__WEBPACK_IMPORTED_MODULE_5___default()('.page-title_cart h1').attr('data-count');
-      jquery__WEBPACK_IMPORTED_MODULE_5___default()('.page-title_cart h1').attr('data-count', "".concat(curValue - 1)); //пересчет суммы
+    jquery__WEBPACK_IMPORTED_MODULE_7___default()('.js-cart-remove').click(function () {
+      jquery__WEBPACK_IMPORTED_MODULE_7___default()(this).closest('.cart__table-item').remove();
+      countItems(); //пересчет суммы
 
       totalSum();
     }); //Удалить всё
 
-    jquery__WEBPACK_IMPORTED_MODULE_5___default()('.js-cart-remove_all').click(function () {
-      jquery__WEBPACK_IMPORTED_MODULE_5___default()('.cart__table').remove();
-      jquery__WEBPACK_IMPORTED_MODULE_5___default()('.cart__footer .price .bonus, .cart__footer .btns').remove();
-      jquery__WEBPACK_IMPORTED_MODULE_5___default()('.page-title_cart h1').attr('data-count', "");
-      jquery__WEBPACK_IMPORTED_MODULE_5___default()('.cart__footer .price .result').text('Корзина пуста');
+    jquery__WEBPACK_IMPORTED_MODULE_7___default()('.js-cart-remove_all').click(function () {
+      jquery__WEBPACK_IMPORTED_MODULE_7___default()('.cart__table').remove();
+      jquery__WEBPACK_IMPORTED_MODULE_7___default()('.cart__footer .price .bonus, .cart__footer .btns').remove();
+      jquery__WEBPACK_IMPORTED_MODULE_7___default()('.cart__footer .price .result').text('Корзина пуста');
+      countItems();
     });
   }
 }
@@ -9290,18 +9303,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var core_js_modules_es_parse_int_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.parse-int.js */ "./node_modules/core-js/modules/es.parse-int.js");
-/* harmony import */ var core_js_modules_es_parse_int_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_parse_int_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.replace.js */ "./node_modules/core-js/modules/es.string.replace.js");
-/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.array.find.js */ "./node_modules/core-js/modules/es.array.find.js");
-/* harmony import */ var core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
-/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.replace.js */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_date_to_string_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.date.to-string.js */ "./node_modules/core-js/modules/es.date.to-string.js");
+/* harmony import */ var core_js_modules_es_date_to_string_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_date_to_string_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_regexp_to_string_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string.js */ "./node_modules/core-js/modules/es.regexp.to-string.js");
+/* harmony import */ var core_js_modules_es_regexp_to_string_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_es_parse_int_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es.parse-int.js */ "./node_modules/core-js/modules/es.parse-int.js");
+/* harmony import */ var core_js_modules_es_parse_int_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_parse_int_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.array.find.js */ "./node_modules/core-js/modules/es.array.find.js");
+/* harmony import */ var core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_find_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_7__);
+
+
 
 
 
@@ -9310,43 +9329,48 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function order() {
-  //функция подсчета цены
+  //разбиение числа на разряды
+  function numberWithSpaces(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  } //функция подсчета цены
+
+
   function totalSum() {
-    var curr = parseInt(jquery__WEBPACK_IMPORTED_MODULE_5___default()('.order__sidebar-content .curr').text().replace(/\s/g, ''));
-    var sale = parseInt(jquery__WEBPACK_IMPORTED_MODULE_5___default()('.order__sidebar-content .sale').text().replace(/\s/g, ''));
-    var delivery = parseInt(jquery__WEBPACK_IMPORTED_MODULE_5___default()('.order__sidebar-content .delivery').text().replace(/\s/g, ''));
-    var bonus = jquery__WEBPACK_IMPORTED_MODULE_5___default()('.order__sidebar-content .bonus').length ? parseInt(jquery__WEBPACK_IMPORTED_MODULE_5___default()('.order__sidebar-content .bonus .bonus-value').text().replace(/\s/g, '')) : 0;
+    var curr = parseInt(jquery__WEBPACK_IMPORTED_MODULE_7___default()('.order__sidebar-content .curr').text().replace(/\s/g, ''));
+    var sale = parseInt(jquery__WEBPACK_IMPORTED_MODULE_7___default()('.order__sidebar-content .sale').text().replace(/\s/g, ''));
+    var delivery = parseInt(jquery__WEBPACK_IMPORTED_MODULE_7___default()('.order__sidebar-content .delivery').text().replace(/\s/g, ''));
+    var bonus = jquery__WEBPACK_IMPORTED_MODULE_7___default()('.order__sidebar-content .bonus').length ? parseInt(jquery__WEBPACK_IMPORTED_MODULE_7___default()('.order__sidebar-content .bonus .bonus-value').text().replace(/\s/g, '')) : 0;
     var total = curr - sale + delivery - bonus;
-    jquery__WEBPACK_IMPORTED_MODULE_5___default()('.order__sidebar-price .total').html("".concat(total, "&#8381;"));
+    jquery__WEBPACK_IMPORTED_MODULE_7___default()('.order__sidebar-price .total').html("".concat(numberWithSpaces(total), " &#8381;"));
   }
 
   totalSum(); //функция показа полей доставки
 
   var onDeliveryType = function onDeliveryType() {
-    var activeDeliveryType = jquery__WEBPACK_IMPORTED_MODULE_5___default()('.delivery-type a.active').attr('data-delivery-type');
-    var hiddenDeliveryTypeInput = jquery__WEBPACK_IMPORTED_MODULE_5___default()('input[name="order_type_delivery"]'); //записываем значение типа пользователя в скрытый инпут
+    var activeDeliveryType = jquery__WEBPACK_IMPORTED_MODULE_7___default()('.delivery-type a.active').attr('data-delivery-type');
+    var hiddenDeliveryTypeInput = jquery__WEBPACK_IMPORTED_MODULE_7___default()('input[name="order_type_delivery"]'); //записываем значение типа пользователя в скрытый инпут
 
     hiddenDeliveryTypeInput.val(activeDeliveryType); //скрываем ненужные поля
 
-    jquery__WEBPACK_IMPORTED_MODULE_5___default()('.form__item[data-delivery-type]').hide().find('input').prop('disabled', true);
-    jquery__WEBPACK_IMPORTED_MODULE_5___default()(".form__item[data-delivery-type=\"".concat(activeDeliveryType, "\"]")).show().find('input').prop('disabled', false);
+    jquery__WEBPACK_IMPORTED_MODULE_7___default()('.form__item[data-delivery-type]').hide().find('input').prop('disabled', true);
+    jquery__WEBPACK_IMPORTED_MODULE_7___default()(".form__item[data-delivery-type=\"".concat(activeDeliveryType, "\"]")).show().find('input').prop('disabled', false);
   }; //Вызываем при загрузке
 
 
   onDeliveryType(); //клик по табам
 
-  jquery__WEBPACK_IMPORTED_MODULE_5___default()('.delivery-type a').click(function () {
-    jquery__WEBPACK_IMPORTED_MODULE_5___default()(this).addClass('active').siblings().removeClass('active');
+  jquery__WEBPACK_IMPORTED_MODULE_7___default()('.delivery-type a').click(function () {
+    jquery__WEBPACK_IMPORTED_MODULE_7___default()(this).addClass('active').siblings().removeClass('active');
     onDeliveryType();
   }); //чекбокс бонусов
 
-  var bonusValue = jquery__WEBPACK_IMPORTED_MODULE_5___default()('[name="order_bonus"]').closest('.bonus').find('.form__checkbox-text strong').text();
+  var bonusValue = jquery__WEBPACK_IMPORTED_MODULE_7___default()('[name="order_bonus"]').closest('.bonus').find('.form__checkbox-text strong').text();
   var sidebarBonus = "<div class=\"bonus\">\n                            <p>\u041E\u043F\u043B\u0430\u0442\u0430 \u0431\u043E\u043D\u0443\u0441\u043D\u044B\u043C\u0438 \u0431\u0430\u043B\u043B\u0430\u043C\u0438</p>\n                            <p class=\"bonus-value\">".concat(bonusValue, "</p>\n                        </div>");
-  jquery__WEBPACK_IMPORTED_MODULE_5___default()('[name="order_bonus"]').change(function () {
-    if (jquery__WEBPACK_IMPORTED_MODULE_5___default()(this).is(':checked')) {
-      jquery__WEBPACK_IMPORTED_MODULE_5___default()('.order__sidebar-content').append(sidebarBonus);
+  jquery__WEBPACK_IMPORTED_MODULE_7___default()('[name="order_bonus"]').change(function () {
+    if (jquery__WEBPACK_IMPORTED_MODULE_7___default()(this).is(':checked')) {
+      jquery__WEBPACK_IMPORTED_MODULE_7___default()('.order__sidebar-content').append(sidebarBonus);
     } else {
-      jquery__WEBPACK_IMPORTED_MODULE_5___default()('.order__sidebar-content .bonus').remove();
+      jquery__WEBPACK_IMPORTED_MODULE_7___default()('.order__sidebar-content .bonus').remove();
     }
 
     totalSum();
@@ -12415,6 +12439,28 @@ module.exports = function () {
 
 /***/ }),
 
+/***/ "./node_modules/core-js/internals/regexp-get-flags.js":
+/*!************************************************************!*\
+  !*** ./node_modules/core-js/internals/regexp-get-flags.js ***!
+  \************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var call = __webpack_require__(/*! ../internals/function-call */ "./node_modules/core-js/internals/function-call.js");
+var hasOwn = __webpack_require__(/*! ../internals/has-own-property */ "./node_modules/core-js/internals/has-own-property.js");
+var isPrototypeOf = __webpack_require__(/*! ../internals/object-is-prototype-of */ "./node_modules/core-js/internals/object-is-prototype-of.js");
+var regExpFlags = __webpack_require__(/*! ../internals/regexp-flags */ "./node_modules/core-js/internals/regexp-flags.js");
+
+var RegExpPrototype = RegExp.prototype;
+
+module.exports = function (R) {
+  var flags = R.flags;
+  return flags === undefined && !('flags' in RegExpPrototype) && !hasOwn(R, 'flags') && isPrototypeOf(RegExpPrototype, R)
+    ? call(regExpFlags, R) : flags;
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/internals/regexp-sticky-helpers.js":
 /*!*****************************************************************!*\
   !*** ./node_modules/core-js/internals/regexp-sticky-helpers.js ***!
@@ -13394,6 +13440,35 @@ $({ target: 'Array', proto: true, forced: !HAS_SPECIES_SUPPORT }, {
 
 /***/ }),
 
+/***/ "./node_modules/core-js/modules/es.date.to-string.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/core-js/modules/es.date.to-string.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+// TODO: Remove from `core-js@4`
+var uncurryThis = __webpack_require__(/*! ../internals/function-uncurry-this */ "./node_modules/core-js/internals/function-uncurry-this.js");
+var defineBuiltIn = __webpack_require__(/*! ../internals/define-built-in */ "./node_modules/core-js/internals/define-built-in.js");
+
+var DatePrototype = Date.prototype;
+var INVALID_DATE = 'Invalid Date';
+var TO_STRING = 'toString';
+var un$DateToString = uncurryThis(DatePrototype[TO_STRING]);
+var getTime = uncurryThis(DatePrototype.getTime);
+
+// `Date.prototype.toString` method
+// https://tc39.es/ecma262/#sec-date.prototype.tostring
+if (String(new Date(NaN)) != INVALID_DATE) {
+  defineBuiltIn(DatePrototype, TO_STRING, function toString() {
+    var value = getTime(this);
+    // eslint-disable-next-line no-self-compare -- NaN check
+    return value === value ? un$DateToString(this) : INVALID_DATE;
+  });
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/core-js/modules/es.function.name.js":
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/es.function.name.js ***!
@@ -13977,6 +14052,43 @@ var exec = __webpack_require__(/*! ../internals/regexp-exec */ "./node_modules/c
 $({ target: 'RegExp', proto: true, forced: /./.exec !== exec }, {
   exec: exec
 });
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/modules/es.regexp.to-string.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/core-js/modules/es.regexp.to-string.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+
+var PROPER_FUNCTION_NAME = (__webpack_require__(/*! ../internals/function-name */ "./node_modules/core-js/internals/function-name.js").PROPER);
+var defineBuiltIn = __webpack_require__(/*! ../internals/define-built-in */ "./node_modules/core-js/internals/define-built-in.js");
+var anObject = __webpack_require__(/*! ../internals/an-object */ "./node_modules/core-js/internals/an-object.js");
+var $toString = __webpack_require__(/*! ../internals/to-string */ "./node_modules/core-js/internals/to-string.js");
+var fails = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-js/internals/fails.js");
+var getRegExpFlags = __webpack_require__(/*! ../internals/regexp-get-flags */ "./node_modules/core-js/internals/regexp-get-flags.js");
+
+var TO_STRING = 'toString';
+var RegExpPrototype = RegExp.prototype;
+var n$ToString = RegExpPrototype[TO_STRING];
+
+var NOT_GENERIC = fails(function () { return n$ToString.call({ source: 'a', flags: 'b' }) != '/a/b'; });
+// FF44- RegExp#toString has a wrong name
+var INCORRECT_NAME = PROPER_FUNCTION_NAME && n$ToString.name != TO_STRING;
+
+// `RegExp.prototype.toString` method
+// https://tc39.es/ecma262/#sec-regexp.prototype.tostring
+if (NOT_GENERIC || INCORRECT_NAME) {
+  defineBuiltIn(RegExp.prototype, TO_STRING, function toString() {
+    var R = anObject(this);
+    var pattern = $toString(R.source);
+    var flags = $toString(getRegExpFlags(R));
+    return '/' + pattern + '/' + flags;
+  }, { unsafe: true });
+}
 
 
 /***/ }),

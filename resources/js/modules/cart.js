@@ -2,8 +2,17 @@ import $ from 'jquery';
 
 function cart() {
     if ($('.cart').length) {
+        //разбиение числа на разряды
+        function numberWithSpaces(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+        }
+        
         //количество товара в заголовке
-        $('.page-title_cart h1').attr('data-count', $('.cart__table-item').length);
+        function countItems() {
+            $('.page-title_cart h1').attr('data-count', $('.cart__table-item').length);
+        }
+
+        countItems();
 
         //функция подсчета цены
         function totalSum() {
@@ -24,8 +33,8 @@ function cart() {
 
             totalSale = totalOldPrice - total;
 
-            $('.cart__footer .price .sum').text(total);
-            $('.cart__footer .price .sale').html(`(Ваша скидка — ${totalSale}&#8381;)`);
+            $('.cart__footer .price .sum').text(numberWithSpaces(total));
+            $('.cart__footer .price .sale').html(`(Ваша скидка — ${numberWithSpaces(totalSale)} &#8381;)`);
             $('.cart__footer .bonus').text(`Начислим ${totalBonus} баллов`);
 
         }
@@ -67,11 +76,8 @@ function cart() {
         //Удаление товара
         $('.js-cart-remove').click(function() {
             $(this).closest('.cart__table-item').remove();
-
-            //количество товара в заголовке
-            let curValue = +$('.page-title_cart h1').attr('data-count');
             
-            $('.page-title_cart h1').attr('data-count', `${curValue - 1}`);
+            countItems();
 
             //пересчет суммы
             totalSum();
@@ -82,9 +88,9 @@ function cart() {
             $('.cart__table').remove();
             $('.cart__footer .price .bonus, .cart__footer .btns').remove();
 
-            $('.page-title_cart h1').attr('data-count', ``);
-
-            $('.cart__footer .price .result').text('Корзина пуста')            
+            $('.cart__footer .price .result').text('Корзина пуста');
+            
+            countItems();
         })
     }
 }

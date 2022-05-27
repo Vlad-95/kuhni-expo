@@ -1,6 +1,11 @@
 import $ from 'jquery';
 
 function order() {
+    //разбиение числа на разряды
+    function numberWithSpaces(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+    }
+
     //функция подсчета цены
     function totalSum() {
         let curr = parseInt($('.order__sidebar-content .curr').text().replace(/\s/g,''))
@@ -10,7 +15,7 @@ function order() {
 
         let total = curr - sale + delivery - bonus;
 
-        $('.order__sidebar-price .total').html(`${total}&#8381;`)
+        $('.order__sidebar-price .total').html(`${numberWithSpaces(total)} &#8381;`)
     }
 
     totalSum();
