@@ -1,5 +1,6 @@
 import $ from 'jquery'
 
+import utils from './modules/utils';
 import header from './modules/header';
 import catalogList from './modules/catalog-list';
 import promo from './modules/promo';
@@ -18,6 +19,7 @@ import order from './modules/order';
 import forms from './modules/forms';
 
 $(document).ready(function() {
+    utils()
     header();
     catalogList();
     promo();
