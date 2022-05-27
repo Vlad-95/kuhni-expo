@@ -1,5 +1,6 @@
 .cart {
     padding-bottom: 52px;
+    margin-top: -20px;
 
     &__table {
         width: 100%;
@@ -328,9 +329,18 @@
                 .fullrounded;
                 padding: 10px 20px;
                 transition: 0.3s;
+                margin-top: 0;
 
                 &.btn-credit {
                     background-color: @blue;
+                    border: 1px solid @blue;
+                    color: @white;
+
+                    &:hover {
+                        background-color: @white;
+                        color: @blue;
+                        border: 1px solid @blue;
+                    }
                 }
             }
         }
@@ -371,6 +381,8 @@
 
 @media screen and (max-width: 1200px) {
     .cart {
+        margin-top: 0;
+
         &__table {
             min-width: 963px;
             .name {
