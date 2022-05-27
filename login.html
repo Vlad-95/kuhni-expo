@@ -244,7 +244,7 @@
                                     <p class="form__checkbox-text">Запомнить меня</p>
                                 </label>
 
-                                <p class="forgot-psw">Забыли пароль?</p>
+                                <p class="forgot-psw js-popup-open" data-type="psw">Забыли пароль?</p>
                             </div>
 
                             <div class="form__footer">
@@ -447,25 +447,21 @@
                 </form>
             </div>
         </div>
-    </div>
+    </div>    
 
-    <div class="popup credit">
+    <div class="popup psw">
         <div class="popup__wrap">
             <div class="popup__content">
-                <h3 class="block-title">Обратный звонок</h2>
-                <div class="close">
+                <h3 class="block-title">Забыли пароль?</h2>
+                <div class="close js-popup-close">
                     <svg>
                         <use xlink:href="img/icons/sprite.svg#close"></use>
                     </svg>
                 </div>
-                <form action="" class="form credit__form">
+                <form action="" class="form">
                     <label class="form__item">
-                        <p class="form__label">Ваше имя *</p>
-                        <input type="text" name="name" class="form__input">
-                    </label>
-                    <label class="form__item">
-                        <p class="form__label">Телефон *</p>
-                        <input type="text" name="phone" class="form__input">
+                        <p class="form__label">Email *</p>
+                        <input type="text" name="email" class="form__input">
                     </label>
                     <label class="form__agree">
                         <input class="agree" type="checkbox" name="agree">
