@@ -161,6 +161,39 @@
                 line-height: 20px;
                 font-size: 15px;
                 font-weight: 500;
+                cursor: pointer;
+
+                &:hover + .descr {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+
+            .descr {
+                position: absolute;
+                opacity: 0;
+                visibility: hidden;
+                transition: 0.3s;
+                top: 30px;
+                right: -28px;
+                background-color: @white;
+                box-shadow: 0 0 20px 0 fade(@text, 20%);
+                font-size: 12px;
+                color: @text;
+                padding: 10px;
+                border-radius: 5px;
+                width: 100px;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: auto;
+                    right: 7px;
+                    top: -16px;
+                    border: none;
+                    border: 8px solid transparent; 
+                    border-bottom: 8px solid @white;
+                }
             }
 
             .text {
@@ -510,7 +543,12 @@
 
                 &__input {
                     input {
-                        font-size: 30px;
+                        font-size: 15px;
+                        height: 30px;
+
+                        &:disabled {
+                            font-size: 30px;
+                        }
                     }
                 }
             }
@@ -522,6 +560,22 @@
 
                 span {
                     font-size: 12px;
+                }
+
+                .descr {
+                    left: calc(100% + 40px);
+                    right: auto;
+                    top: -2px;
+                    right: auto;
+
+                    &:before {
+                        left: -15px;
+                        right: auto;
+                        top: 5px;
+                        border: none;
+                        border: 8px solid transparent; 
+                        border-right: 8px solid @white;
+                    }
                 }
             }
 
@@ -652,7 +706,12 @@
 
                 &__input {
                     input {
-                        font-size: 22px;
+                        font-size: 15px;
+                        height: 22px;
+
+                        &:disabled {
+                            font-size: 22px;
+                        }
                     }
                 }
             }
@@ -679,7 +738,12 @@
 
                 &__input {
                     input {
-                        font-size: 18px;
+                        font-size: 15px;
+                        height: 18px;
+
+                        &:disabled {
+                            font-size: 18px;
+                        }
                     }
                 }
             }
