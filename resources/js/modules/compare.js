@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import 'jquery-match-height';
+import 'jquery-mousewheel';
 
 function compare () {
     if ($('.compare').length) {
@@ -62,6 +63,17 @@ function compare () {
         })
 
         //горизонтальный скролл
+
+        //по колесику мыши
+        if ($(window).width() > 992) {
+            $(".scroll-table").mousewheel(function(event, delta) {
+                this.scrollLeft -= (delta * 50);
+    
+                event.preventDefault();        
+            });
+        }
+        
+
         $(".scroll-table").on("scroll", function (e) {
             let horizontal = e.currentTarget.scrollLeft;
 
