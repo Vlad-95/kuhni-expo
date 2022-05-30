@@ -31,7 +31,7 @@ const contacts = () => {
                 shops.forEach(item => {
                     let myPlacemark = new ymaps.Placemark(item.coords, {}, {
                         iconLayout: 'default#image',
-                        iconImageHref: '/img/icons/map-mark.png',
+                        iconImageHref: './img/icons/map-mark.png',
                         iconImageSize: [55, 57],
                         iconImageOffset: [-28, -45]
                     })
